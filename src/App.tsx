@@ -7,6 +7,7 @@ import styles from './styles.module.scss';
 
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+import { Footer, Links } from './components';
 
 const Home = lazy(() => import('./pages/home'));
 const AboutUs = lazy(() => import('./pages/aboutUs'));
@@ -18,17 +19,27 @@ const Layout = () => {
   return (
     <>
       <div className={styles.app}>
-        <Navbar>
-          <Navbar.Group align={Alignment.LEFT}>
-            <Button text="Home" icon="document" intent="primary"/>
-            <Button minimal icon="code" text="About us" />
-            <Button minimal icon="build" text="About us" ></Button>
-            <Button minimal icon="draw" text="How it works" />
-            <Button minimal icon="download" text="Mobile" />
-            <Button minimal icon="endorsed" text="Privacy" />
-          </Navbar.Group>
-        </Navbar>
-        <Outlet />
+        <section>
+          <Navbar>
+            <Navbar.Group align={Alignment.LEFT}>
+              <Button text="Home" icon="document" intent="primary" />
+              <Button minimal icon="code" text="About us" />
+              <Button minimal icon="build" text="About us" ></Button>
+              <Button minimal icon="draw" text="How it works" />
+              <Button minimal icon="download" text="Mobile" />
+              <Button minimal icon="endorsed" text="Privacy" />
+            </Navbar.Group>
+          </Navbar>
+        </section>
+        <section>
+          <Outlet />
+        </section>
+        <section>
+          <Links/>
+        </section>
+        <section>
+          <Footer/>
+        </section>
       </div>
     </>
   )

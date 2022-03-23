@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InputGroup, Button, Spinner, Intent, Card, Elevation } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
-import { Footer, Counter } from '../../components'
+import { Counter } from '../../components'
 
 import images from './images';
 import styles from './styles.module.scss';
@@ -98,9 +98,6 @@ const Home = (props) => {
         <div>
           <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
         </div>
-      </section>
-      <section>
-        <Footer />
       </section>
     </div >
   )

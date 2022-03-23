@@ -6,7 +6,7 @@ import { Button, Intent } from "@blueprintjs/core";
 
 import styles from './styles.module.scss';
 
-const Footer = ({ showText = true, backgroundColor }) => {
+const Footer = ({ showText = true }) => {
   return (
     <div className={styles.footer}>
       {showText && (
@@ -16,7 +16,7 @@ const Footer = ({ showText = true, backgroundColor }) => {
       )}
       <div>
         {getIcons().map((icon, index) => (
-          <Button style={{ backgroundColor }} key={`button_${index}`} className={styles.button} intent={Intent.PRIMARY}>
+          <Button key={`button_${index}`} className={styles.button} intent={Intent.PRIMARY}>
             <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
           </Button>
         ))}
