@@ -6,7 +6,7 @@ import transparencyImage from './transparency.png';
 import coNeutralImage from './co2-neutral.png';
 import privacyImage from './privacy-friendly.png';
 
-export default {
+const Images = {
   logoImage,
   savanahImage,
   womanWithCropsImage,
@@ -15,3 +15,5 @@ export default {
   coNeutralImage,
   privacyImage
 }
+
+export default Images;

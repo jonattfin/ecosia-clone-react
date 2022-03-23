@@ -1,10 +1,12 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, BrowserRouter as Router, Routes, Link, Outlet } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
+import { Navbar, Alignment, Button } from '@blueprintjs/core';
 
 import './App.css';
+import styles from './styles.module.scss';
 
-// import "@blueprintjs/core/lib/css/blueprint.css";
-// import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+import "@blueprintjs/core/lib/css/blueprint.css";
+import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 const Home = lazy(() => import('./pages/home'));
 const AboutUs = lazy(() => import('./pages/aboutUs'));
@@ -15,33 +17,24 @@ const Privacy = lazy(() => import('./pages/privacy'));
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about-us">About us</Link>
-          </li>
-          <li>
-            <Link to="/how-it-works">How it works</Link>
-          </li>
-          <li>
-            <Link to="/mobile">Mobile</Link>
-          </li>
-          <li>
-            <Link to="/privacy">Privacy</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
+      <div className={styles.app}>
+        <Navbar>
+          <Navbar.Group align={Alignment.LEFT}>
+            <Button text="Home" icon="document" intent="primary"/>
+            <Button minimal icon="code" text="About us" />
+            <Button minimal icon="build" text="About us" ></Button>
+            <Button minimal icon="draw" text="How it works" />
+            <Button minimal icon="download" text="Mobile" />
+            <Button minimal icon="endorsed" text="Privacy" />
+          </Navbar.Group>
+        </Navbar>
+        <Outlet />
+      </div>
     </>
   )
 };
 
 class App extends React.Component {
-
   render() {
     return (
       <Router>

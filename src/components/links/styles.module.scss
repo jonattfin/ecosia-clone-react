@@ -1,0 +1,27 @@
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    padding-top: 5vh;
+
+    height: 40vh;
+    text-align: center;
+    background-color: #F9F9F9;
+
+    .title {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 20px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        max-width: 10vw;
+    }
+
+    .image {
+        height: 50%;
+    }
+}

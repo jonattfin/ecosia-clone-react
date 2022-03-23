@@ -1,0 +1,9 @@
+@import '../../globals';
+
+.counter {
+  &__text {
+    color: $primary-color;
+  }
+}
+
+

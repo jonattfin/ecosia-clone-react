@@ -1,0 +1,14 @@
+.app {
+    .menu {
+        display: flex;
+        justify-content: center;
+    
+        td {
+          background-color: goldenrod;
+          padding: 5px 30px;
+          border: 1px solid rosybrown;
+          border-radius: 5px;
+        }
+    }
+}
+
