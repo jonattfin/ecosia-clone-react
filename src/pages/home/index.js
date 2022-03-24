@@ -211,7 +211,7 @@ const Home = (props) => {
       <section className={styles['join-section']}>
         <div className={styles['main-grid']}>
           <div className={styles['grid-item__title']}>Join 15 million people who already use Ecosia</div>
-          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined> Share Ecosia</Button></div>
+          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined onClick={() => {throw new Error("You clicked on Share Ecosia")}}> Share Ecosia</Button></div>
         </div>
       </section>
     </div >
