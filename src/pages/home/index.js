@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { InputGroup, Spinner, Intent, Button } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { interval, tap } from 'rxjs';
-import { Icon, IconSize } from "@blueprintjs/core";
+import { Icon } from "@blueprintjs/core";
 
 import { Counter } from '../../components'
 import PieReport from './pie';
@@ -16,18 +16,18 @@ const Home = (props) => {
   const initialValue = 146000000;
   const [counter, setCounter] = useState(initialValue);
 
+  const [query, setQuery] = useState('');
+
+  const { actions, model = {} } = props;
+  const { payload = {} } = model;
+  const { data, searchInProgress } = payload;
+  
   useEffect(() => {
     const subscription = interval(1000)
       .pipe(tap(x => console.log(x)))
       .subscribe(value => setCounter((initialValue + value).toLocaleString()));
     return () => subscription.unsubscribe();
   }, []);
-
-  const [query, setQuery] = useState('');
-
-  const { actions, model = {} } = props;
-  const { payload = {} } = model;
-  const { data, searchInProgress } = payload;
 
   return (
     <div className={styles.home}>
@@ -130,7 +130,7 @@ const Home = (props) => {
             </div>
           </div>
           <div>
-            <div>&nbsp;</div>
+          <div>&nbsp;</div>
             <div className={styles.report_link}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
           </div>
         </div>

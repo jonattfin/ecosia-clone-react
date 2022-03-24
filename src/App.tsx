@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
-import { Navbar, Alignment, Button } from '@blueprintjs/core';
+import { Navbar, Alignment, Button, Tag, Intent } from '@blueprintjs/core';
 
 import './App.css';
 import styles from './styles.module.scss';
@@ -21,8 +21,10 @@ const Layout = () => {
       <div className={styles.app}>
         <section>
           <Navbar>
-            <Navbar.Group align={Alignment.LEFT}>
-              <Button text="Home" icon="document" intent="primary" />
+            <Navbar.Group align={Alignment.RIGHT}>
+              <Tag icon="tree" intent={Intent.SUCCESS}>0</Tag>
+              <Navbar.Divider />
+              <Button text="Home" icon="document" intent={Intent.PRIMARY} />
               <Button minimal icon="code" text="About us" />
               <Button minimal icon="build" text="About us" ></Button>
               <Button minimal icon="draw" text="How it works" />
@@ -35,10 +37,10 @@ const Layout = () => {
           <Outlet />
         </section>
         <section>
-          <Links/>
+          <Links />
         </section>
         <section>
-          <Footer/>
+          <Footer />
         </section>
       </div>
     </>
