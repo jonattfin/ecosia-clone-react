@@ -21,7 +21,7 @@ const Home = (props) => {
   const { actions, model = {} } = props;
   const { payload = {} } = model;
   const { data, searchInProgress } = payload;
-  
+
   useEffect(() => {
     const subscription = interval(1000)
       .pipe(tap(x => console.log(x)))
@@ -130,7 +130,7 @@ const Home = (props) => {
             </div>
           </div>
           <div>
-          <div>&nbsp;</div>
+            <div>&nbsp;</div>
             <div className={styles['report-link']}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
           </div>
         </div>
@@ -211,7 +211,11 @@ const Home = (props) => {
       <section className={styles['join-section']}>
         <div className={styles['main-grid']}>
           <div className={styles['grid-item__title']}>Join 15 million people who already use Ecosia</div>
-          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined onClick={() => {throw new Error("You clicked on Share Ecosia")}}> Share Ecosia</Button></div>
+          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined onClick={() => {
+            console.log("error will be thrown");
+            throw new Error("You clicked on Share Ecosia")
+          }
+          }> Share Ecosia</Button></div>
         </div>
       </section>
     </div >
