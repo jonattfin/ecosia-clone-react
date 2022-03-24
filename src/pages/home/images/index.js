@@ -1,19 +1,25 @@
 import logoImage from './logo.png';
-import savanahImage from './savanah.png'
-import womanWithCropsImage from './woman-with-crops.jpg'
-import worldMapImage from './world-map.png'
 import transparencyImage from './transparency.png';
 import coNeutralImage from './co2-neutral.png';
-import privacyImage from './privacy-friendly.png';
+import brazilImage from './brazil.webp';
+import burkinaFasoImage from './burkinafaso.webp';
+import indonesiaImage from './indonesia.webp';
+import coinImage from './coin.svg';
+import worldImage from './world.svg';
+import privacyImage from './privacy.svg';
+import profitsImage from './profits.svg';
 
-const Images = {
+const images = {
   logoImage,
-  savanahImage,
-  womanWithCropsImage,
-  worldMapImage,
   transparencyImage,
   coNeutralImage,
-  privacyImage
+  brazilImage,
+  burkinaFasoImage,
+  indonesiaImage,
+  coinImage,
+  worldImage,
+  privacyImage,
+  profitsImage
 }
 
-export default Images;
+export default images;

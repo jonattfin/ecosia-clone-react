@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
-import { InputGroup, Button, Spinner, Intent, Card, Elevation } from "@blueprintjs/core";
+import React, { useState, useEffect } from 'react';
+import { InputGroup, Spinner, Intent } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+import { interval, tap } from 'rxjs';
 
 import { Counter } from '../../components'
+import PieReport from './pie';
 
 import images from './images';
 import styles from './styles.module.scss';
 
 const Home = (props) => {
+
+  const initialValue = 146000000;
+  const [counter, setCounter] = useState(initialValue);
+
+  useEffect(() => {
+    const subscription = interval(1000)
+      .pipe(tap(x => console.log(x)))
+      .subscribe(value => setCounter((initialValue + value).toLocaleString()));
+    return () => subscription.unsubscribe();
+  }, []);
+
   const [query, setQuery] = useState('');
 
   const { actions, model = {} } = props;
@@ -16,7 +29,7 @@ const Home = (props) => {
 
   return (
     <div className={styles.home}>
-      <section className={styles.first_screen}>
+      <section className={styles.search_section}>
         <div>
           <img className={styles.logo} src={images.logoImage} alt="logo" />
         </div>
@@ -29,74 +42,156 @@ const Home = (props) => {
             onChange={(ev) => { setQuery(ev.target.value); }}
             onKeyDown={(ev) => { if (ev.keyCode === 13) { actions.search(query); } }}
           />
-          <div>&nbsp;</div>
           {searchInProgress && <Spinner intent={Intent.PRIMARY} size={Spinner.SIZE_SMALL} />}
           <div className={styles.counter__wrapper}>
             {data}
-            <Counter />
+            <h1>The search engine that plants trees.</h1>
+            <Counter counter={counter} />
             <div>&nbsp;</div>
-            <a href="#woman-with-crops">
-              <Button icon={IconNames.ARROW_DOWN} intent={Intent.PRIMARY} large />
-            </a>
           </div>
-        </div>
-        <div>
-        </div>
-        <div>
-          <img className={styles.savanah} src={images.savanahImage} alt="savanah" />
         </div>
       </section>
-      <section className={styles.second_screen} id="woman-with-crops">
+      <section className={styles.countries_section}>
         <div className={styles.row}>
-          <div>
-            <img className={styles.withCrops} src={images.womanWithCropsImage} alt="woman with crops" />
-          </div>
           <div className={styles.column}>
+            <div className={styles.above_title}>
+              Where are your trees being planted?
+            </div>
             <div className={styles.title}>
-              You search the web, <br />
-              we plant trees
+              We plant in 30+ countries with local organizations
             </div>
             <div className={styles.body}>
-              Ecosia is like any other search engine, with one major difference:<br />
-              <b>we use our profits to plant trees.</b>
+              <div className={styles.countries_grid}>
+                <div className={styles.grid_item}>
+                  <img className={styles.country} src={images.brazilImage} alt="brazil" />
+                </div>
+                <div className={styles.grid_item}>
+                  <img className={styles.country} src={images.burkinaFasoImage} alt="burkina faso" />
+                </div>
+                <div className={styles.grid_item}>
+                  <img className={styles.country} src={images.indonesiaImage} alt="indonesia" />
+                </div>
+                <div className={styles.grid_item}>
+                  <div>
+                    Brazil
+                  </div>
+                  <br />
+                  <div>
+                    Your trees in Brazil protect thousands of endangered plants and animals.
+                  </div>
+                </div>
+                <div className={styles.grid_item}>
+                  <div>
+                    Burkina Faso
+                  </div>
+                  <br />
+                  <div>
+                    In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
+                  </div>
+                </div>
+                <div className={styles.grid_item}>
+                  <div>
+                    Indonesia
+                  </div>
+                  <br />
+                  <div>
+                    In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>&nbsp;</div>
             <div>
-              <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
             </div>
-          </div>
-        </div>
-        <div className={styles.row}>
-          <div className={styles.column}>
-            <div className={styles.title}>
-              We plant trees where <br /> they’re needed most
-            </div>
-            <div className={styles.body}>
-              Our trees benefit people, the environment <br /> and local economies.
-            </div>
-          </div>
-          <div>
-            <img className={styles.worldMap} src={images.worldMapImage} alt="world map" />
           </div>
         </div>
       </section>
-      <section className={styles.third_screen}>
-        <div className={styles.title}>
-          We stand for a better internet
-        </div>
-        <div className={styles.cards}>
-          {getCards().map((card, index) => (
-            <div className={styles.card_separator} key={`card_${index}`}>
-              <Card interactive={true} elevation={Elevation.TWO}>
-                <img className={styles.card_image} src={card.image} alt="logo" />
-                <h4>{card.title}</h4>
-                <p>{card.content}</p>
-              </Card>
+      <section className={styles.map_section}>
+        <div className={styles.wrapper_image}>
+          <div className={styles.above_title}>Trees planted by ecosia users</div>
+          <div className={styles.title__kick}>{counter}</div>
+          <div className={styles.facts_grid}>
+            <div className={styles.grid_item}>
+              <div className={styles.grid_item__title}>15 Million</div>
+              <div className={styles.grid_item__text}>People using Ecosia</div>
             </div>
-          ))}
+            <div className={styles.grid_item}>
+              <div className={styles.grid_item__title}>500+</div>
+              <div className={styles.grid_item__text}>Native species</div>
+            </div>
+            <div className={styles.grid_item}>
+              <div className={styles.grid_item__title}>30+</div>
+              <div className={styles.grid_item__text}>Countries</div>
+            </div>
+            <div className={styles.grid_item}>
+              <div className={styles.grid_item__title}>60+</div>
+              <div className={styles.grid_item__text}>Active projects</div>
+            </div>
+          </div>
         </div>
+      </section>
+      <section className={styles.financial_reports}>
+        <div className={styles.reports_text}>
+          <div className={styles.above_title}>Monthly financial reports </div>
+          <div className={styles.title}>Our revenue in January 2022 </div>
+          <div >
+            Our monthly reports show how much ad revenue we made from your searches, how we spent it, and how many trees this helped us plant.
+          </div>
+        </div>
+        <div className={styles.pie_container}>
+          <PieReport />
+        </div>
+      </section>
+      <section className={styles.why_choose_us}>
         <div>
-          <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+          <div className={styles.above_title}>Why choose Ecosia? </div>
+          <div className={styles.title}>We put people and planet before profit</div>
+          <div className={styles.reasons_grid}>
+            <div className={styles.grid_item}>
+              <div>
+                <img src={images.profitsImage } alt="profits" />
+              </div>
+              <div className={styles.grid_item__title}>
+                We’re a not-for-profit business
+              </div>
+              <div>
+                We dedicate 100% of our profits to climate action, with at least 80% financing tree-planting projects.
+              </div>
+            </div>
+            <div className={styles.grid_item}>
+              <div>
+                <img src={images.privacyImage} alt="privacy" />
+              </div>
+              <div className={styles.grid_item__title}>
+                Ecosia is powered by 200% renewable energy
+              </div>
+              <div>
+                Our solar panels produce twice the amount of energy needed to power all searches with renewables.
+              </div>
+            </div>
+            <div className={styles.grid_item}>
+              <div>
+                <img src={images.worldImage} alt="world" />
+              </div>
+              <div className={styles.grid_item__title}>
+                We always put your privacy first
+              </div>
+              <div>
+                We anonymize your searches and don’t create a profile of you. We’re interested in trees, not your data.
+              </div>
+
+            </div>
+            <div className={styles.grid_item}>
+              <div>
+                <img src={images.coinImage} alt="coin" />
+              </div>
+              <div className={styles.grid_item__title}>
+                We are transparent about everything we do
+              </div>
+              <div>
+                We publish detailed financial reports and frequent updates from our tree planting projects.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div >
@@ -105,25 +200,3 @@ const Home = (props) => {
 
 export default Home;
 
-function getCards() {
-  return [
-    {
-      url: '',
-      title: 'Completely transparent',
-      content: 'We publish our monthly financial reports, so you see exactly where the income from your searches goes.',
-      image: images.transparencyImage
-    },
-    {
-      url: '',
-      title: 'More than Co2 neutral',
-      content: 'Our servers run on 100% renewable energy, and every search request removes 1kg of CO from the atmosphere.',
-      image: images.coNeutralImage
-    },
-    {
-      url: '',
-      title: 'Privacy friendly',
-      content: 'We don’t sell your data to advertisers, have no third party trackers and anonymize all searches within one week.',
-      image: images.privacyImage
-    },
-  ]
-}

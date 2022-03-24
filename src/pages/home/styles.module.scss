@@ -1,9 +1,21 @@
 .home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    .above_title {
+      font-size: 2em;
+      color: teal;
+      text-transform: uppercase;
+      padding: 10px 0px;
+    }
 
     .title {
         font-size: 3em;
+
+        &__kick {
+            font-size: 6em;
+        }
     }
 
     .body {
@@ -11,13 +23,13 @@
         margin-top: 20px;
     }
 
-    .first_screen {
+    .search_section {
         display: flex;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
 
-        height: 100vh;
+        height: 75vh;
 
         .logo {
             width: 30vw;
@@ -35,10 +47,6 @@
             }
         }
 
-        .savanah {
-            width: 100vw;
-        }
-
         @media only screen and (max-width: 1024px) {
             .searchBox {
                 width: 80vw;
@@ -46,7 +54,7 @@
         }
     }
 
-    .second_screen {
+    .countries_section {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -67,37 +75,102 @@
             margin: 5vw;
         }
 
-        .withCrops {
-            height: 40vh;
-            border-radius: 50%;
+        .countries_grid {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          padding: 10px;
+          width: 600px;
         }
 
-        .worldMap {
-            height: 40vh;
+        .grid_item {
+          padding: 20px;
+        }
+
+        .country {
+          border-radius: 5px;
+          padding: 10px;
         }
     }
 
-    .third_screen {
+    .map_section {
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
 
-        height: 100vh;
+        .wrapper_image {
+            background-image: url("./images/map.svg");
+            background-repeat: no-repeat;
+            height: 40vh;
+            width: 30vw;
+        }
 
-        .cards {
-            display: flex;
-            flex-direction: row;
-            width: 60vw;
+        .facts_grid {
+            height: 25vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+            align-items: flex-end;
+        }
 
-            text-align: center;
+        .grid_item {
+            padding: 5px;
+            border-left: 5px solid teal;
 
-            .card_separator {
-                padding: 20px;
+            &__title {
+                font-size: 3em;
             }
 
-            .card_image {
-                width: 15vw;
+            &__text {
+                font-size: 1em;
+            }
+        }
+
+    }
+
+    .financial_reports {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e2f6f7;
+        height: 30vh;
+
+        .reports_text {
+            width: 20vw;
+        }
+
+        .pie_container {
+            height: 25vh;
+            width: 10vw;
+        }
+    }
+
+    .why_choose_us {
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+        flex-direction: column;
+        height: 50vh;
+
+        .reasons_grid {
+            height: 25vh;
+            width: 25vw;
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 10px;
+        }
+
+        .grid_item {
+            padding: 5px;
+            text-align: center;
+            // border-left: 5px solid teal;
+
+            &__title {
+                font-size: 1.5em;
+                padding: 10px 0px;
+            }
+
+            &__text {
+                font-size: 1em;
             }
         }
     }
