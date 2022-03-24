@@ -216,6 +216,7 @@ const Home = (props) => {
             throw new Error("You clicked on Share Ecosia")
           }
           }> Share Ecosia</Button></div>
+          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined onClick={badMethod}> Share Ecosia (Bad)</Button></div>
         </div>
       </section>
     </div >
