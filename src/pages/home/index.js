@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { InputGroup, Spinner, Intent } from "@blueprintjs/core";
+import { InputGroup, Spinner, Intent, Button } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { interval, tap } from 'rxjs';
+import { Icon, IconSize } from "@blueprintjs/core";
 
 import { Counter } from '../../components'
 import PieReport from './pie';
 
 import images from './images';
 import styles from './styles.module.scss';
+import { Link } from 'react-router-dom';
 
 const Home = (props) => {
 
@@ -127,9 +129,13 @@ const Home = (props) => {
               <div className={styles.grid_item__text}>Active projects</div>
             </div>
           </div>
+          <div>
+            <div>&nbsp;</div>
+            <div className={styles.report_link}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+          </div>
         </div>
       </section>
-      <section className={styles.financial_reports}>
+      <section className={styles.financial_reports_section}>
         <div className={styles.reports_text}>
           <div className={styles.above_title}>Monthly financial reports </div>
           <div className={styles.title}>Our revenue in January 2022 </div>
@@ -139,16 +145,19 @@ const Home = (props) => {
         </div>
         <div className={styles.pie_container}>
           <PieReport />
+          <div>&nbsp;</div>
+          <div className={styles.report_link}><Link to="#">Explore our financial reports <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
         </div>
       </section>
-      <section className={styles.why_choose_us}>
-        <div>
+      <section className={styles.why_choose_us_section}>
+        <div className={styles.wrapper}>
           <div className={styles.above_title}>Why choose Ecosia? </div>
           <div className={styles.title}>We put people and planet before profit</div>
+          <div>&nbsp;</div>
           <div className={styles.reasons_grid}>
             <div className={styles.grid_item}>
               <div>
-                <img src={images.profitsImage } alt="profits" />
+                <img src={images.profitsImage} alt="profits" />
               </div>
               <div className={styles.grid_item__title}>
                 We’re a not-for-profit business
@@ -192,6 +201,17 @@ const Home = (props) => {
               </div>
             </div>
           </div>
+          <div>
+            <div>&nbsp;</div>
+            <div className={styles.report_link}><Link to="#">Other reasons... <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+          </div>
+        </div>
+
+      </section>
+      <section className={styles.join_section}>
+        <div className={styles.main_grid}>
+          <div className={styles.grid_item__title}>Join 15 million people who already use Ecosia</div>
+          <div className={styles.grid_item}><Button intent={Intent.DANGER} large outlined> Share Ecosia</Button></div>
         </div>
       </section>
     </div >

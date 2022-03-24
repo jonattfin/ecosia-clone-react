@@ -1,177 +1,215 @@
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .above_title {
+    font-size: 2em;
+    color: teal;
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+
+  .title {
+    font-size: 3em;
+
+    &__kick {
+      font-size: 6em;
+    }
+  }
+
+  .body {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  .search_section {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
+
+    height: 75vh;
+
+    .logo {
+      width: 30vw;
+      min-width: 100px;
+      max-width: 150px;
+    }
+
+    .searchBox {
+      width: 40vw;
+    }
+
+    .counter {
+      &__wrapper {
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .searchBox {
+        width: 80vw;
+      }
+    }
+  }
+
+  .countries_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    height: 100vh;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      align-items: center;
+      width: 100vw;
+    }
+
+    .column {
+      margin: 5vw;
+    }
+
+    .countries_grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+      width: 600px;
+    }
+
+    .grid_item {
+      padding: 20px;
+    }
+
+    .country {
+      padding: 10px;
+    }
+  }
+
+  .map_section {
+    display: flex;
     justify-content: center;
+    align-items: center;
 
-    .above_title {
-      font-size: 2em;
-      color: teal;
-      text-transform: uppercase;
-      padding: 10px 0px;
+    .wrapper_image {
+      background-image: url("./images/map.svg");
+      background-repeat: no-repeat;
+      height: 42vh;
+      width: 30vw;
     }
 
-    .title {
+    .facts_grid {
+      height: 25vh;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      padding: 10px;
+      align-items: flex-end;
+    }
+
+    .grid_item {
+      padding: 5px;
+
+      &__title {
         font-size: 3em;
+      }
 
-        &__kick {
-            font-size: 6em;
-        }
+      &__text {
+        font-size: 1em;
+      }
     }
 
-    .body {
+    .report_link {
+      text-align: right;
+    }
+
+  }
+
+  .financial_reports_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2f6f7;
+    height: 32vh;
+
+    .reports_text {
+      width: 20vw;
+    }
+
+    .pie_container {
+      height: 25vh;
+      width: 10vw;
+    }
+
+    .report_link {
+      text-align: right;
+    }
+  }
+
+  .why_choose_us_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43vh;
+
+    .wrapper {
+      width: 30vw;
+    }
+
+    .reasons_grid {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .grid_item {
+      padding: 5px;
+      text-align: center;
+
+      &__title {
         font-size: 1.5em;
-        margin-top: 20px;
+        padding: 10px 0px;
+      }
+
+      &__text {
+        font-size: 1em;
+      }
     }
 
-    .search_section {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
+    .report_link {
+      text-align: right;
+    }
+  }
 
-        height: 75vh;
+  .join_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-        .logo {
-            width: 30vw;
-            min-width: 100px;
-            max-width: 150px;
-        }
+    height: 25vh;
+    background-color: #e2f6f7;
 
-        .searchBox {
-            width: 40vw;
-        }
-
-        .counter {
-            &__wrapper {
-                text-align: center;
-            }
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .searchBox {
-                width: 80vw;
-            }
-        }
+    .main_grid {
+      display: grid;
+      grid-template-columns: auto;
     }
 
-    .countries_section {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
+    .grid_item {
+      padding: 5px;
+      text-align: center;
 
-        height: 100vh;
+      &__title {
+        font-size: 3em;
+        padding: 20px 0px;
+      }
 
-        .row {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-
-            align-items: center;
-            width: 100vw;
-        }
-
-        .column {
-            margin: 5vw;
-        }
-
-        .countries_grid {
-          display: grid;
-          grid-template-columns: auto auto auto;
-          padding: 10px;
-          width: 600px;
-        }
-
-        .grid_item {
-          padding: 20px;
-        }
-
-        .country {
-          border-radius: 5px;
-          padding: 10px;
-        }
+      &__text {
+        font-size: 1em;
+      }
     }
-
-    .map_section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .wrapper_image {
-            background-image: url("./images/map.svg");
-            background-repeat: no-repeat;
-            height: 40vh;
-            width: 30vw;
-        }
-
-        .facts_grid {
-            height: 25vh;
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            padding: 10px;
-            align-items: flex-end;
-        }
-
-        .grid_item {
-            padding: 5px;
-            border-left: 5px solid teal;
-
-            &__title {
-                font-size: 3em;
-            }
-
-            &__text {
-                font-size: 1em;
-            }
-        }
-
-    }
-
-    .financial_reports {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #e2f6f7;
-        height: 30vh;
-
-        .reports_text {
-            width: 20vw;
-        }
-
-        .pie_container {
-            height: 25vh;
-            width: 10vw;
-        }
-    }
-
-    .why_choose_us {
-        display: flex;
-        align-items: center;
-        // justify-content: space-around;
-        flex-direction: column;
-        height: 50vh;
-
-        .reasons_grid {
-            height: 25vh;
-            width: 25vw;
-            display: grid;
-            grid-template-columns: auto auto;
-            padding: 10px;
-        }
-
-        .grid_item {
-            padding: 5px;
-            text-align: center;
-            // border-left: 5px solid teal;
-
-            &__title {
-                font-size: 1.5em;
-                padding: 10px 0px;
-            }
-
-            &__text {
-                font-size: 1em;
-            }
-        }
-    }
+  }
 }
