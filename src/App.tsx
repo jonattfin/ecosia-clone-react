@@ -6,11 +6,11 @@ import styles from './styles.module.scss';
 
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
-import { Footer, Links, Header } from './components';
+import { Footer, Links, Header } from './shared-components';
 
 const Home = lazy(() => import('./pages/home'));
-const AboutUs = lazy(() => import('./pages/aboutUs'));
-const HowItWorks = lazy(() => import('./pages/howItWorks'));
+const AboutUs = lazy(() => import('./pages/about-us'));
+const HowItWorks = lazy(() => import('./pages/how-it-works'));
 const Mobile = lazy(() => import('./pages/mobile'));
 const Privacy = lazy(() => import('./pages/privacy'));
 

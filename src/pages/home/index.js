@@ -3,13 +3,14 @@ import { InputGroup, Spinner, Intent, Button } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { interval, tap } from 'rxjs';
 import { Icon } from "@blueprintjs/core";
-
-import { Counter } from '../../components'
-import PieReport from './pie';
-
-import images from './images';
-import styles from './styles.module.scss';
 import { Link } from 'react-router-dom';
+
+import { Counter } from '../../shared-components'
+
+import Components from './components';
+import Images from './images';
+
+import styles from './styles.module.scss';
 
 const Home = (props) => {
 
@@ -31,13 +32,13 @@ const Home = (props) => {
 
   return (
     <div className={styles.home}>
-      <section className={styles.search_section}>
+      <section className={styles['search-section']}>
         <div>
-          <img className={styles.logo} src={images.logoImage} alt="logo" />
+          <img className={styles.logo} src={Images.logoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
           <InputGroup
-            className={styles.searchBox}
+            className={styles['search-box']}
             placeholder="Search the web to plant trees..."
             large
             leftIcon={IconNames.SEARCH}
@@ -53,27 +54,27 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-      <section className={styles.countries_section}>
+      <section className={styles['countries-section']}>
         <div className={styles.row}>
           <div className={styles.column}>
-            <div className={styles.above_title}>
+            <div className={styles['above-title']}>
               Where are your trees being planted?
             </div>
             <div className={styles.title}>
               We plant in 30+ countries with local organizations
             </div>
             <div className={styles.body}>
-              <div className={styles.countries_grid}>
-                <div className={styles.grid_item}>
-                  <img className={styles.country} src={images.brazilImage} alt="brazil" />
+              <div className={styles['countries-grid']}>
+                <div className={styles['grid-item']}>
+                  <img className={styles.country} src={Images.brazilImage} alt="brazil" />
                 </div>
-                <div className={styles.grid_item}>
-                  <img className={styles.country} src={images.burkinaFasoImage} alt="burkina faso" />
+                <div className={styles['grid-item']}>
+                  <img className={styles.country} src={Images.burkinaFasoImage} alt="burkina faso" />
                 </div>
-                <div className={styles.grid_item}>
-                  <img className={styles.country} src={images.indonesiaImage} alt="indonesia" />
+                <div className={styles['grid-item']}>
+                  <img className={styles.country} src={Images.indonesiaImage} alt="indonesia" />
                 </div>
-                <div className={styles.grid_item}>
+                <div className={styles['grid-item']}>
                   <div>
                     Brazil
                   </div>
@@ -82,7 +83,7 @@ const Home = (props) => {
                     Your trees in Brazil protect thousands of endangered plants and animals.
                   </div>
                 </div>
-                <div className={styles.grid_item}>
+                <div className={styles['grid-item']}>
                   <div>
                     Burkina Faso
                   </div>
@@ -91,7 +92,7 @@ const Home = (props) => {
                     In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
                   </div>
                 </div>
-                <div className={styles.grid_item}>
+                <div className={styles['grid-item']}>
                   <div>
                     Indonesia
                   </div>
@@ -107,68 +108,68 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-      <section className={styles.map_section}>
-        <div className={styles.wrapper_image}>
-          <div className={styles.above_title}>Trees planted by ecosia users</div>
+      <section className={styles['map-section']}>
+        <div className={styles['wrapper-image']}>
+          <div className={styles['above-title']}>Trees planted by ecosia users</div>
           <div className={styles.title__kick}>{counter}</div>
-          <div className={styles.facts_grid}>
-            <div className={styles.grid_item}>
-              <div className={styles.grid_item__title}>15 Million</div>
-              <div className={styles.grid_item__text}>People using Ecosia</div>
+          <div className={styles['facts-grid']}>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>15 Million</div>
+              <div className={styles['grid-item__text']}>People using Ecosia</div>
             </div>
-            <div className={styles.grid_item}>
-              <div className={styles.grid_item__title}>500+</div>
-              <div className={styles.grid_item__text}>Native species</div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>500+</div>
+              <div className={styles['grid-item__text']}>Native species</div>
             </div>
-            <div className={styles.grid_item}>
-              <div className={styles.grid_item__title}>30+</div>
-              <div className={styles.grid_item__text}>Countries</div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>30+</div>
+              <div className={styles['grid-item__text']}>Countries</div>
             </div>
-            <div className={styles.grid_item}>
-              <div className={styles.grid_item__title}>60+</div>
-              <div className={styles.grid_item__text}>Active projects</div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>60+</div>
+              <div className={styles['grid-item__text']}>Active projects</div>
             </div>
           </div>
           <div>
           <div>&nbsp;</div>
-            <div className={styles.report_link}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+            <div className={styles['report-link']}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
           </div>
         </div>
       </section>
-      <section className={styles.financial_reports_section}>
-        <div className={styles.reports_text}>
-          <div className={styles.above_title}>Monthly financial reports </div>
+      <section className={styles['financial-reports-section']}>
+        <div className={styles['reports-text']}>
+          <div className={styles['above-title']}>Monthly financial reports </div>
           <div className={styles.title}>Our revenue in January 2022 </div>
           <div >
             Our monthly reports show how much ad revenue we made from your searches, how we spent it, and how many trees this helped us plant.
           </div>
         </div>
-        <div className={styles.pie_container}>
-          <PieReport />
+        <div className={styles['pie-container']}>
+          <Components.PieComponent />
           <div>&nbsp;</div>
-          <div className={styles.report_link}><Link to="#">Explore our financial reports <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+          <div className={styles['report-link']}><Link to="#">Explore our financial reports <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
         </div>
       </section>
-      <section className={styles.why_choose_us_section}>
+      <section className={styles['why-choose-us-section']}>
         <div className={styles.wrapper}>
-          <div className={styles.above_title}>Why choose Ecosia? </div>
+          <div className={styles['above-title']}>Why choose Ecosia? </div>
           <div className={styles.title}>We put people and planet before profit</div>
           <div>&nbsp;</div>
-          <div className={styles.reasons_grid}>
-            <div className={styles.grid_item}>
+          <div className={styles['reasons-grid']}>
+            <div className={styles['grid-item']}>
               <div>
-                <img src={images.profitsImage} alt="profits" />
+                <img src={Images.profitsImage} alt="profits" />
               </div>
-              <div className={styles.grid_item__title}>
+              <div className={styles['grid-item__title']}>
                 We’re a not-for-profit business
               </div>
               <div>
                 We dedicate 100% of our profits to climate action, with at least 80% financing tree-planting projects.
               </div>
             </div>
-            <div className={styles.grid_item}>
+            <div className={styles['grid-item']}>
               <div>
-                <img src={images.privacyImage} alt="privacy" />
+                <img src={Images.privacyImage} alt="privacy" />
               </div>
               <div className={styles.grid_item__title}>
                 Ecosia is powered by 200% renewable energy
@@ -177,11 +178,11 @@ const Home = (props) => {
                 Our solar panels produce twice the amount of energy needed to power all searches with renewables.
               </div>
             </div>
-            <div className={styles.grid_item}>
+            <div className={styles['grid-item']}>
               <div>
-                <img src={images.worldImage} alt="world" />
+                <img src={Images.worldImage} alt="world" />
               </div>
-              <div className={styles.grid_item__title}>
+              <div className={styles['grid-item__title']}>
                 We always put your privacy first
               </div>
               <div>
@@ -189,11 +190,11 @@ const Home = (props) => {
               </div>
 
             </div>
-            <div className={styles.grid_item}>
+            <div className={styles['grid-item']}>
               <div>
-                <img src={images.coinImage} alt="coin" />
+                <img src={Images.coinImage} alt="coin" />
               </div>
-              <div className={styles.grid_item__title}>
+              <div className={styles['grid-item__title']}>
                 We are transparent about everything we do
               </div>
               <div>
@@ -203,15 +204,15 @@ const Home = (props) => {
           </div>
           <div>
             <div>&nbsp;</div>
-            <div className={styles.report_link}><Link to="#">Other reasons... <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+            <div className={styles['report-link']}><Link to="#">Other reasons... <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
           </div>
         </div>
 
       </section>
-      <section className={styles.join_section}>
-        <div className={styles.main_grid}>
-          <div className={styles.grid_item__title}>Join 15 million people who already use Ecosia</div>
-          <div className={styles.grid_item}><Button intent={Intent.DANGER} large outlined> Share Ecosia</Button></div>
+      <section className={styles['join-section']}>
+        <div className={styles['main-grid']}>
+          <div className={styles['grid-item__title']}>Join 15 million people who already use Ecosia</div>
+          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined> Share Ecosia</Button></div>
         </div>
       </section>
     </div >

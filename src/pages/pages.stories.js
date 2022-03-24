@@ -5,8 +5,8 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 import Home from './home';
-import AboutUs from './aboutUs';
-import HowItWorks from './howItWorks';
+import AboutUs from './about-us';
+import HowItWorks from './how-it-works';
 import Mobile from './mobile';
 import Privacy from './privacy';
 

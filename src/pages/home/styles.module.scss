@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
 
-  .above_title {
+  .above-title {
     font-size: 2em;
     color: teal;
     text-transform: uppercase;
@@ -23,7 +23,7 @@
     margin-top: 20px;
   }
 
-  .search_section {
+  .search-section {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -37,7 +37,7 @@
       max-width: 150px;
     }
 
-    .searchBox {
+    .search-box {
       width: 40vw;
     }
 
@@ -48,13 +48,13 @@
     }
 
     @media only screen and (max-width: 1024px) {
-      .searchBox {
+      .search-box {
         width: 80vw;
       }
     }
   }
 
-  .countries_section {
+  .countries-section {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -75,14 +75,14 @@
       margin: 5vw;
     }
 
-    .countries_grid {
+    .countries-grid {
       display: grid;
       grid-template-columns: auto auto auto;
       padding: 10px;
       width: 600px;
     }
 
-    .grid_item {
+    .grid-item {
       padding: 20px;
     }
 
@@ -91,19 +91,19 @@
     }
   }
 
-  .map_section {
+  .map-section {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .wrapper_image {
+    .wrapper-image {
       background-image: url("./images/map.svg");
       background-repeat: no-repeat;
       height: 42vh;
       width: 30vw;
     }
 
-    .facts_grid {
+    .facts-grid {
       height: 25vh;
       display: grid;
       grid-template-columns: auto auto auto auto;
@@ -111,7 +111,7 @@
       align-items: flex-end;
     }
 
-    .grid_item {
+    .grid-item {
       padding: 5px;
 
       &__title {
@@ -123,34 +123,34 @@
       }
     }
 
-    .report_link {
+    .report-link {
       text-align: right;
     }
 
   }
 
-  .financial_reports_section {
+  .financial-reports-section {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #e2f6f7;
     height: 32vh;
 
-    .reports_text {
+    .reports-text {
       width: 20vw;
     }
 
-    .pie_container {
+    .pie-container {
       height: 25vh;
       width: 10vw;
     }
 
-    .report_link {
+    .report-link {
       text-align: right;
     }
   }
 
-  .why_choose_us_section {
+  .why-choose-us-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,12 +160,12 @@
       width: 30vw;
     }
 
-    .reasons_grid {
+    .reasons-grid {
       display: grid;
       grid-template-columns: auto auto;
     }
 
-    .grid_item {
+    .grid-item {
       padding: 5px;
       text-align: center;
 
@@ -179,12 +179,12 @@
       }
     }
 
-    .report_link {
+    .report-link {
       text-align: right;
     }
   }
 
-  .join_section {
+  .join-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,12 +193,12 @@
     height: 25vh;
     background-color: #e2f6f7;
 
-    .main_grid {
+    .main-grid {
       display: grid;
       grid-template-columns: auto;
     }
 
-    .grid_item {
+    .grid-item {
       padding: 5px;
       text-align: center;
 
@@ -207,9 +207,6 @@
         padding: 20px 0px;
       }
 
-      &__text {
-        font-size: 1em;
-      }
     }
   }
 }
