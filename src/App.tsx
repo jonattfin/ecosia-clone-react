@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
 
-import './App.css';
 import styles from './styles.module.scss';
 
 import "@blueprintjs/core/lib/css/blueprint.css";

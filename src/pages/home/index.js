@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { InputGroup, Spinner, Intent, Button } from "@blueprintjs/core";
+import { InputGroup, Spinner, Intent, Button, Icon } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { interval, tap } from 'rxjs';
-import { Icon } from "@blueprintjs/core";
 import { Link } from 'react-router-dom';
 
 import { Counter } from '../../shared-components'
