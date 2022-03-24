@@ -1,8 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
 
-import styles from './styles.module.scss';
-
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { Footer, Links, Header } from './shared-components';
@@ -16,7 +14,7 @@ const Privacy = lazy(() => import('./pages/privacy'));
 const Layout = () => {
   return (
     <>
-      <div className={styles.app}>
+      <div>
         <section>
           <Header/>
         </section>
