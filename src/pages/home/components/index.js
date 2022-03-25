@@ -1,4 +1,4 @@
-import PieComponent from './responsive-pie';
+import PieComponent from './pie';
 
 const Components = {
   PieComponent
