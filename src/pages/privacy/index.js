@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { LanguageContext, ThemeContext } from '../../context';
+import { LanguageContext } from '../../language';
+import { ThemeContext } from '../../theme';
 import { getLanguage } from './languages';
 
 var Component = () => {

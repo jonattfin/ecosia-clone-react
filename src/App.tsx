@@ -6,8 +6,8 @@ import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import "@blueprintjs/popover2/lib/css/blueprint-popover2.css";
 
 import { Footer, Links, Header } from './shared-components';
-import { ThemeContext, LanguageContext } from './context';
-import { Languages, Themes } from './constants';
+import { Languages, LanguageContext } from './language';
+import { Themes, ThemeContext } from './theme';
 
 const Home = lazy(() => import('./pages/home'));
 const AboutUs = lazy(() => import('./pages/about-us'));
