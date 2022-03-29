@@ -1,4 +1,4 @@
-import { Languages } from '../../constants';
+import { Languages } from '../../language';
 
 const languages = {
   [Languages.En]: {

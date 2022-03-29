@@ -1,11 +1,9 @@
 .links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
 
-  padding-top: 5vh;
-
-  height: 40vh;
+  height: 30vh;
   text-align: center;
   background-color: #F9F9F9;
 
@@ -18,7 +16,7 @@
   .column {
     display: flex;
     flex-direction: column;
-    max-width: 10vw;
+    max-width: 20vw;
   }
 
   .image {

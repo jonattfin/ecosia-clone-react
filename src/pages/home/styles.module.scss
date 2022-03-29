@@ -1,5 +1,3 @@
-$page-width: 40vw;
-
 .home {
   display: flex;
   flex-direction: column;
@@ -90,6 +88,16 @@ $page-width: 40vw;
     .country {
       padding: 10px;
     }
+
+    @media only screen and (max-width: 1024px) {
+      .countries-grid {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+        height: 100vh;
+        width: 80vw;
+      }
+    }
   }
 
   .map-section {
@@ -141,7 +149,7 @@ $page-width: 40vw;
       display: flex;
       width: 40vw;
     }
-    
+
     .reports-text {
       width: 40vw;
     }

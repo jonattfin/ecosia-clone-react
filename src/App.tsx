@@ -9,6 +9,8 @@ import { Footer, Links, Header } from './shared-components';
 import { Languages, LanguageContext } from './language';
 import { Themes, ThemeContext } from './theme';
 
+import styles from './styles.module.scss';
+
 const Home = lazy(() => import('./pages/home'));
 const AboutUs = lazy(() => import('./pages/about-us'));
 const HowItWorks = lazy(() => import('./pages/how-it-works'));
@@ -32,14 +34,14 @@ const Layout = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <LanguageContext.Provider value={language}>
-        <div>
+        <div className={styles.Layout}>
           <section>
             <Header {...props} />
           </section>
           <section>
             <Outlet />
           </section>
-          <section>
+          <section className={styles['links-section']}>
             <Links />
           </section>
           <section>

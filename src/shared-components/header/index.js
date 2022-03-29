@@ -15,7 +15,8 @@ import { Popover2 as Popover } from '@blueprintjs/popover2';
 
 // import styles from './styles.module.scss';
 
-import { Languages, Themes } from '../../constants';
+import { Languages } from '../../language';
+import { Themes } from '../../theme';
 
 const languageOptions = [
   { value: Languages.En, label: 'English' },
