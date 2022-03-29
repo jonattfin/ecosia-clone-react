@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Intent } from "@blueprintjs/core";
+import { Icon, Intent, IconSize } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 import images from './images';
@@ -18,10 +18,10 @@ export default () => {
           Forests need protecting and so does your privacy. <br />We make sure to do both.
         </div>
         <div>
-          <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+          <a href="#statements"><Icon intent={Intent.DANGER} icon={IconNames.HandDown} size={IconSize.LARGE}></Icon></a>
         </div>
       </section>
-      <section className={styles['statements-section']}>
+      <section id="statements" className={styles['statements-section']}>
         {getStatements().map(({ title, content, image }, index) => (
           <div key={`statement_${index}`} className={styles.row}>
             <img className={styles.image} src={image} alt="tldr" />
