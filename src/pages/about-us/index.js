@@ -1,3 +1,3 @@
-var Component = () => <div>About Us</div>
+import AboutUsComponent from './about-us-component'
 
-export default Component;
+export default AboutUsComponent;

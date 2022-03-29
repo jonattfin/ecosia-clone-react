@@ -1,0 +1,36 @@
+.mobile {
+    .ecosia-for-mobile {
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+
+        height: 100vh;
+        background-image: url('./images/background.jpg');
+
+        padding-top: 20vh;
+        padding-left: 5vw;
+
+        .title {
+            font-size: 4em;
+            padding-bottom: 5vh;
+        }
+
+        .phone {
+            width: 20vw;
+        }
+
+        .separator {
+            padding: 5px;
+        }
+
+        .logo {
+            width: 10vw;
+        }
+
+        .subtitle {
+            font-size: 2em;
+            padding-bottom: 5vh;
+            width: 40vw;
+        }
+    }
+}

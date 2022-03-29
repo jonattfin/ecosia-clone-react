@@ -1,0 +1,143 @@
+@import '../../globals';
+
+.how-it-works {
+    .title {
+        font-size: 3em;
+    }
+
+    .sub-title {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .plant-trees-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100vh;
+
+        text-align: center;
+        color: white;
+        background-image: url('./images/background.jpg');
+
+        .separator {
+            padding: 10px;
+        }
+    }
+
+    .brands-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        height: 15vh;
+        background-color: $grey-color;
+
+        .image {
+            max-height: 40px;
+        }
+    }
+
+    .how_it_works_section {
+        height: 50vh;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+
+            text-align: center;
+            padding: 50px;
+        }
+
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+            text-align: center;
+
+            .image {
+                max-width: 10vw;
+            }
+        }
+
+        .text {
+            margin: 0px 2vw;
+        }
+    }
+
+    .graphics-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 60vh;
+        background-color: $grey-color;
+
+        .title {
+            font-size: 3em;
+            text-align: center;
+            width: 80vw;
+        }
+
+        .column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                max-width: 15vw;
+                text-align: center;
+                padding: 1vw;
+
+                .time {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: grey;
+                    font-size: 1em;
+                    padding: 5px;
+                }
+
+                .subtitle {
+                    font-size: 2em;
+                    padding: 5px;
+                }
+
+                .line {
+                    border: 3px solid #AAB74F;
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    .journey-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 70vh;
+
+        .separator {
+            padding: 5px;
+        }
+
+        .savanah-image {
+            max-height: 150px;
+            width: 100vw;
+        }
+    }
+}

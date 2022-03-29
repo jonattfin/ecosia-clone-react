@@ -1,0 +1,168 @@
+@import '../../globals';
+
+.about-us {
+    .everyone-power-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 50vh;
+        background-image: url('./images/background.jpg');
+        background-size: 75% auto;
+
+        .title {
+            font-size: 5em;
+            text-align: center;
+            color: white;
+            width: 50vw;
+        }
+    }
+
+    .social-business-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 50vh;
+        background-color: $grey-color;
+
+        .title {
+            font-size: 4em;
+            text-align: center;
+            // color: white;
+            width: 80vw;
+        }
+
+        .column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                max-width: 15vw;
+                text-align: center;
+                padding: 1vw;
+
+                .time {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: grey;
+                    font-size: 1em;
+                    padding: 5px;
+                }
+
+                .subtitle {
+                    font-size: 1em;
+                    padding: 5px;
+                }
+
+                .line {
+                    border: 3px solid #AAB74F;
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .meet-the-team-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 50vh;
+        text-align: center;
+
+        .title {
+            font-size: 4em;
+            width: 80vw;
+        }
+
+        .subtitle {
+            font-size: 2em;
+            width: 80vw;
+        }
+
+        .member {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+
+            &__item {
+                padding: 50px;
+            }
+
+            &__image {
+                max-width: 100px;
+                border-radius: 50%;
+            }
+
+            &__name {
+                text-transform: uppercase;
+                color: $primary-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .hiring-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 40vh;
+        text-align: center;
+        background-color: $grey-color;
+
+        .title {
+            font-size: 4em;
+            width: 80vw;
+        }
+
+        .subtitle {
+            font-size: 2em;
+            width: 80vw;
+        }
+    }
+
+    .contact-us-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        height: 50vh;
+        text-align: center;
+
+        .title {
+            font-size: 4em;
+            width: 80vw;
+        }
+
+        .subtitle {
+            font-size: 2em;
+            width: 80vw;
+        }
+
+        .form-group {
+            width: 40vw;
+        }
+
+        .form-item {
+            padding: 5px;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid grey;
+    }
+}
