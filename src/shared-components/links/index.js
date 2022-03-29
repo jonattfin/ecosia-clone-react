@@ -30,7 +30,7 @@ const Links = () => {
         <div><a href="#id">Press</a></div>
         <div><a href="#id">Jobs</a></div>
       </div>
-      <div className={styles.column}>
+      <div className={styles.column__imprint}>
         <div className={styles.title}>Imprint</div>
         <div>
           Ecosia GmbH
