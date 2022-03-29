@@ -19,7 +19,6 @@ import { Languages, Themes } from '../../constants';
 
 const languageOptions = [
   { value: Languages.En, label: 'English' },
-  { value: Languages.Fr, label: 'French' },
   { value: Languages.Ro, label: 'Romanian' },
 ];
 

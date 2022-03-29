@@ -1,6 +1,5 @@
 export enum Languages {
     En,
-    Fr,
     Ro
 };
 

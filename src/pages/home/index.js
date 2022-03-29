@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { InputGroup, Spinner, Intent, Button, Icon } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 import { interval, tap } from 'rxjs';
@@ -10,6 +10,9 @@ import Images from './images';
 
 import styles from './styles.module.scss';
 
+import { LanguageContext } from '../../context';
+import { getLanguage } from './languages';
+
 const Home = (props) => {
 
   const initialValue = 146000000;
@@ -20,6 +23,9 @@ const Home = (props) => {
   const { actions, model = {} } = props;
   const { payload = {} } = model;
   const { data, searchInProgress } = payload;
+
+  var languageContext = useContext(LanguageContext);
+  const language = getLanguage(languageContext);
 
   useEffect(() => {
     const subscription = interval(1000)
@@ -37,7 +43,7 @@ const Home = (props) => {
         <div className={styles.counter}>
           <InputGroup
             className={styles['search-box']}
-            placeholder="Search the web to plant trees..."
+            placeholder={language['search-to-plant-trees']}
             large
             leftIcon={IconNames.SEARCH}
             onChange={(ev) => { setQuery(ev.target.value); }}
@@ -46,7 +52,7 @@ const Home = (props) => {
           {searchInProgress && <Spinner intent={Intent.PRIMARY} size={Spinner.SIZE_SMALL} />}
           <div className={styles.counter__wrapper}>
             {data}
-            <h1>The search engine that plants trees.</h1>
+            <h1>{language['the-search-engine']}</h1>
             <Counter counter={counter} />
             <div>&nbsp;</div>
           </div>
@@ -56,10 +62,10 @@ const Home = (props) => {
         <div className={styles.row}>
           <div className={styles.column}>
             <div className={styles['above-title']}>
-              Where are your trees being planted?
+              {language['where-do-you-plant-trees']}
             </div>
             <div className={styles.title}>
-              We plant in 30+ countries with local organizations
+              {language['we-plant-30-countries']}
             </div>
             <div className={styles.body}>
               <div className={styles['countries-grid']}>
@@ -78,7 +84,7 @@ const Home = (props) => {
                   </div>
                   <br />
                   <div>
-                    Your trees in Brazil protect thousands of endangered plants and animals.
+                    {language['we-plant-in-brazil']}
                   </div>
                 </div>
                 <div className={styles['grid-item']}>
@@ -87,7 +93,7 @@ const Home = (props) => {
                   </div>
                   <br />
                   <div>
-                    In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
+                    {language['we-plant-in-burkina-faso']}
                   </div>
                 </div>
                 <div className={styles['grid-item']}>
@@ -96,7 +102,7 @@ const Home = (props) => {
                   </div>
                   <br />
                   <div>
-                    In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
+                    {language['we-plant-in-indonesia']}
                   </div>
                 </div>
               </div>

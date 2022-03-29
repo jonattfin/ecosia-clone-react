@@ -28,6 +28,11 @@ indent_style = space
 indent_size = 2
 
 # Indentation override for all JS under lib directory
+[src/**.ts]
+indent_style = space
+indent_size = 2
+
+# Indentation override for all JS under lib directory
 [src/**.jsx]
 indent_style = space
 indent_size = 2

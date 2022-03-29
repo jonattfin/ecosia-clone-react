@@ -1,12 +1,16 @@
 import { useContext } from 'react';
 import { LanguageContext, ThemeContext } from '../../context';
+import { getLanguage } from './languages';
 
 var Component = () => {
   var languageContext = useContext(LanguageContext);
   var themeContext = useContext(ThemeContext);
+
+  const language = getLanguage(languageContext);
+
   return (
     <div>
-      Privacy
+      {language.privacy}
       <div>
         language: {JSON.stringify(languageContext)}
       </div>
