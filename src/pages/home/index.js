@@ -5,7 +5,6 @@ import { interval, tap } from 'rxjs';
 import { Link } from 'react-router-dom';
 
 import { Counter } from '../../shared-components'
-
 import Components from './components';
 import Images from './images';
 

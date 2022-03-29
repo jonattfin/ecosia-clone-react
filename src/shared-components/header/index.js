@@ -1,6 +1,19 @@
-import { Navbar, Alignment, Button, Tag, Intent, Menu, MenuItem, Popover, Position } from '@blueprintjs/core';
-import React from 'react';
-import Select from 'react-select'
+import React from 'react'
+import {
+  Button,
+  Position,
+  Menu,
+  MenuItem,
+  Tag,
+  Navbar,
+  Alignment,
+  Intent
+} from "@blueprintjs/core";
+import { useNavigate } from "react-router-dom";
+import Select from 'react-select';
+import { Popover2 as Popover } from '@blueprintjs/popover2';
+
+// import styles from './styles.module.scss';
 
 import { Languages, Themes } from '../../constants';
 
@@ -15,40 +28,48 @@ const themeOptions = [
   { value: Themes.Black, label: 'Black' },
 ];
 
-class Component extends React.Component {
+const Component = (props) => {
+  let navigate = useNavigate();
+  const { model } = props;
 
-
-  renderMenu = () => {
-    return (
-      <Menu>
-        <MenuItem icon="code" onClick={() => { }} text="Home"></MenuItem>
-        <MenuItem icon="build" onClick={() => { }} text="About us"></MenuItem>
-        <MenuItem icon="draw" onClick={() => { }} text="How it works"></MenuItem>
-        <MenuItem icon="download" onClick={() => { }} text="Mobile"></MenuItem>
-        <MenuItem icon="endorsed" onClick={() => { }} text="Privacy"></MenuItem>
-      </Menu>
-    );
-  }
-
-  render() {
-    const props = this.props;
-
-    return (
-      <Navbar>
-        <Navbar.Group align={Alignment.RIGHT}>
-          <Tag icon="tree" intent={Intent.SUCCESS}>0</Tag>
-          <Navbar.Divider />
-          <Select options={languageOptions} value={languageOptions[props.language]} onChange={(option) => { props.setLanguage(option.value) }} />
-          <Navbar.Divider />
-          <Select options={themeOptions} value={themeOptions[props.theme]} onChange={(option) => { props.setTheme(option.value) }} />
-          <Navbar.Divider />
-          <Popover content={this.renderMenu()} position={Position.TOP_RIGHT}>
-            <Button icon="menu" intent={Intent.PRIMARY} />
-          </Popover>
-        </Navbar.Group>
-      </Navbar>
-    )
-  };
-}
+  return (
+    <Navbar>
+      <Navbar.Group align={Alignment.RIGHT}>
+        <Tag icon={'tree'} intent={Intent.SUCCESS}>
+          {model.payload.numberOfSearches}
+        </Tag>
+        <Navbar.Divider />
+        <Select options={languageOptions} value={languageOptions[model.language]} onChange={(option) => { model.setLanguage(option.value) }} />
+        <Navbar.Divider />
+        <Select options={themeOptions} value={themeOptions[model.theme]} onChange={(option) => { model.setTheme(option.value) }} />
+        <Navbar.Divider />
+        <Popover content={createMenu(navigate)} position={Position.RIGHT}>
+          <Button icon="menu" />
+        </Popover>
+      </Navbar.Group>
+    </Navbar>
+  );
+};
 
 export default Component;
+
+function createMenu(navigate) {
+  const pages = [
+    { url: '/', text: 'Home', icon: "home", },
+    { url: '/how-it-works', text: 'How Ecosia works', icon: "build", },
+    { url: '/about-us', text: 'About us', icon: 'help' },
+    { url: '/mobile', text: 'Mobile app', icon: 'mobile-phone' },
+    { url: '/privacy', text: 'Privacy', icon: 'shield' },
+  ];
+
+  const onClick = (url) => () => {
+    navigate(url, { replace: true });
+  }
+
+  return (
+    <Menu>
+      {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} icon={icon} text={text} onClick={onClick(url)} />)}
+    </Menu>
+  );
+}
+

@@ -1228,6 +1228,19 @@
     classnames "^2.2"
     tslib "~2.3.1"
 
+"@blueprintjs/popover2@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/popover2/-/popover2-1.0.1.tgz#4486afdc19bc11f701a2e6f2ba655fa40db7ff58"
+  integrity sha512-IKMFaM7/61WnSQkxvzVN+d+qw6rk6IiQqN/MNHcELBDh1YAXQD7fqznYNkO2dG31BkuMH25N7X7K+FT+BbcJXA==
+  dependencies:
+    "@blueprintjs/core" "^4.0.1"
+    "@juggle/resize-observer" "^3.3.1"
+    "@popperjs/core" "^2.5.4"
+    classnames "^2.2"
+    dom4 "^2.1.5"
+    react-popper "^2.2.4"
+    tslib "~2.3.1"
+
 "@blueprintjs/select@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@blueprintjs/select/-/select-4.0.1.tgz#9ca2a7b410ac2ba302d7f7b23add46fa2ee06f00"

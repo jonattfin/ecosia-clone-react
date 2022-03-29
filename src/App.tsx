@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom
 
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+import "@blueprintjs/popover2/lib/css/blueprint-popover2.css";
 
 import { Footer, Links, Header } from './shared-components';
 import { ThemeContext, LanguageContext } from './context';
@@ -19,7 +20,13 @@ const Layout = () => {
   const [theme, setTheme] = useState(Themes.Light);
 
   const props = {
-    language, theme, setLanguage, setTheme
+    model: {
+      payload: {
+        numberOfSearches: 0,
+      },
+      language, setLanguage,
+      theme, setTheme,
+    },
   };
 
   return (
