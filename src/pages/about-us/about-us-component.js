@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Button, Intent, InputGroup, FormGroup, ControlGroup, HTMLSelect } from "@blueprintjs/core";
+import { Button, Intent, InputGroup, FormGroup, TextArea, ControlGroup, HTMLSelect, Icon } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
-import { range } from 'lodash';
 
 import styles from './styles.module.scss';
 
 const Component = () => {
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
+  const [play, setPlay] = useState(false);
 
   return (
     <div className={styles['about-us']}>
@@ -32,20 +32,22 @@ const Component = () => {
         </div>
       </section>
       <section className={styles['meet-the-team-section']}>
-        <div className={styles.title}>Meet the team</div>
-        <div className={styles.subtitle}>Our international team is based in Berlin, Germany. Click on any of these fine folks to learn more.</div>
-        <div className={styles.member}>
-          {getTeamMembers().map((member, index) => (
-            <div key={`member_${index}`} className={styles.member__item}>
-              <div>
-                <img className={styles.member__image} src={member.image} alt={member.name} />
-              </div>
-              <div className={styles.member__name}>{member.name}</div>
-              <div >{member.position}</div>
+        {!play && (
+          <>
+            <div className={styles.title}>Step inside!</div>
+            <div className={styles.subtitle}>Meet the humans who make Ecosia and learn what it's like to work here.</div>
+            <div>
+              <Icon icon={IconNames.Play} intent={Intent.PRIMARY} size={100} onClick={() => setPlay(true)} />
             </div>
-          ))}
-        </div>
-        <div></div>
+          </>
+        )}
+        {play && (
+          <div className={styles['movie']}>
+            <video className={styles['movie__wrapper']} controls autoPlay={true}>
+              <source src="https://d3fme2ivr1xlgj.cloudfront.net/240719_Ecosia_hiringvideo_subbed_titled.mp4" type="video/mp4" />
+            </video>
+          </div>
+        )}
       </section>
       <section className={styles['hiring-section']}>
         <div className={styles.title}>We're hiring!</div>
@@ -59,10 +61,11 @@ const Component = () => {
         <div className={styles.subtitle}>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</div>
         <div >
           <FormGroup className={styles['form-group']}>
-            <InputGroup
-              className={styles.formItem}
-              placeholder="Message"
+            <TextArea
+              growVertically={true}
               large
+              className={styles['form-item__text-area']}
+              placeholder="Message"
               onChange={(ev) => { setMessage(ev.target.value); }}
             />
             <InputGroup
@@ -115,17 +118,6 @@ function getTimePeriods() {
       content: 'A planting milestone! That same year, Ecosia also builds its own solar energy plant to power every search.'
     },
   ]
-}
-
-function getTeamMembers() {
-  return range(1, 9).map(i => {
-    return {
-      image: '',
-      name: 'Joe Doe',
-      position: 'Happiness officer',
-      description: 'description'
-    }
-  })
 }
 
 function getFilterOptions() {

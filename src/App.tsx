@@ -53,7 +53,6 @@ const Layout = () => {
   )
 };
 
-
 const App = () => {
   return (
     <Router>

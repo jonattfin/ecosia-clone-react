@@ -1,22 +1,18 @@
 .mobile {
     .ecosia-for-mobile {
         display: flex;
-        align-items: left;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         height: 100vh;
-        background-image: url('./images/background.jpg');
-
-        padding-top: 20vh;
-        padding-left: 5vw;
+        background-image: url('https://infopages-prod-cdn.ecosia.org/assets/images/mobile/mobile_hero@1x-887294d71c.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
 
         .title {
             font-size: 4em;
             padding-bottom: 5vh;
-        }
-
-        .phone {
-            width: 20vw;
         }
 
         .separator {
@@ -24,13 +20,13 @@
         }
 
         .logo {
-            width: 10vw;
+            width: 5vw;
         }
 
         .subtitle {
             font-size: 2em;
             padding-bottom: 5vh;
-            width: 40vw;
+            width: 20vw;
         }
     }
 }
