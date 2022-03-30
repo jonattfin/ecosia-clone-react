@@ -1,7 +1,6 @@
-import React from 'react';
 
 import styles from './styles.module.scss';
-import images from './images';
+import Images from './images';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -17,8 +16,8 @@ export default () => {
         <div>&nbsp;</div>
         <div>&nbsp;</div>
         <div >
-          <img className={styles.logo} src={images.appStoreImage} alt={"app store"} />
-          <img className={styles.logo} src={images.playStoreImage} alt={"play store"} />
+          <img className={styles.logo} src={Images.appStoreImage} alt={"app store"} />
+          <img className={styles.logo} src={Images.playStoreImage} alt={"play store"} />
         </div>
       </section>
     </div>

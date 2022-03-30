@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Button, Intent, InputGroup, FormGroup, TextArea, ControlGroup, HTMLSelect, Icon } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 import styles from './styles.module.scss';
 
 const Component = () => {
-  const [message, setMessage] = useState('');
-  const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+  // const [email, setEmail] = useState('');
   const [play, setPlay] = useState(false);
 
   return (
@@ -14,7 +16,7 @@ const Component = () => {
       <section className={styles['everyone-power-section']}>
         <div className={styles.title}>We believe in everyone's power to do good</div>
         <div>
-          <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+          <Button variant="contained">Add Ecosia to Firefox</Button>
         </div>
         <div></div>
       </section>
@@ -37,7 +39,7 @@ const Component = () => {
             <div className={styles.title}>Step inside!</div>
             <div className={styles.subtitle}>Meet the humans who make Ecosia and learn what it's like to work here.</div>
             <div>
-              <Icon icon={IconNames.Play} intent={Intent.PRIMARY} size={100} onClick={() => setPlay(true)} />
+              <Button variant="contained" onClick={() => setPlay(true)} >Play</Button>
             </div>
           </>
         )}
@@ -53,40 +55,37 @@ const Component = () => {
         <div className={styles.title}>We're hiring!</div>
         <div className={styles.subtitle}>Want to help change the world? Let's team up. Apply to help us build great products and services that can make the world a more sustainable place. We can't wait to hear from you.</div>
         <div>
-          <Button intent={Intent.PRIMARY} large text={'See openings'} />
+          <Button variant="contained">See openings</Button>
         </div>
       </section>
       <section className={styles['contact-us-section']}>
         <div className={styles.title}>Contact us</div>
         <div className={styles.subtitle}>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</div>
         <div >
-          <FormGroup className={styles['form-group']}>
-            <TextArea
-              growVertically={true}
-              large
-              className={styles['form-item__text-area']}
-              placeholder="Message"
-              onChange={(ev) => { setMessage(ev.target.value); }}
+          <Stack component="form">
+            <TextField
+              hiddenLabel
+              id="filled-hidden-label-small"
+              defaultValue="Small"
+              variant="filled"
+              size="small"
             />
-            <InputGroup
-              className={styles['form-item']}
-              placeholder="E-mail"
-              large
-              onChange={(ev) => { setEmail(ev.target.value); }}
+            <TextField
+              hiddenLabel
+              id="filled-hidden-label-small"
+              defaultValue="Small"
+              variant="filled"
+              size="small"
             />
-            <ControlGroup>
-              <HTMLSelect options={getFilterOptions()} />
-            </ControlGroup>
-            <div className={styles['form-item']}>
-              For more info on how we handle your data, see our privacy policy.
-            </div>
-            <Button
-              className={styles['form-item']}
-              intent={Intent.PRIMARY}
-              large
-              text={'Send'.toUpperCase()}
-              onClick={() => alert(`message: ${message}, email: ${email}`)} />
-          </FormGroup>
+            <TextField
+              hiddenLabel
+              id="filled-hidden-label-small"
+              defaultValue="Small"
+              variant="filled"
+              size="small"
+            />
+            <Button variant="contained">Send</Button>
+          </Stack>
         </div>
       </section>
     </div>
@@ -120,6 +119,6 @@ function getTimePeriods() {
   ]
 }
 
-function getFilterOptions() {
-  return ["Subject", "Technical problem", "General inquiry", "Press inquiry"];
-}
+// function getFilterOptions() {
+//   return ["Subject", "Technical problem", "General inquiry", "Press inquiry"];
+// }

@@ -1,8 +1,5 @@
 
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { Button, Intent } from "@blueprintjs/core";
+import Button from '@mui/material/Button';
 
 import styles from './styles.module.scss';
 
@@ -12,12 +9,14 @@ const Footer = ({ showText = true }) => {
       {showText && (
         <div>
           Follow our journey
-      </div>
+        </div>
       )}
       <div>
         {getIcons().map((icon, index) => (
-          <Button key={`button_${index}`} className={styles.button} intent={Intent.PRIMARY}>
-            <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+          <Button key={`button_${index}`}>
+            <span class="material-icons">
+              {icon}
+            </span>
           </Button>
         ))}
       </div>
@@ -28,5 +27,5 @@ const Footer = ({ showText = true }) => {
 export default Footer;
 
 function getIcons() {
-  return [faFacebook, faTwitter, faYoutube, faInstagram, faLinkedin];
+  return ['assistant', 'storm', 'wb_twilight', 'home'];
 }

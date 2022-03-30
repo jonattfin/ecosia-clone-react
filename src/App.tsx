@@ -1,10 +1,6 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
 
-import "@blueprintjs/core/lib/css/blueprint.css";
-import "@blueprintjs/icons/lib/css/blueprint-icons.css";
-import "@blueprintjs/popover2/lib/css/blueprint-popover2.css";
-
 import { Footer, Links, Header } from './shared-components';
 import { Languages, LanguageContext } from './language';
 import { Themes, ThemeContext } from './theme';

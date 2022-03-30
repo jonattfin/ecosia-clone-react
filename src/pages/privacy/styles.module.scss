@@ -1,62 +1,63 @@
 .privacy {
-    .we-protect-privacy-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
 
-        height: 50vh;
-        background-image: url('./images/background.jpg');
-        background-repeat: no-repeat;
-        background-size: 100%;
+  .we-protect-privacy-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-        color: white;
-        text-align: center;
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-        .title {
-            font-size: 4em;
-            padding-bottom: 5vh;
-        }
+    color: white;
+    text-align: center;
 
-        .subtitle {
-            font-size: 2em;
-            padding-bottom: 5vh;
-        }
-
-        .separator {
-            padding: 5px;
-        }
+    .title {
+        font-size: 4em;
+        padding-bottom: 5vh;
     }
 
-    .statements-section {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-content: center;
-
-        height: 100vh;
-
-        .title {
-            font-size: 1.5em;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding-bottom: 2vh;
-        }
-
-        .content {
-            width: 20vw;
-            font-size: 1.5em;
-        }
-
-        .image {
-          padding: 0px 50px;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-        }
+    .subtitle {
+        font-size: 2em;
+        padding-bottom: 5vh;
     }
+
+    .separator {
+        padding: 5px;
+    }
+  }
+
+  .statements-section {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    .title {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-bottom: 2vh;
+    }
+
+    .content {
+      width: 20vw;
+      font-size: 1.5em;
+    }
+
+    .image {
+      padding: 0px 50px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
 }

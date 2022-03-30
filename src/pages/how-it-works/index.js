@@ -1,6 +1,4 @@
-import React from 'react';
-import { Button, Intent } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import Button from '@mui/material/Button';
 
 import styles from './styles.module.scss';
 import images from './images';
@@ -14,7 +12,7 @@ const Component = () => {
         <div className={styles['sub-title']}>We use the profit we make from your searches to plant trees where they are needed most. <br />Get the free browser extension and plant trees with every search.</div>
         <div className={styles.separator}>&nbsp;</div>
         <div>
-          <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+          <Button variant="contained">Add Ecosia to Firefox</Button>
         </div>
       </section>
       <section className={styles['brands-section']}>
@@ -54,10 +52,10 @@ const Component = () => {
           We know trust has to be earned
         </div>
         <div className={styles['sub-title']}>
-            That is why we publish our monthly financial reports and tree planting receipts. This way you can hold us accountable as we follow our journey to a reforested world.
-          </div>
+          That is why we publish our monthly financial reports and tree planting receipts. This way you can hold us accountable as we follow our journey to a reforested world.
+        </div>
         <div className={styles['view-reports-btn']}>
-          <Button intent={Intent.PRIMARY} large>View Reports</Button>
+          <Button variant="contained">View Reports</Button>
         </div>
       </section>
     </div >

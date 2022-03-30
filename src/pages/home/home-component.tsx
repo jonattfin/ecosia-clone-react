@@ -1,6 +1,5 @@
 import React from 'react';
-import { InputGroup, Spinner, Intent, Button, Icon, SpinnerSize } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+
 import { Link } from 'react-router-dom';
 
 import { Counter } from '../../shared-components'
@@ -21,15 +20,15 @@ const HomeComponent = (props: any) => {
           <img className={styles.logo} src={Images.logoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
-          <InputGroup
+          {/* <InputGroup
             className={styles['search-box']}
             placeholder={language['search-to-plant-trees']}
             large
             leftIcon={IconNames.SEARCH}
             onChange={(ev) => { setQuery(ev.target.value); }}
             onKeyDown={(ev) => { if (ev.keyCode === 13) { actions.search(query); } }}
-          />
-          {searchInProgress && <Spinner intent={Intent.PRIMARY} size={SpinnerSize.SMALL} />}
+          /> */}
+          {/* {searchInProgress && <Spinner intent={Intent.PRIMARY} size={SpinnerSize.SMALL} />} */}
           <div className={styles.counter__wrapper}>
             {data}
             <h1>{language['the-search-engine']}</h1>
@@ -116,7 +115,7 @@ const HomeComponent = (props: any) => {
           </div>
           <div>
             <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Discover our projects <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+            <div className={styles['report-link']}><Link to="#">Discover our projects</Link></div>
           </div>
         </div>
       </section>
@@ -132,7 +131,7 @@ const HomeComponent = (props: any) => {
           <div className={styles['pie-container']}>
             <Components.PieComponent />
             <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Explore our financial reports <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+            <div className={styles['report-link']}><Link to="#">Explore our financial reports</Link></div>
           </div>
         </div>
       </section>
@@ -190,7 +189,7 @@ const HomeComponent = (props: any) => {
           </div>
           <div>
             <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Other reasons... <Icon icon="flows" intent={Intent.DANGER} /></Link></div>
+            <div className={styles['report-link']}><Link to="#">Other reasons...</Link></div>
           </div>
         </div>
 
@@ -198,11 +197,6 @@ const HomeComponent = (props: any) => {
       <section className={styles['join-section']}>
         <div className={styles['main-grid']}>
           <div className={styles['grid-item__title']}>Join 15 million people who already use Ecosia</div>
-          <div className={styles['grid-item']}><Button intent={Intent.DANGER} large outlined onClick={() => {
-            console.log("error will be thrown");
-            throw new Error("You clicked on Share Ecosia")
-          }
-          }> Share Ecosia</Button></div>
         </div>
       </section>
     </div >
