@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { Button, Intent, InputGroup, ControlGroup } from "@blueprintjs/core";
+import React from 'react';
+import { Button, Intent } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 import styles from './styles.module.scss';
 import images from './images';
 
 const Component = () => {
-  const [email, setEmail] = useState('');
-
   return (
     <div className={styles['how-it-works']}>
       <section className={styles['plant-trees-section']}>
@@ -36,7 +34,7 @@ const Component = () => {
         </div>
       </section>
       <section className={styles['graphics-section']}>
-        <div className={styles.title}>Over 57 million trees planted</div>
+        <div className={styles.title}>Over 146 million trees planted</div>
         <div className={styles.column}>
           {getTimePeriods().map((period, index) => (
             <div key={`period_${index}`} className={styles.column__item}>
@@ -48,37 +46,19 @@ const Component = () => {
           ))}
         </div>
       </section>
-      <section className={styles['journey-section']}>
+      <section className={styles['reports-section']}>
+        <div>
+          <img src="https://infopages-prod-cdn.ecosia.org/assets/images/what/transperancy-blue-img-8408403664.svg" alt="transparency" />
+        </div>
         <div className={styles.title}>
-          Follow our journey to one billion trees
+          We know trust has to be earned
         </div>
         <div className={styles['sub-title']}>
-          Subscribe to our newsletter for regular updates, and connect with us on social media.
+            That is why we publish our monthly financial reports and tree planting receipts. This way you can hold us accountable as we follow our journey to a reforested world.
+          </div>
+        <div className={styles['view-reports-btn']}>
+          <Button intent={Intent.PRIMARY} large>View Reports</Button>
         </div>
-        <div>
-          {/* <Footer showText={false} backgroundColor="teal" /> */}
-        </div>
-        <div>
-          <ControlGroup>
-            <InputGroup
-              placeholder="Your e-mail"
-              large
-              onChange={(ev) => { setEmail(ev.target.value); }}
-            />
-            <div className={styles.separator}>&nbsp;</div>
-            <Button intent={Intent.PRIMARY} large text={'Get updates'} onClick={() => alert(email)} />
-          </ControlGroup>
-        </div>
-        <div className={styles.separator}>&nbsp;</div>
-        <div>
-          <img className={styles['savanah-image']} src={images.savanahImage} alt={'savanah'} />
-        </div>
-      </section>
-      <section>
-        {/* <Links /> */}
-      </section>
-      <section>
-        {/* <Footer /> */}
       </section>
     </div >
   );
@@ -95,23 +75,23 @@ function getTimePeriods() {
     },
     {
       time: 'over',
-      title: '7 million',
+      title: '15 million',
       content: 'active users'
     },
     {
       time: 'now',
-      title: <div>&nbsp;</div>,
+      title: <div>{146000000}</div>,
       content: 'trees total'
     },
     {
       time: 'over',
-      title: '9,101,152',
+      title: '12,101,152',
       content: 'EUR invested'
     },
     {
-      time: '',
-      title: '0.2 euro',
-      content: 'per tree'
+      time: 'over',
+      title: '9000',
+      content: 'planting sites'
     },
   ]
 }
