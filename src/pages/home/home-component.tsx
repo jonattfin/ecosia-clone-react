@@ -1,5 +1,5 @@
-import React from 'react';
 
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Counter } from '../../shared-components'
@@ -20,15 +20,7 @@ const HomeComponent = (props: any) => {
           <img className={styles.logo} src={Images.logoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
-          {/* <InputGroup
-            className={styles['search-box']}
-            placeholder={language['search-to-plant-trees']}
-            large
-            leftIcon={IconNames.SEARCH}
-            onChange={(ev) => { setQuery(ev.target.value); }}
-            onKeyDown={(ev) => { if (ev.keyCode === 13) { actions.search(query); } }}
-          /> */}
-          {/* {searchInProgress && <Spinner intent={Intent.PRIMARY} size={SpinnerSize.SMALL} />} */}
+          {/* <div>search</div> */}
           <div className={styles.counter__wrapper}>
             {data}
             <h1>{language['the-search-engine']}</h1>
