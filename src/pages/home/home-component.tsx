@@ -38,59 +38,34 @@ const HomeComponent = (props: any) => {
         </div>
       </section>
       <section className={styles['countries-section']}>
-        <div className={styles.row}>
-          <div className={styles.column}>
-            <div className={styles['above-title']}>
-              {language['where-do-you-plant-trees']}
-            </div>
-            <div className={styles.title}>
-              {language['we-plant-30-countries']}
-            </div>
-            <div className={styles.body}>
-              <div className={styles['countries-grid']}>
-                <div className={styles['grid-item']}>
-                  <img className={styles.country} src={Images.brazilImage} alt="brazil" />
-                </div>
-                <div className={styles['grid-item']}>
-                  <img className={styles.country} src={Images.burkinaFasoImage} alt="burkina faso" />
-                </div>
-                <div className={styles['grid-item']}>
-                  <img className={styles.country} src={Images.indonesiaImage} alt="indonesia" />
-                </div>
-                <div className={styles['grid-item']}>
-                  <div>
-                    Brazil
-                  </div>
-                  <br />
-                  <div>
-                    {language['we-plant-in-brazil']}
-                  </div>
-                </div>
-                <div className={styles['grid-item']}>
-                  <div>
-                    Burkina Faso
-                  </div>
-                  <br />
-                  <div>
-                    {language['we-plant-in-burkina-faso']}
-                  </div>
-                </div>
-                <div className={styles['grid-item']}>
-                  <div>
-                    Indonesia
-                  </div>
-                  <br />
-                  <div>
-                    {language['we-plant-in-indonesia']}
-                  </div>
-                </div>
-              </div>
+        <div className={styles['above-title']}>
+          {language['where-do-you-plant-trees']}
+        </div>
+        <div className={styles.title}>
+          {language['we-plant-30-countries']}
+        </div>
+        <div className={styles['countries-grid']}>
+          <div className={styles['grid-item']}>
+            <div><img className={styles.country} src={Images.brazilImage} alt="brazil" /></div>
+            <div>Brazil</div>
+            {language['we-plant-in-brazil']}
+          </div>
+          <div className={styles['grid-item']}>
+            <img className={styles.country} src={Images.burkinaFasoImage} alt="burkina faso" />
+          </div>
+          <div>Burkina Faso</div>
+          {language['we-plant-in-burkina-faso']}
+          <div className={styles['grid-item']}>
+            <img className={styles.country} src={Images.indonesiaImage} alt="indonesia" />
+            <div>
+              {language['we-plant-in-indonesia']}
             </div>
             <div>
             </div>
           </div>
         </div>
-      </section>
+
+      </section >
       <section className={styles['map-section']}>
         <div className={styles['wrapper-image']}>
           <div className={styles['above-title']}>Trees planted by ecosia users</div>
@@ -115,7 +90,7 @@ const HomeComponent = (props: any) => {
           </div>
           <div>
             <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Discover our projects</Link></div>
+            <div className={styles['report-link']}><Link to="#">Discover our projects...</Link></div>
           </div>
         </div>
       </section>
@@ -131,7 +106,7 @@ const HomeComponent = (props: any) => {
           <div className={styles['pie-container']}>
             <Components.PieComponent />
             <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Explore our financial reports</Link></div>
+            <div className={styles['report-link']}><Link to="#">Explore our financial reports...</Link></div>
           </div>
         </div>
       </section>

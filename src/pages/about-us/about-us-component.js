@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
 
 import styles from './styles.module.scss';
 
@@ -61,29 +62,17 @@ const Component = () => {
       <section className={styles['contact-us-section']}>
         <div className={styles.title}>Contact us</div>
         <div className={styles.subtitle}>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</div>
-        <div >
-          <Stack component="form">
-            <TextField
-              hiddenLabel
-              id="filled-hidden-label-small"
-              defaultValue="Small"
-              variant="filled"
-              size="small"
-            />
-            <TextField
-              hiddenLabel
-              id="filled-hidden-label-small"
-              defaultValue="Small"
-              variant="filled"
-              size="small"
-            />
-            <TextField
-              hiddenLabel
-              id="filled-hidden-label-small"
-              defaultValue="Small"
-              variant="filled"
-              size="small"
-            />
+        <div>
+          <Stack spacing={2}>
+            {/* <TextField variant="outlined" label="Message" multiline rows={5}></TextField> */}
+            {/* <TextField variant="outlined" label="E-mail" fullWidth /> */}
+            {/* <TextField variant="outlined" label="Subject" select fullWidth>
+              {getFilterOptions().map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField> */}
             <Button variant="contained">Send</Button>
           </Stack>
         </div>
@@ -119,6 +108,6 @@ function getTimePeriods() {
   ]
 }
 
-// function getFilterOptions() {
-//   return ["Subject", "Technical problem", "General inquiry", "Press inquiry"];
-// }
+function getFilterOptions() {
+  return ["Subject", "Technical problem", "General inquiry", "Press inquiry"];
+}

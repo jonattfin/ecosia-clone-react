@@ -14,7 +14,7 @@ const Footer = ({ showText = true }) => {
       <div>
         {getIcons().map((icon, index) => (
           <Button key={`button_${index}`}>
-            <span class="material-icons">
+            <span className="material-icons">
               {icon}
             </span>
           </Button>

@@ -1,6 +1,7 @@
 @import '../../globals';
 
 .about-us {
+
   .everyone-power-section {
     display: flex;
     justify-content: space-evenly;
@@ -11,10 +12,9 @@
     background-image: url('https://infopages-prod-cdn.ecosia.org/assets/images/about/about_hero@1x-c5c46bd688.jpg');
 
     .title {
-      font-size: 5em;
+      font-size: 4em;
       text-align: center;
-      color: white;
-      width: 50vw;
+      color: black;
     }
   }
 
@@ -28,10 +28,8 @@
     background-color: $grey-color;
 
     .title {
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
-      // color: white;
-      width: 80vw;
     }
 
     .column {
@@ -39,13 +37,13 @@
       justify-content: center;
       align-items: center;
       flex-direction: row;
+      max-width: 50vw;
 
       &__item {
         display: flex;
         align-items: center;
         flex-direction: column;
 
-        max-width: 15vw;
         text-align: center;
         padding: 1vw;
 
@@ -66,6 +64,12 @@
           border: 3px solid #AAB74F;
           width: 50%;
         }
+      }
+    }
+
+    @media only screen and (max-width: $size-medium) {
+      .column {
+        max-width: 80vw;
       }
     }
   }
@@ -95,6 +99,12 @@
         height: 40vh;
       }
     }
+
+    @media only screen and (max-width: $size-medium) {
+      .subtitle {
+        width: 80vw;
+      }
+    }
   }
 
   .hiring-section {
@@ -115,6 +125,16 @@
     .subtitle {
       font-size: 2em;
       width: 40vw;
+    }
+
+    .text-field {
+      min-width: 40vw;
+    }
+
+    @media only screen and (max-width: $size-medium) {
+      .subtitle {
+        width: 80vw;
+      }
     }
   }
 
@@ -148,11 +168,11 @@
         width: 20vw;
       }
     }
-  }
 
-  .footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid grey;
+    @media only screen and (max-width: $size-medium) {
+      .subtitle {
+        width: 80vw;
+      }
+    }
   }
 }

@@ -1,4 +1,7 @@
+@import '../../globals';
+
 .mobile {
+
     .ecosia-for-mobile {
         display: flex;
         flex-direction: column;
@@ -21,12 +24,24 @@
 
         .logo {
             width: 5vw;
+            padding: 1vw;
         }
 
         .subtitle {
             font-size: 2em;
             padding-bottom: 5vh;
             width: 20vw;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: $size-medium) {
+          .subtitle {
+            width: 80vw;
+          }
+
+          .logo {
+            width: 30vw;
+          }
         }
     }
 }

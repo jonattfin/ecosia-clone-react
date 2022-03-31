@@ -1,3 +1,5 @@
+@import '../../globals';
+
 .privacy {
 
   .we-protect-privacy-section {
@@ -15,17 +17,13 @@
     text-align: center;
 
     .title {
-        font-size: 4em;
-        padding-bottom: 5vh;
+      font-size: 3em;
+      padding-bottom: 5vh;
     }
 
     .subtitle {
-        font-size: 2em;
-        padding-bottom: 5vh;
-    }
-
-    .separator {
-        padding: 5px;
+      font-size: 2em;
+      padding-bottom: 5vh;
     }
   }
 
@@ -37,11 +35,23 @@
 
     height: 100vh;
 
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      div {
+        text-align: left;
+        padding: 20px;
+        vertical-align: middle;
+      }
+    }
+
     .title {
       font-size: 1.5em;
+
       text-transform: uppercase;
       font-weight: bold;
-      padding-bottom: 2vh;
+      padding-bottom: 1vh;
     }
 
     .content {
@@ -49,15 +59,20 @@
       font-size: 1.5em;
     }
 
-    .image {
-      padding: 0px 50px;
-    }
+    @media only screen and (max-width: $size-medium) {
+      .grid-container {
+        grid-template-columns: auto;
+      }
 
-    .row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
+      .content {
+        width: 80vw;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    .statements-section {
+      height: 200vh;
     }
   }
 }

@@ -37,13 +37,6 @@ const Links = () => {
           12047 Berlin, Germany
 
           Chairman Christian Kroll
-
-          VAT ID: DE273999090
-
-          Commercial Register:
-
-          HRB 170873, Amtsgericht
-          Charlottenburg
         </div>
       </div>
       <div className={styles.column}>

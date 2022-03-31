@@ -30,14 +30,14 @@ const Layout = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <LanguageContext.Provider value={language}>
-        <div className={styles.Layout}>
+        <div className={styles.layout}>
           <section>
             <Header {...props} />
           </section>
           <section>
             <Outlet />
           </section>
-          <section className={styles['links-section']}>
+          <section>
             <Links />
           </section>
           <section>

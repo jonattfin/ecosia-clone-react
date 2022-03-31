@@ -16,7 +16,10 @@ const Component = () => {
         </div>
       </section>
       <section className={styles['brands-section']}>
-        {getBrands().map((brand, index) => (<img key={`brand_image_${index}`} className={styles.image} src={brand} alt='tdlr'></img>))}
+        <div>
+          {getBrands().map((brand, index) => (<img key={`brand_image_${index}`} className={styles.image} src={brand} alt='tdlr'></img>))}
+        </div>
+
       </section>
       <section className={styles['how_it_works_section']}>
         <div className={styles.header}>
