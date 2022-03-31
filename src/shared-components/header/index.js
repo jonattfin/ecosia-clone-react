@@ -10,6 +10,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Divider from '@mui/material/Divider';
+import Badge from '@mui/material/Badge';
+import ForestOutlinedIcon from '@mui/icons-material/ForestOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 
 import { Languages } from '../../language';
 import { Themes } from '../../theme';
@@ -77,38 +80,53 @@ const Component = (props) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {/* Photos */}
           </Typography>
-          <div>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <IconButton size="large" aria-label="" color="inherit">
+              <Badge badgeContent={1} color="success">
+                <ForestOutlinedIcon color="info" />
+              </Badge>
+            </IconButton>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
+              aria-label=""
               color="inherit"
             >
-              <MenuIcon color="primary" />
+              <Badge color="default">
+                <NotificationsNoneOutlinedIcon color="disabled"/>
+              </Badge>
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} onClick={() => handleClose(url)}>{text}</MenuItem>)}
-              <Divider />
-              <MenuItem onClick={() => handleChangeLanguage(language)}>Change language ({language.label})</MenuItem>
-              <MenuItem onClick={() => handleChangeTheme(theme)}>Change theme ({theme.label})</MenuItem>
-            </Menu>
-          </div>
+          </Box>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} onClick={() => handleClose(url)}>{text}</MenuItem>)}
+            <Divider />
+            <MenuItem onClick={() => handleChangeLanguage(language)}>Change language ({language.label})</MenuItem>
+            <MenuItem onClick={() => handleChangeTheme(theme)}>Change theme ({theme.label})</MenuItem>
+          </Menu>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+            color="inherit"
+          >
+            <MenuIcon color="primary" />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box >
