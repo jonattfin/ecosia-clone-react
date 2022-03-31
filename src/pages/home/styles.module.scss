@@ -61,11 +61,28 @@
     justify-content: center;
     flex-direction: column;
 
-    height: 100vh;
+    height: 80vh;
 
     .countries-grid {
       display: grid;
       grid-template-columns: auto auto;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__title {
+        padding: 1%;
+        font-size: larger;
+      }
+
+      &__subtitle {
+        padding: 1%;
+        text-align: center;
+      }
     }
 
     @media only screen and (max-width: $size-medium) {
@@ -76,35 +93,50 @@
     }
   }
 
-  .map-section {
+  .map-section-outside {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-    .wrapper-image {
-      background-image: url("./images/map.svg");
-      background-repeat: no-repeat;
-      height: 42vh;
-      width: 40vw;
-    }
+    .map-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    .facts-grid {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      height: 25vh;
-      padding: 10px;
-      align-items: flex-end;
-    }
-
-    .grid-item {
-      padding: 5px;
-
-      &__title {
-        font-size: 3em;
+      .wrapper-image {
+        background-image: url("./images/map.svg");
       }
 
-      &__text {
-        font-size: 1em;
+      .facts-grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 25vh;
+        padding: 10px;
+        align-items: flex-end;
+      }
+
+      .grid-item {
+        padding: 5px;
+
+        &__title {
+          font-size: 3em;
+        }
+
+        &__text {
+          font-size: 1em;
+        }
+      }
+
+
+      @media only screen and (max-width: $size-medium) {
+        .wrapper-image {
+          width: 80vw;
+        }
+
+        .facts-grid {
+          grid-template-columns: auto;
+        }
       }
     }
 
@@ -112,16 +144,6 @@
       text-align: right;
     }
 
-
-    @media only screen and (max-width: $size-medium) {
-      .wrapper-image {
-        width: 80vw;
-      }
-
-      .facts-grid  {
-        grid-template-columns: auto;
-      }
-    }
   }
 
   .financial-reports-section {
@@ -150,7 +172,7 @@
     }
 
     @media only screen and (max-width: $size-medium) {
-      .container-wrapper  {
+      .container-wrapper {
         width: 80vw;
       }
 
@@ -206,7 +228,7 @@
     justify-content: center;
     flex-direction: column;
 
-    height: 25vh;
+    height: 20vh;
     background-color: #e2f6f7;
 
     .main-grid {
@@ -216,23 +238,25 @@
 
     .grid-item {
       padding: 5px;
-      text-align: center;
 
       &__title {
         font-size: 3em;
         padding: 10%;
       }
-
     }
   }
 
   @media only screen and (max-width: 1024px) {
     .title {
       font-size: 2em;
-  
+
       &__kick {
         font-size: 4em;
       }
+    }
+
+    .countries-section {
+      height: 120vh;
     }
 
     .why-choose-us-section {

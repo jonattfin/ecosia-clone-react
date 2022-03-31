@@ -47,52 +47,49 @@ const HomeComponent = (props: any) => {
         <div className={styles['countries-grid']}>
           <div className={styles['grid-item']}>
             <div><img className={styles.country} src={Images.brazilImage} alt="brazil" /></div>
-            <div>Brazil</div>
-            {language['we-plant-in-brazil']}
+            <div className={styles['grid-item__title']}>Brazil</div>
+            <div className={styles['grid-item__subtitle']}>
+              {language['we-plant-in-brazil']}
+            </div>
           </div>
           <div className={styles['grid-item']}>
             <img className={styles.country} src={Images.burkinaFasoImage} alt="burkina faso" />
+            <div className={styles['grid-item__title']}>Burkina Faso</div>
+            <div className={styles['grid-item__subtitle']}>{language['we-plant-in-burkina-faso']}</div>
           </div>
-          <div>Burkina Faso</div>
-          {language['we-plant-in-burkina-faso']}
           <div className={styles['grid-item']}>
             <img className={styles.country} src={Images.indonesiaImage} alt="indonesia" />
-            <div>
-              {language['we-plant-in-indonesia']}
-            </div>
-            <div>
-            </div>
+            <div className={styles['grid-item__title']}>Indonesia</div>
+            <div className={styles['grid-item__subtitle']}>{language['we-plant-in-indonesia']}</div>
           </div>
         </div>
-
       </section >
-      <section className={styles['map-section']}>
-        <div className={styles['wrapper-image']}>
-          <div className={styles['above-title']}>Trees planted by ecosia users</div>
-          <div className={styles.title__kick}>{counter}</div>
-          <div className={styles['facts-grid']}>
-            <div className={styles['grid-item']}>
-              <div className={styles['grid-item__title']}>15 Million</div>
-              <div className={styles['grid-item__text']}>People using Ecosia</div>
-            </div>
-            <div className={styles['grid-item']}>
-              <div className={styles['grid-item__title']}>500+</div>
-              <div className={styles['grid-item__text']}>Native species</div>
-            </div>
-            <div className={styles['grid-item']}>
-              <div className={styles['grid-item__title']}>30+</div>
-              <div className={styles['grid-item__text']}>Countries</div>
-            </div>
-            <div className={styles['grid-item']}>
-              <div className={styles['grid-item__title']}>60+</div>
-              <div className={styles['grid-item__text']}>Active projects</div>
+      <section className={styles['map-section-outside']}>
+        <section className={styles['map-section']}>
+          <div className={styles['wrapper-image']}>
+            <div className={styles['above-title']}>Trees planted by ecosia users</div>
+            <div className={styles.title__kick}>{counter}</div>
+            <div className={styles['facts-grid']}>
+              <div className={styles['grid-item']}>
+                <div className={styles['grid-item__title']}>15 Million</div>
+                <div className={styles['grid-item__text']}>People using Ecosia</div>
+              </div>
+              <div className={styles['grid-item']}>
+                <div className={styles['grid-item__title']}>500+</div>
+                <div className={styles['grid-item__text']}>Native species</div>
+              </div>
+              <div className={styles['grid-item']}>
+                <div className={styles['grid-item__title']}>30+</div>
+                <div className={styles['grid-item__text']}>Countries</div>
+              </div>
+              <div className={styles['grid-item']}>
+                <div className={styles['grid-item__title']}>60+</div>
+                <div className={styles['grid-item__text']}>Active projects</div>
+              </div>
             </div>
           </div>
-          <div>
-            <div>&nbsp;</div>
-            <div className={styles['report-link']}><Link to="#">Discover our projects...</Link></div>
-          </div>
-        </div>
+        </section>
+        <div className={styles['report-link']}><Link to="#">Discover our projects...</Link></div>
       </section>
       <section className={styles['financial-reports-section']}>
         <div className={styles['container-wrapper']}>
