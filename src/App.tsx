@@ -17,10 +17,11 @@ const Layout = () => {
   const [language, setLanguage] = useState(Languages.En);
   const [theme, setTheme] = useState(Themes.Light);
 
+
   const props = {
     model: {
       payload: {
-        numberOfSearches: 0,
+        numberOfTrees: 0,
       },
       language, setLanguage,
       theme, setTheme,
@@ -35,7 +36,7 @@ const Layout = () => {
             <Header {...props} />
           </section>
           <section>
-            <Outlet />
+            <Outlet/>
           </section>
           <section>
             <Links />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -62,19 +61,17 @@ const Component = () => {
       <section className={styles['contact-us-section']}>
         <div className={styles.title}>Contact us</div>
         <div className={styles.subtitle}>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</div>
-        <div>
-          <Stack spacing={2}>
-            {/* <TextField variant="outlined" label="Message" multiline rows={5}></TextField> */}
-            {/* <TextField variant="outlined" label="E-mail" fullWidth /> */}
-            {/* <TextField variant="outlined" label="Subject" select fullWidth>
-              {getFilterOptions().map((option) => (
-                <MenuItem key={option} value={option}>
-                  {option}
-                </MenuItem>
-              ))}
-            </TextField> */}
-            <Button variant="contained">Send</Button>
-          </Stack>
+        <div className={styles.form}>
+          <TextField variant="outlined" label="Message" multiline rows={5}></TextField>
+          <TextField variant="outlined" label="E-mail" />
+          <TextField variant="outlined" label="Subject" select>
+            {getFilterOptions().map((option) => (
+              <MenuItem key={option} value={option}>
+                {option}
+              </MenuItem>
+            ))}
+          </TextField>
+          <Button variant="contained">Send</Button>
         </div>
       </section>
     </div>

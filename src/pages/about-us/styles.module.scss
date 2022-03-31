@@ -157,20 +157,18 @@
       width: 40vw;
     }
 
-    .form-group {
+    .form {
+      display: grid;
       width: 20vw;
-    }
-
-    .form-item {
-      padding: 5px;
-
-      &__text-area {
-        width: 20vw;
-      }
+      gap: 10px;
     }
 
     @media only screen and (max-width: $size-medium) {
       .subtitle {
+        width: 80vw;
+      }
+
+      .form {
         width: 80vw;
       }
     }

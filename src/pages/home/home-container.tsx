@@ -10,6 +10,7 @@ import HomeComponent from './home-component';
 const HomeContainer = () => {
   const initialValue = 146000000;
   const [counter, setCounter] = useState(initialValue);
+
   const [query, setQuery] = useState('');
 
   var languageContext = useContext(LanguageContext);

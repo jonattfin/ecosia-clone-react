@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -83,7 +82,7 @@ const Component = (props) => {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="" color="inherit">
-              <Badge badgeContent={1} color="success">
+              <Badge badgeContent={model?.payload?.numberOfTrees} color="success">
                 <ForestOutlinedIcon color="info" />
               </Badge>
             </IconButton>
@@ -134,33 +133,3 @@ const Component = (props) => {
 }
 
 export default Component;
-
-// function createMenu(navigate, model) {
-
-
-//   const onClick = (url) => () => {
-//     navigate(url, { replace: true });
-//   }
-
-//   const changeLanguage = (option) => {
-//     model.setLanguage(option.value);
-//   }
-
-//   const changeTheme = (option) => {
-//     model.setTheme(option.value);
-//   }
-
-//   return (
-//     <Menu>
-//       {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} icon={icon} text={text} onClick={onClick(url)} />)}
-//       <MenuDivider />
-//       <MenuItem icon="translate" text="Language" onClick={() => { }}>
-//         {languageOptions.map((option, index) => <MenuItem key={`language_${index}`} icon={option.icon} text={option.label} selected={model.language === option.value} onClick={() => changeLanguage(option)} />)}
-//       </MenuItem>
-//       <MenuItem icon="style" text="Theme" onClick={() => { }}>
-//         {themeOptions.map((option, index) => <MenuItem key={`theme_${index}`} icon={option.icon} text={option.label} selected={model.theme === option.value} onClick={() => changeTheme(option)} />)}
-//       </MenuItem>
-//     </Menu>
-//   );
-// }
-

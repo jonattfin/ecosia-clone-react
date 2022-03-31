@@ -1,6 +1,9 @@
 
-import React from 'react';
+
 import { Link } from 'react-router-dom';
+import FormControl from '@mui/material/FormControl';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import SearchIcon from '@mui/icons-material/Search';
 
 import { Counter } from '../../shared-components'
 import Components from './components';
@@ -9,9 +12,7 @@ import Images from './images';
 import styles from './styles.module.scss';
 
 const HomeComponent = (props: any) => {
-  const { actions, model = {}, language, counter, query, setQuery } = props;
-  const { payload = {} } = model;
-  const { data, searchInProgress } = payload;
+  const { language, counter, query, setQuery } = props;
 
   return (
     <div className={styles.home}>
@@ -20,9 +21,18 @@ const HomeComponent = (props: any) => {
           <img className={styles.logo} src={Images.logoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
-          {/* <div>search</div> */}
+          <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" className={styles['search-box']}>
+            <OutlinedInput
+              value={query}
+              onChange={(ev) => {setQuery(ev.target.value);}}
+              endAdornment={<SearchIcon />}
+              label="Query"
+            />
+          </FormControl>
+          <div>
+            {query}
+          </div>
           <div className={styles.counter__wrapper}>
-            {data}
             <h1>{language['the-search-engine']}</h1>
             <Counter counter={counter} />
             <div>&nbsp;</div>
