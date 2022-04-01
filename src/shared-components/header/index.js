@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,6 +15,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 
 import { Languages } from '../../language';
 import { Themes } from '../../theme';
+import { CounterContext } from '../../counter';
 
 const languageOptions = [
   { value: Languages.En, label: 'English', icon: "translate" },
@@ -39,6 +40,8 @@ const Component = (props) => {
 
   var navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
+
+  var counter = useContext(CounterContext);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -82,7 +85,7 @@ const Component = (props) => {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="" color="inherit">
-              <Badge badgeContent={model?.payload?.numberOfTrees} color="success">
+              <Badge badgeContent={counter} color="success">
                 <ForestOutlinedIcon color="info" />
               </Badge>
             </IconButton>

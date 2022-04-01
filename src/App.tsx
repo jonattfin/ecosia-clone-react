@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom
 import { Footer, Links, Header } from './shared-components';
 import { Languages, LanguageContext } from './language';
 import { Themes, ThemeContext } from './theme';
+import { CounterContext } from './counter';
 
 import styles from './styles.module.scss';
 
@@ -16,13 +17,10 @@ const Privacy = lazy(() => import('./pages/privacy'));
 const Layout = () => {
   const [language, setLanguage] = useState(Languages.En);
   const [theme, setTheme] = useState(Themes.Light);
-
+  const [queryCounter] = useState(100);
 
   const props = {
     model: {
-      payload: {
-        numberOfTrees: 0,
-      },
       language, setLanguage,
       theme, setTheme,
     },
@@ -31,20 +29,22 @@ const Layout = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <LanguageContext.Provider value={language}>
-        <div className={styles.layout}>
-          <section>
-            <Header {...props} />
-          </section>
-          <section>
-            <Outlet/>
-          </section>
-          <section>
-            <Links />
-          </section>
-          <section>
-            <Footer />
-          </section>
-        </div>
+        <CounterContext.Provider value={queryCounter}>
+          <div className={styles.layout}>
+            <section>
+              <Header {...props} />
+            </section>
+            <section>
+              <Outlet />
+            </section>
+            <section>
+              <Links />
+            </section>
+            <section>
+              <Footer />
+            </section>
+          </div>
+        </CounterContext.Provider>
       </LanguageContext.Provider>
     </ThemeContext.Provider>
   )
