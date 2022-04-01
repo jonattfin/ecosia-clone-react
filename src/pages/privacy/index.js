@@ -1,6 +1,4 @@
 
-import take from 'lodash-es/take';
-
 import Images from './images';
 import styles from './styles.module.scss';
 

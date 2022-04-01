@@ -1,9 +1,8 @@
 
 
 import { Link } from 'react-router-dom';
-import FormControl from '@mui/material/FormControl';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import SearchIcon from '@mui/icons-material/Search';
+import { FormControl, OutlinedInput } from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
 
 import { Counter } from '../../shared-components'
 import Components from './components';
@@ -24,7 +23,7 @@ const HomeComponent = (props: any) => {
           <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" className={styles['search-box']}>
             <OutlinedInput
               value={query}
-              onChange={(ev) => {setQuery(ev.target.value);}}
+              onChange={(ev) => { setQuery(ev.target.value); }}
               endAdornment={<SearchIcon />}
               label="Query"
             />

@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import { useState } from "react";
+import { TextField, Button, MenuItem } from '@mui/material';
 
 import styles from './styles.module.scss';
 

@@ -2,8 +2,7 @@
 import styles from './styles.module.scss';
 import Images from './images';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
+const Component = () => {
   return (
     <div className={styles.mobile}>
       <section className={styles['ecosia-for-mobile']}>
@@ -23,3 +22,5 @@ export default () => {
     </div>
   );
 }
+
+export default Component;

@@ -1,4 +1,4 @@
-import Button from '@mui/material/Button';
+import { Button } from '@mui/material';
 
 import styles from './styles.module.scss';
 import images from './images';

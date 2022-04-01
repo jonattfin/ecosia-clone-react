@@ -6,12 +6,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import Divider from '@mui/material/Divider';
-import Badge from '@mui/material/Badge';
-import ForestOutlinedIcon from '@mui/icons-material/ForestOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { MenuItem, Menu, Divider, Badge } from '@mui/material';
+
+import {
+  ForestOutlined as ForestOutlinedIcon,
+  NotificationsNoneOutlined as NotificationsNoneOutlinedIcon
+}
+  from "@mui/icons-material";
 
 import { Languages } from '../../language';
 import { Themes } from '../../theme';
@@ -95,7 +96,7 @@ const Component = (props) => {
               color="inherit"
             >
               <Badge color="default">
-                <NotificationsNoneOutlinedIcon color="disabled"/>
+                <NotificationsNoneOutlinedIcon color="disabled" />
               </Badge>
             </IconButton>
           </Box>

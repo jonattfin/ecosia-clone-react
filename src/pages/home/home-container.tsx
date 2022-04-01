@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { interval, tap } from 'rxjs';
 
 import { LanguageContext } from '../../language';
