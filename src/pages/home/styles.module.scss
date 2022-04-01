@@ -31,10 +31,10 @@
     justify-content: space-around;
     flex-direction: column;
 
-    height: 75vh;
+    height: 100vh;
 
     .logo {
-      max-width: 5vw;
+      max-width: 10vw;
     }
 
     .search-box {
@@ -48,6 +48,10 @@
     }
 
     @media only screen and (max-width: 1024px) {
+      .logo {
+        max-width: 25vw;
+      }
+      
       .search-box {
         width: 80vw;
       }

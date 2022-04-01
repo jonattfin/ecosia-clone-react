@@ -23,9 +23,9 @@ const HomeComponent = (props: any) => {
           <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" className={styles['search-box']}>
             <OutlinedInput
               value={query}
+              placeholder = "Search the web to plant trees..."
               onChange={(ev) => { setQuery(ev.target.value); }}
               endAdornment={<SearchIcon />}
-              label="Query"
             />
           </FormControl>
           <div>
