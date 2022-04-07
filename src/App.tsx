@@ -21,10 +21,10 @@ const Layout = () => {
   const [queryCounter] = useState(100);
 
   const props = {
-    model: {
-      language, setLanguage,
-      theme, setTheme,
-    },
+    language,
+    onLanguageChange: setLanguage,
+    theme,
+    onThemeChange: setTheme,
   };
 
   return (

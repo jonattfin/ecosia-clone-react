@@ -1,5 +1,6 @@
 import { FormControl, OutlinedInput } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
+import { useState } from 'react';
 
 import * as SharedComponents from '../../../shared-components'
 import * as Images from './images';
@@ -7,7 +8,8 @@ import * as Images from './images';
 import styles from './styles.module.scss';
 
 export default function Component(props) {
-  const { query, setQuery, doSearch, language, counter } = props;
+  const [query, setQuery] = useState('');
+  const { onSearch, language, counter } = props;
 
   return (
     <section className={styles['search-section']}>
@@ -20,13 +22,10 @@ export default function Component(props) {
             value={query}
             placeholder="Search the web to plant trees..."
             onChange={(ev) => { setQuery(ev.target.value); }}
-            onKeyDown={ev => { if (ev.key === 'Enter') doSearch(query); }}
+            onKeyDown={ev => { if (ev.key === 'Enter') onSearch(query); }}
             endAdornment={<SearchIcon />}
           />
         </FormControl>
-        <div>
-          {query}
-        </div>
         <div className={styles.counter__wrapper}>
           <h1>{language['the-search-engine']}</h1>
           <SharedComponents.Counter counter={counter} />

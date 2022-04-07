@@ -1,3 +1,5 @@
+import { action } from '@storybook/addon-actions';
+
 import { withRouter } from '../../helpers';
 
 import * as Components from './components';
@@ -14,9 +16,7 @@ export const PieComponent = () => {
 
 export const SearchComponent = () => {
   const props = {
-    query: "",
-    setQuery: () => { },
-    doSearch: () => { },
+    onSearch: action('onSearch'),
     language: {},
     counter: 100
   };

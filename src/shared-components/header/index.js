@@ -14,19 +14,7 @@ import {
 }
   from "@mui/icons-material";
 
-import { Languages } from '../../language';
-import { Themes } from '../../theme';
 import { CounterContext } from '../../counter';
-
-const languageOptions = [
-  { value: Languages.En, label: 'English', icon: "translate" },
-  { value: Languages.Ro, label: 'Romanian', icon: "translate" },
-];
-
-const themeOptions = [
-  { value: Themes.Light, label: 'Light', icon: "style" },
-  { value: Themes.Black, label: 'Black', icon: "style" },
-];
 
 const pages = [
   { url: '/', text: 'Home', icon: "home", },
@@ -37,7 +25,7 @@ const pages = [
 ];
 
 const Component = (props) => {
-  const { model } = props;
+  const { language, theme, onLanguageChange, onThemeChange } = props;
 
   var navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -55,26 +43,13 @@ const Component = (props) => {
 
   const handleChangeLanguage = (option) => {
     setAnchorEl(null);
-    model.setLanguage(option.value)
+    onLanguageChange(option)
   }
 
   const handleChangeTheme = (option) => {
     setAnchorEl(null);
-    model.setTheme(option.value)
+    onThemeChange(option)
   }
-
-  const getLanguage = () => {
-    var otherLanguage = languageOptions.find(x => x.value !== model.language);
-    return otherLanguage;
-  }
-
-  const getTheme = () => {
-    var otherTheme = themeOptions.find(x => x.value !== model.theme);
-    return otherTheme;
-  }
-
-  const language = getLanguage();
-  const theme = getTheme();
 
   return (
     <Box sx={{ flexGrow: 1 }}>

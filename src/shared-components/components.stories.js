@@ -1,18 +1,20 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 
 import { Counter, Footer, Links, Header } from '.';
 import { withRouter } from '../helpers';
 
 export default () => <div></div>
 
-const headerProps = {
-  model: {
-    setLanguage: (option) => console.log(option),
-    setTheme: (option) => console.log(option),
+export const EcosiaHeader = () => {
+  const props = {
+    language: 0,
+    theme: 0,
+    onLanguageChange: action('onLanguageChange'),
+    onThemeChange: action('onThemeChange')
   }
+  return withRouter(Header, props)
 };
-
-export const EcosiaHeader = () => withRouter(Header, headerProps);
 
 export const EcosiaCounter = () => <Counter counter={100}></Counter>;
 

@@ -12,13 +12,11 @@ export default function Component() {
   const initialValue = 146000000;
   const [counter, setCounter] = useState(initialValue);
 
-  const [query, setQuery] = useState('');
-
   var languageContext = useContext(LanguageContext);
   const language = getLanguage(languageContext);
 
   var navigate = useNavigate();
-  const doSearch = (q) => { navigate(`/search/${q}`); };
+  const onSearch = (q) => { navigate(`/search/${q}`); };
 
   useEffect(() => {
     const subscription = interval(5000)
@@ -28,6 +26,6 @@ export default function Component() {
   }, []);
 
   return (
-    <HomeComponent {...{ counter, query, language, setQuery, doSearch }} />
+    <HomeComponent {...{ counter, language, onSearch }} />
   )
 }
