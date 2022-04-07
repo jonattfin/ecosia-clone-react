@@ -1,25 +1,10 @@
-import logoImage from './logo.png';
-import transparencyImage from './transparency.png';
-import coNeutralImage from './co2-neutral.png';
-import brazilImage from './brazil.webp';
-import burkinaFasoImage from './burkinafaso.webp';
-import indonesiaImage from './indonesia.webp';
-import coinImage from './coin.svg';
-import worldImage from './world.svg';
-import privacyImage from './privacy.svg';
-import profitsImage from './profits.svg';
-
-const images = {
-  logoImage,
-  transparencyImage,
-  coNeutralImage,
-  brazilImage,
-  burkinaFasoImage,
-  indonesiaImage,
-  coinImage,
-  worldImage,
-  privacyImage,
-  profitsImage
-}
-
-export default images;
+export { default as LogoImage } from './logo.png';
+export { default as TransparencyImage } from './transparency.png';
+export { default as CoNeutralImage } from './co2-neutral.png';
+export { default as BrazilImage } from './brazil.webp';
+export { default as BurkinaFasoImage } from './burkinafaso.webp';
+export { default as IndonesiaImage } from './indonesia.webp';
+export { default as CoinImage } from './coin.svg';
+export { default as WorldImage } from './world.svg';
+export { default as PrivacyImage } from './privacy.svg';
+export { default as ProfitsImage } from './profits.svg';

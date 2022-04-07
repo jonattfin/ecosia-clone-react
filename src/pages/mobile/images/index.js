@@ -1,11 +1,3 @@
-import backgroundImage from './background.jpg'
-import appStoreImage from './app-store-en.svg'
-import playStoreImage from './play-store-en.svg'
-
-const images = {
-  backgroundImage,
-  appStoreImage,
-  playStoreImage
-}
-
-export default images;
+export { default as BackgroundImage } from './background.jpg'
+export { default as AppStoreImage } from './app-store-en.svg'
+export { default as PlayStoreImage } from './play-store-en.svg'

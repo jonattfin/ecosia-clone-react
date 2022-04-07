@@ -1,17 +1,6 @@
-import { default as backgroundImage } from './background.jpg'
-import { default as pantherImage } from './panther.svg'
-import { default as treesImage } from './trees.svg'
-import { default as crowImage } from './crow.svg'
-import { default as fishImage } from './fish.svg'
-import { default as foxImage } from './fox.svg'
-
-const images = {
-  backgroundImage,
-  pantherImage,
-  treesImage,
-  crowImage,
-  fishImage,
-  foxImage
-};
-
-export default images;
+export { default as BackgroundImage } from './background.jpg'
+export { default as PantherImage } from './panther.svg'
+export { default as TreesImage } from './trees.svg'
+export { default as CrowImage } from './crow.svg'
+export { default as FishImage } from './fish.svg'
+export { default as FoxImage } from './fox.svg'

@@ -1,7 +1,2 @@
-import PieComponent from './pie';
+export { default as PieComponent } from './pie';
 
-const Components = {
-  PieComponent
-}
-
-export default Components;

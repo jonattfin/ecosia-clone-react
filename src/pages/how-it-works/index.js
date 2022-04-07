@@ -1,9 +1,10 @@
 import { Button } from '@mui/material';
 
-import styles from './styles.module.scss';
-import images from './images';
+import * as Images from './images';
 
-const Component = () => {
+import styles from './styles.module.scss';
+
+export default function Component() {
   return (
     <div className={styles['how-it-works']}>
       <section className={styles['plant-trees-section']}>
@@ -62,8 +63,6 @@ const Component = () => {
   );
 }
 
-export default Component;
-
 function getTimePeriods() {
   return [
     {
@@ -95,15 +94,15 @@ function getTimePeriods() {
 }
 
 function getBrands() {
-  const { upWorthyImage, scientificImage, guardianImage, salonImage, forbesImage } = images;
-  return [upWorthyImage, scientificImage, guardianImage, salonImage, forbesImage];
+  const { UpWorthyImage, ScientificImage, GuardianImage, SalonImage, ForbesImage } = Images;
+  return [UpWorthyImage, ScientificImage, GuardianImage, SalonImage, ForbesImage];
 }
 
 function getImages() {
-  const { ecosiaImage, adsImage, incomeImage } = images;
+  const { EcosiaImage, AdsImage, IncomeImage } = Images;
   return [
-    { image: ecosiaImage, text: 'You search the web with Ecosia.' },
-    { image: adsImage, text: 'Search ads generate income for Ecosia.' },
-    { image: incomeImage, text: 'Ecosia uses this income to plant trees.' },
+    { image: EcosiaImage, text: 'You search the web with Ecosia.' },
+    { image: AdsImage, text: 'Search ads generate income for Ecosia.' },
+    { image: IncomeImage, text: 'Ecosia uses this income to plant trees.' },
   ];
 }

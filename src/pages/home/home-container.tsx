@@ -7,7 +7,7 @@ import { getLanguage } from './languages';
 
 import HomeComponent from './home-component';
 
-const HomeContainer = () => {
+export default function Component() {
   const initialValue = 146000000;
   const [counter, setCounter] = useState(initialValue);
 
@@ -27,6 +27,3 @@ const HomeContainer = () => {
     <HomeComponent {...{ counter, query, language, setQuery }} />
   )
 }
-
-export default HomeContainer;
-

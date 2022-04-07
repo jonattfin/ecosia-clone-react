@@ -1,6 +1,7 @@
 
+import * as Images from './images';
+
 import styles from './styles.module.scss';
-import Images from './images';
 
 const Component = () => {
   return (
@@ -15,8 +16,8 @@ const Component = () => {
         <div>&nbsp;</div>
         <div>&nbsp;</div>
         <div >
-          <img className={styles.logo} src={Images.appStoreImage} alt={"app store"} />
-          <img className={styles.logo} src={Images.playStoreImage} alt={"play store"} />
+          <img className={styles.logo} src={Images.AppStoreImage} alt={"app store"} />
+          <img className={styles.logo} src={Images.PlayStoreImage} alt={"play store"} />
         </div>
       </section>
     </div>

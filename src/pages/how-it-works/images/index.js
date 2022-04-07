@@ -1,25 +1,10 @@
-import backgroundImage from './background.jpg';
-import upWorthyImage from './up-worthy.svg';
-import scientificImage from './scientific.svg';
-import guardianImage from './guardian.svg';
-import salonImage from './salon.svg';
-import forbesImage from './forbes.svg';
-import ecosiaImage from './ecosia.svg';
-import adsImage from './ads.svg';
-import incomeImage from './income.svg';
-import savanahImage from './savanah.png'
-
-const images = {
-  backgroundImage,
-  upWorthyImage,
-  scientificImage,
-  guardianImage,
-  salonImage,
-  forbesImage,
-  ecosiaImage,
-  adsImage,
-  incomeImage,
-  savanahImage,
-};
-
-export default images;
+export { default as BackgroundImage } from './background.jpg';
+export { default as UpWorthyImage } from './up-worthy.svg';
+export { default as ScientificImage } from './scientific.svg';
+export { default as GuardianImage } from './guardian.svg';
+export { default as SalonImage } from './salon.svg';
+export { default as ForbesImage } from './forbes.svg';
+export { default as EcosiaImage } from './ecosia.svg';
+export { default as AdsImage } from './ads.svg';
+export { default as IncomeImage } from './income.svg';
+export { default as SavanahImage } from './savanah.png'

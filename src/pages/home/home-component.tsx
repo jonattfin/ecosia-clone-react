@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 import { FormControl, OutlinedInput } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 
-import { Counter } from '../../shared-components'
-import Components from './components';
-import Images from './images';
+import * as SharedComponents from '../../shared-components'
+import * as Components from './components';
+import * as Images from './images';
 
 import styles from './styles.module.scss';
 
-const HomeComponent = (props: any) => {
+export default function Component(props: any) {
   const { language, counter, query, setQuery } = props;
 
   return (
     <div className={styles.home}>
       <section className={styles['search-section']}>
         <div>
-          <img className={styles.logo} src={Images.logoImage} alt="logo" />
+          <img className={styles.logo} src={Images.LogoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
           <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" className={styles['search-box']}>
             <OutlinedInput
               value={query}
-              placeholder = "Search the web to plant trees..."
+              placeholder="Search the web to plant trees..."
               onChange={(ev) => { setQuery(ev.target.value); }}
               endAdornment={<SearchIcon />}
             />
@@ -33,7 +33,7 @@ const HomeComponent = (props: any) => {
           </div>
           <div className={styles.counter__wrapper}>
             <h1>{language['the-search-engine']}</h1>
-            <Counter counter={counter} />
+            <SharedComponents.Counter counter={counter} />
             <div>&nbsp;</div>
           </div>
         </div>
@@ -47,49 +47,47 @@ const HomeComponent = (props: any) => {
         </div>
         <div className={styles['countries-grid']}>
           <div className={styles['grid-item']}>
-            <div><img className={styles.country} src={Images.brazilImage} alt="brazil" /></div>
+            <div><img className={styles.country} src={Images.BrazilImage} alt="brazil" /></div>
             <div className={styles['grid-item__title']}>Brazil</div>
             <div className={styles['grid-item__subtitle']}>
               {language['we-plant-in-brazil']}
             </div>
           </div>
           <div className={styles['grid-item']}>
-            <img className={styles.country} src={Images.burkinaFasoImage} alt="burkina faso" />
+            <img className={styles.country} src={Images.BurkinaFasoImage} alt="burkina faso" />
             <div className={styles['grid-item__title']}>Burkina Faso</div>
             <div className={styles['grid-item__subtitle']}>{language['we-plant-in-burkina-faso']}</div>
           </div>
           <div className={styles['grid-item']}>
-            <img className={styles.country} src={Images.indonesiaImage} alt="indonesia" />
+            <img className={styles.country} src={Images.IndonesiaImage} alt="indonesia" />
             <div className={styles['grid-item__title']}>Indonesia</div>
             <div className={styles['grid-item__subtitle']}>{language['we-plant-in-indonesia']}</div>
           </div>
         </div>
       </section >
-      <section className={styles['map-section-outside']}>
-        <section className={styles['map-section']}>
-          <div className={styles['wrapper-image']}>
-            <div className={styles['above-title']}>Trees planted by ecosia users</div>
-            <div className={styles.title__kick}>{counter}</div>
-            <div className={styles['facts-grid']}>
-              <div className={styles['grid-item']}>
-                <div className={styles['grid-item__title']}>15 Million</div>
-                <div className={styles['grid-item__text']}>People using Ecosia</div>
-              </div>
-              <div className={styles['grid-item']}>
-                <div className={styles['grid-item__title']}>500+</div>
-                <div className={styles['grid-item__text']}>Native species</div>
-              </div>
-              <div className={styles['grid-item']}>
-                <div className={styles['grid-item__title']}>30+</div>
-                <div className={styles['grid-item__text']}>Countries</div>
-              </div>
-              <div className={styles['grid-item']}>
-                <div className={styles['grid-item__title']}>60+</div>
-                <div className={styles['grid-item__text']}>Active projects</div>
-              </div>
+      <section className={styles['map-section']}>
+        <div className={styles['wrapper-image']}>
+          <div className={styles['above-title']}>Trees planted by ecosia users</div>
+          <div className={styles.title__kick}>{counter}</div>
+          <div className={styles['facts-grid']}>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>15 Million</div>
+              <div className={styles['grid-item__text']}>People using Ecosia</div>
+            </div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>500+</div>
+              <div className={styles['grid-item__text']}>Native species</div>
+            </div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>30+</div>
+              <div className={styles['grid-item__text']}>Countries</div>
+            </div>
+            <div className={styles['grid-item']}>
+              <div className={styles['grid-item__title']}>60+</div>
+              <div className={styles['grid-item__text']}>Active projects</div>
             </div>
           </div>
-        </section>
+        </div>
         <div className={styles['report-link']}><Link to="#">Discover our projects...</Link></div>
       </section>
       <section className={styles['financial-reports-section']}>
@@ -116,7 +114,7 @@ const HomeComponent = (props: any) => {
           <div className={styles['reasons-grid']}>
             <div className={styles['grid-item']}>
               <div>
-                <img src={Images.profitsImage} alt="profits" />
+                <img src={Images.ProfitsImage} alt="profits" />
               </div>
               <div className={styles['grid-item__title']}>
                 We’re a not-for-profit business
@@ -127,7 +125,7 @@ const HomeComponent = (props: any) => {
             </div>
             <div className={styles['grid-item']}>
               <div>
-                <img src={Images.privacyImage} alt="privacy" />
+                <img src={Images.PrivacyImage} alt="privacy" />
               </div>
               <div className={styles['grid-item__title']}>
                 Ecosia is powered by 200% renewable energy
@@ -138,7 +136,7 @@ const HomeComponent = (props: any) => {
             </div>
             <div className={styles['grid-item']}>
               <div>
-                <img src={Images.worldImage} alt="world" />
+                <img src={Images.WorldImage} alt="world" />
               </div>
               <div className={styles['grid-item__title']}>
                 We always put your privacy first
@@ -150,7 +148,7 @@ const HomeComponent = (props: any) => {
             </div>
             <div className={styles['grid-item']}>
               <div>
-                <img src={Images.coinImage} alt="coin" />
+                <img src={Images.CoinImage} alt="coin" />
               </div>
               <div className={styles['grid-item__title']}>
                 We are transparent about everything we do
@@ -175,6 +173,3 @@ const HomeComponent = (props: any) => {
     </div >
   )
 }
-
-export default HomeComponent;
-

@@ -1,7 +1,2 @@
-import savanahImage from './savanah.png'
+export { default as SavanahImage } from './savanah.png'
 
-const images = {
-  savanahImage
-}
-
-export default images;
