@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useContext } from 'react';
 import { interval, tap } from 'rxjs';
+import { useNavigate } from "react-router-dom";
 
 import { LanguageContext } from '../../language';
 import { getLanguage } from './languages';
@@ -16,6 +17,9 @@ export default function Component() {
   var languageContext = useContext(LanguageContext);
   const language = getLanguage(languageContext);
 
+  var navigate = useNavigate();
+  const doSearch = (q: string) => { navigate(`/search/${q}`); };
+
   useEffect(() => {
     const subscription = interval(5000)
       .pipe(tap(value => console.log(value + 1)))
@@ -24,6 +28,6 @@ export default function Component() {
   }, []);
 
   return (
-    <HomeComponent {...{ counter, query, language, setQuery }} />
+    <HomeComponent {...{ counter, query, language, setQuery, doSearch }} />
   )
 }

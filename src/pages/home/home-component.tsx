@@ -11,7 +11,7 @@ import * as Images from './images';
 import styles from './styles.module.scss';
 
 export default function Component(props: any) {
-  const { language, counter, query, setQuery } = props;
+  const { language, counter, query, setQuery, doSearch } = props;
 
   return (
     <div className={styles.home}>
@@ -25,6 +25,7 @@ export default function Component(props: any) {
               value={query}
               placeholder="Search the web to plant trees..."
               onChange={(ev) => { setQuery(ev.target.value); }}
+              onKeyDown={ev => { if (ev.key === 'Enter') doSearch(query); }}
               endAdornment={<SearchIcon />}
             />
           </FormControl>

@@ -1,0 +1,29 @@
+.search-page {
+  padding-top: 75px;
+
+  .title {
+    color: chocolate;
+  }
+
+  .logo {
+    max-width: 60px;
+  }
+
+  .search-list {
+    padding-top: 50px;
+  }
+
+  .subtitle {
+    color: mediumseagreen;
+    font-size: smaller;
+  }
+
+  .snippet {
+    max-width: 30vw;
+    font-size: smaller;
+  }
+
+  .pagination {
+    text-align: center;
+  }
+}

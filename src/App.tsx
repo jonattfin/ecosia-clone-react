@@ -13,6 +13,7 @@ const AboutUs = lazy(() => import('./pages/about-us'));
 const HowItWorks = lazy(() => import('./pages/how-it-works'));
 const Mobile = lazy(() => import('./pages/mobile'));
 const Privacy = lazy(() => import('./pages/privacy'));
+const Search = lazy(() => import('./pages/search'));
 
 const Layout = () => {
   const [language, setLanguage] = useState(Languages.En);
@@ -61,6 +62,7 @@ const App = () => {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/mobile" element={<Mobile />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/search/:query" element={<Search />} />
           </Route>
         </Routes>
       </Suspense>
