@@ -1,0 +1,175 @@
+@import '../../../globals';
+
+.everyone-power-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  height: 50vh;
+  background-image: url('https://infopages-prod-cdn.ecosia.org/assets/images/about/about_hero@1x-c5c46bd688.jpg');
+
+  .title {
+    font-size: 4em;
+    text-align: center;
+    color: black;
+  }
+}
+
+.social-business-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  height: 50vh;
+  background-color: $grey-color;
+
+  .title {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 50vw;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+      padding: 1vw;
+
+      .time {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: grey;
+        font-size: 1em;
+        padding: 5px;
+      }
+
+      .subtitle {
+        font-size: 1em;
+        padding: 5px;
+      }
+
+      .line {
+        border: 3px solid #AAB74F;
+        width: 50%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    .column {
+      max-width: 80vw;
+    }
+  }
+}
+
+
+.meet-the-team-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  height: 50vh;
+  text-align: center;
+  background-color: #e2f6f7;
+
+  .title {
+    font-size: 4em;
+    width: 40vw;
+  }
+
+  .subtitle {
+    font-size: 2em;
+    width: 40vw;
+  }
+
+  .movie {
+    &__wrapper {
+      height: 40vh;
+    }
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    .subtitle {
+      width: 80vw;
+    }
+  }
+}
+
+
+.hiring-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  height: 40vh;
+  text-align: center;
+  background-color: $grey-color;
+
+  .title {
+    font-size: 4em;
+    width: 40vw;
+  }
+
+  .subtitle {
+    font-size: 2em;
+    width: 40vw;
+  }
+
+  .text-field {
+    min-width: 40vw;
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    .subtitle {
+      width: 80vw;
+    }
+  }
+}
+
+.contact-us-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  height: 50vh;
+  text-align: center;
+
+  .title {
+    font-size: 4em;
+    width: 40vw;
+  }
+
+  .subtitle {
+    font-size: 2em;
+    width: 40vw;
+  }
+
+  .form {
+    display: grid;
+    width: 20vw;
+    gap: 10px;
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    .subtitle {
+      width: 80vw;
+    }
+
+    .form {
+      width: 80vw;
+    }
+  }
+}

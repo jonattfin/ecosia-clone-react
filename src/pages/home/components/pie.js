@@ -11,8 +11,8 @@ const commonProperties = {
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const pie = ({ data = getData() /* see data tab */ }) => (
-  <ResponsivePie
+export default function Component({ data = getData() /* see data tab */ }) {
+  return (<ResponsivePie
     {...commonProperties}
     data={data}
     innerRadius={0.6}
@@ -27,10 +27,8 @@ const pie = ({ data = getData() /* see data tab */ }) => (
       from: 'color',
       modifiers: [['darker', 1.2]],
     }}
-  />
-)
-
-export default pie;
+  />);
+}
 
 function getData() {
   return [
