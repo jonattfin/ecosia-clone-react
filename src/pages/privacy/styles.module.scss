@@ -1,4 +1,4 @@
-@import '../../../globals';
+@import '../../globals';
 
 .we-protect-privacy-section {
   height: 50vh;
@@ -7,7 +7,7 @@
   justify-content: center;
   flex-direction: column;
 
-  background-image: url('./images/background.jpg');
+  background-image: url('./components/images/background.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 

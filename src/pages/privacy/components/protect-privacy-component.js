@@ -1,6 +1,5 @@
-import styles from '../styles.module.scss';
 
-export default function Component() {
+export default function Component({ styles }) {
   return (
     <section className={styles['we-protect-privacy-section']}>
       <div className={styles.title}>

@@ -7,10 +7,8 @@ export default function Component() {
   let { query = '' } = useParams();
 
   const [resultsObject, setResultsObject] = useState({
-    webPages: {
-      totalEstimatedMatches: 0,
-      value: []
-    }
+    totalEstimatedMatches: 0,
+    values: []
   });
 
   var navigate = useNavigate();
@@ -25,7 +23,10 @@ export default function Component() {
         }
       });
 
-      const data = await response.json();
+      const data = (await response.json()).map(d => {
+        const { value, totalEstimatedMatches } = d.webPages;
+        return { values: value, totalEstimatedMatches }
+      });
       setResultsObject(data);
     }
 

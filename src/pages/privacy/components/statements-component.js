@@ -1,8 +1,6 @@
 import * as Images from './images';
 
-import styles from '../styles.module.scss';
-
-export default function Component() {
+export default function Component({ styles }) {
   return (
     <section id="statements" className={styles['statements-section']}>
       {getStatements().map(({ title, content, image }, index) => (
