@@ -1,10 +1,7 @@
-
 import { useState } from "react";
 import { Button } from '@mui/material';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   const [play, setPlay] = useState(false);
 
   return (

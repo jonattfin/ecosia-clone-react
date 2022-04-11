@@ -2,9 +2,7 @@ import { Link } from 'react-router-dom';
 
 import PieComponent from './pie';
 
-import styles from './styles.module.scss';
-
-export default function Component({ language }) {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['financial-reports-section']}>
       <div className={styles['container-wrapper']}>

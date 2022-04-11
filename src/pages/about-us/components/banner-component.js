@@ -1,8 +1,6 @@
 import { Button } from '@mui/material';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['everyone-power-section']}>
       <div className={styles.title}>We believe in everyone's power to do good</div>

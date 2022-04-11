@@ -1,4 +1,4 @@
-@import '../../../globals';
+@import '../../globals';
 
 .title {
   font-size: 3em;
@@ -21,7 +21,7 @@
 
   text-align: center;
   color: white;
-  background-image: url('./images/background.jpg');
+  background-image: url('./components/images/background.jpg');
   background-size: cover;
 
   .separator {

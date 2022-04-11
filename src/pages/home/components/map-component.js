@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import styles from './styles.module.scss';
 
-export default function Component({ counter }) {
+export default function Component({ counter, language, styles }) {
   return (
     <section className={styles['map-section']}>
       <div className={styles['wrapper-image']}>

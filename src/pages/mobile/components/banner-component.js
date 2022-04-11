@@ -1,8 +1,6 @@
 import * as Images from './images';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ styles, language }) {
   return (
     <section className={styles['ecosia-for-mobile']}>
       <div className={styles.title}>

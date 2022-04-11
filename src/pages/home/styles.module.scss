@@ -1,4 +1,9 @@
-@import '../../../globals';
+@import '../../globals';
+
+.main-container {
+  // display: flex;
+  // flex-direction: column;
+}
 
 .search-section {
   display: flex;
@@ -67,8 +72,8 @@
 
   @media only screen and (max-width: $size-medium) {
     .countries-grid {
-      display: grid;
-      grid-template-columns: auto;
+      // display: grid;
+      // grid-template-columns: auto;
     }
   }
 }
@@ -79,7 +84,7 @@
   align-items: center;
 
   .wrapper-image {
-    background-image: url("./images/map.svg");
+    background-image: url("./components/images/map.svg");
     background-repeat: repeat;
     width: 30vw;
   }
@@ -160,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 60vh;
 
   .wrapper {
     width: 40vw;
@@ -202,7 +207,7 @@
   justify-content: center;
   flex-direction: column;
 
-  height: 20vh;
+  height: 30vh;
   background-color: #e2f6f7;
 
   .main-grid {
@@ -264,3 +269,4 @@
 //     margin-top: 20px;
 //   }
 // }
+

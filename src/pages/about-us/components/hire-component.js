@@ -1,9 +1,6 @@
-
 import { Button } from '@mui/material';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['hiring-section']}>
       <div className={styles.title}>We're hiring!</div>

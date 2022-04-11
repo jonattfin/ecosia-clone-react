@@ -1,11 +1,7 @@
 
 import * as Images from './images';
 
-import styles from './styles.module.scss';
-
-export default function Component(props) {
-  const { language } = props;
-
+export default function Component({ language, styles }) {
   return (
     <section className={styles['countries-section']}>
       <div className={styles['above-title']}>
@@ -21,16 +17,16 @@ export default function Component(props) {
           <div className={styles['grid-item__subtitle']}>
             {language['we-plant-in-brazil']}
           </div>
-        </div>
-        <div className={styles['grid-item']}>
-          <img className={styles.country} src={Images.BurkinaFasoImage} alt="burkina faso" />
-          <div className={styles['grid-item__title']}>Burkina Faso</div>
-          <div className={styles['grid-item__subtitle']}>{language['we-plant-in-burkina-faso']}</div>
-        </div>
-        <div className={styles['grid-item']}>
-          <img className={styles.country} src={Images.IndonesiaImage} alt="indonesia" />
-          <div className={styles['grid-item__title']}>Indonesia</div>
-          <div className={styles['grid-item__subtitle']}>{language['we-plant-in-indonesia']}</div>
+          <div className={styles['grid-item']}>
+            <img className={styles.country} src={Images.BurkinaFasoImage} alt="burkina faso" />
+            <div className={styles['grid-item__title']}>Burkina Faso</div>
+            <div className={styles['grid-item__subtitle']}>{language['we-plant-in-burkina-faso']}</div>
+          </div>
+          <div className={styles['grid-item']}>
+            <img className={styles.country} src={Images.IndonesiaImage} alt="indonesia" />
+            <div className={styles['grid-item__title']}>Indonesia</div>
+            <div className={styles['grid-item__subtitle']}>{language['we-plant-in-indonesia']}</div>
+          </div>
         </div>
       </div>
     </section >

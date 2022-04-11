@@ -1,8 +1,6 @@
 import { TextField, Button, MenuItem } from '@mui/material';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['contact-us-section']}>
       <div className={styles.title}>Contact us</div>

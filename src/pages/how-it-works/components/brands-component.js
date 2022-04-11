@@ -1,8 +1,6 @@
 import * as Images from './images';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ styles, language }) {
   return (
     <section className={styles['brands-section']}>
       {getBrands().map((brand, index) => (<img key={`brand_image_${index}`} className={styles.image} src={brand} alt='tdlr'></img>))}

@@ -1,7 +1,5 @@
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['social-business-section']}>
       <div className={styles.title}>Ecosia is a social business founded in 2009 after a trip around the world</div>

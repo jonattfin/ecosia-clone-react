@@ -5,11 +5,9 @@ import { useState } from 'react';
 import * as SharedComponents from '../../../shared-components'
 import * as Images from './images';
 
-import styles from './styles.module.scss';
 
-export default function Component(props) {
+export default function Component({ onSearch, language, counter, styles }) {
   const [query, setQuery] = useState('');
-  const { onSearch, language, counter } = props;
 
   return (
     <section className={styles['search-section']}>

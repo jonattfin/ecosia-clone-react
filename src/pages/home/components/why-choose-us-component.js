@@ -2,9 +2,7 @@ import { Link } from 'react-router-dom';
 
 import * as Images from './images';
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['why-choose-us-section']}>
       <div className={styles.wrapper}>

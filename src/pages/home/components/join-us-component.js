@@ -1,6 +1,5 @@
-import styles from './styles.module.scss';
 
-export default function Component() {
+export default function Component({ language, styles }) {
   return (
     <section className={styles['join-section']}>
       <div className={styles['main-grid']}>

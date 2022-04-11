@@ -1,7 +1,5 @@
 
-import styles from './styles.module.scss';
-
-export default function Component() {
+export default function Component({ styles, language }) {
   return (
     <section className={styles['graphics-section']}>
       <div className={styles.title}>Over 146 million trees planted</div>
