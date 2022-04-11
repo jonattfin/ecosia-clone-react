@@ -7,7 +7,7 @@ export default function Component(props: any) {
   const commonProps = { language, styles };
 
   return (
-    <div className={styles['main-container']}>
+    <div>
       <Components.SearchComponent {...{ counter, onSearch }} {...commonProps} />
       <Components.CountriesComponent {...commonProps} />
       <Components.MapComponent {...{ counter }} {...commonProps} />

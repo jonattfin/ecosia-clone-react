@@ -1,8 +1,18 @@
 @import '../../globals';
 
-.main-container {
-  // display: flex;
-  // flex-direction: column;
+.above-title {
+  font-size: 2em;
+  color: teal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.title {
+  font-size: 3em;
+
+  &__kick {
+    font-size: 6em;
+  }
 }
 
 .search-section {
@@ -72,8 +82,7 @@
 
   @media only screen and (max-width: $size-medium) {
     .countries-grid {
-      // display: grid;
-      // grid-template-columns: auto;
+      grid-template-columns: auto;
     }
   }
 }
@@ -243,30 +252,4 @@
     height: 60vh;
   }
 }
-
-// .home {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-
-//   .above-title {
-//     font-size: 2em;
-//     color: teal;
-//     text-transform: uppercase;
-//     padding: 10px 0px;
-//   }
-
-//   .title {
-//     font-size: 3em;
-
-//     &__kick {
-//       font-size: 6em;
-//     }
-//   }
-
-//   .body {
-//     font-size: 1.5em;
-//     margin-top: 20px;
-//   }
-// }
 

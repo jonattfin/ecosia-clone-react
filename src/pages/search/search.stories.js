@@ -6,13 +6,14 @@ import SearchComponent from './search-component';
 export default () => <div></div>
 
 export const SearchPage = () => {
+  const query = 'hello world';
 
   const values = range(10).map(item => {
-    return { url: `url${item}`, snippet: `snippet${item}`, name: `name${item}` };
+    return { url: `url${item}`, snippet: `snippet ${query} ${item}`, name: `name${item}` };
   });
 
   const props = {
-    query: 'hello world',
+    query,
     doSearch: action('doSearch'),
     resultsObject: {
       values,
