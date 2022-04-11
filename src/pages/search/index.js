@@ -23,11 +23,10 @@ export default function Component() {
         }
       });
 
-      const data = (await response.json()).map(d => {
-        const { value, totalEstimatedMatches } = d.webPages;
-        return { values: value, totalEstimatedMatches }
-      });
-      setResultsObject(data);
+      const data = await response.json();
+      debugger;
+      const { value, totalEstimatedMatches } = data.webPages;
+      setResultsObject({ values: value, totalEstimatedMatches });
     }
 
     fetchData();

@@ -15,6 +15,8 @@ import {
   from "@mui/icons-material";
 
 import { CounterContext } from '../../counter';
+import { Languages } from '../../language';
+import { Themes } from '../../theme';
 
 const pages = [
   { url: '/', text: 'Home', icon: "home", },
@@ -25,7 +27,11 @@ const pages = [
 ];
 
 const Component = (props) => {
-  const { language, theme, onLanguageChange, onThemeChange } = props;
+  const {
+    language, onLanguageChange,
+    theme, onThemeChange
+  }
+    = props;
 
   var navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -43,6 +49,7 @@ const Component = (props) => {
 
   const handleChangeLanguage = (option) => {
     setAnchorEl(null);
+    console.log(option);
     onLanguageChange(option)
   }
 
@@ -50,6 +57,9 @@ const Component = (props) => {
     setAnchorEl(null);
     onThemeChange(option)
   }
+
+  const otherLanguage = language === Languages.En ? Languages.Ro : Languages.En;
+  const otherTheme = theme === Themes.Light ? Themes.Black : Themes.Light;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -92,8 +102,8 @@ const Component = (props) => {
           >
             {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} onClick={() => handleClose(url)}>{text}</MenuItem>)}
             <Divider />
-            <MenuItem onClick={() => handleChangeLanguage(language)}>Change language ({language.label})</MenuItem>
-            <MenuItem onClick={() => handleChangeTheme(theme)}>Change theme ({theme.label})</MenuItem>
+            <MenuItem onClick={() => handleChangeLanguage(otherLanguage)}>Change language ({otherLanguage})</MenuItem>
+            <MenuItem onClick={() => handleChangeTheme(otherTheme)}>Change theme ({otherTheme})</MenuItem>
           </Menu>
           <IconButton
             size="large"

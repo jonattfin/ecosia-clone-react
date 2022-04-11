@@ -5,11 +5,11 @@ const defaultObject = {
   values: []
 };
 
-export default function Component({ result = defaultObject, styles }) {
+export default function Component({ resultsObject = defaultObject, styles }) {
   return (
     <div className={styles['search-list']}>
       <Stack spacing={2}>
-        {result.values.map(({ url, snippet, name }, index) =>
+        {resultsObject.values.map(({ url, snippet, name }, index) =>
           <div key={`index_${index}`}>
             <div>
               <a className={styles['title']} href={url} target="_blank" rel="noreferrer">{name}</a>
@@ -23,8 +23,8 @@ export default function Component({ result = defaultObject, styles }) {
           </div>
         )}
       </Stack>
-      <h5>{result.totalEstimatedMatches} results</h5>
-      <div className={styles['pagination']}><Pagination count={10} /></div>
+      <h5>{resultsObject.totalEstimatedMatches} results</h5>
+      <div className={styles['pagination']}><Pagination count={resultsObject.totalEstimatedMatches / 10} /></div>
     </div>
   )
 }
