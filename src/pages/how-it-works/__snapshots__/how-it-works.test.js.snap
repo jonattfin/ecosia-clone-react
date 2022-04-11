@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Components.BrandsComponent/> renders correctly 1`] = `
+<section
+  className="brands-section"
+>
+  <img
+    alt="tdlr"
+    className="image"
+    src="up-worthy.svg"
+  />
+  <img
+    alt="tdlr"
+    className="image"
+    src="scientific.svg"
+  />
+  <img
+    alt="tdlr"
+    className="image"
+    src="guardian.svg"
+  />
+  <img
+    alt="tdlr"
+    className="image"
+    src="salon.svg"
+  />
+  <img
+    alt="tdlr"
+    className="image"
+    src="forbes.svg"
+  />
+</section>
+`;
+
+exports[`<Components.GraphicsComponent/> renders correctly 1`] = `
+<section
+  className="graphics-section"
+>
+  <div
+    className="title"
+  >
+    Over 146 million trees planted
+  </div>
+  <div
+    className="column"
+  >
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        December 2009
+      </div>
+      <div
+        className="subtitle"
+      >
+        1.1 sec
+      </div>
+      <hr
+        className="line"
+      />
+      <div
+        className="time"
+      >
+        to plant a tree
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        over
+      </div>
+      <div
+        className="subtitle"
+      >
+        15 million
+      </div>
+      <hr
+        className="line"
+      />
+      <div
+        className="time"
+      >
+        active users
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        now
+      </div>
+      <div
+        className="subtitle"
+      >
+        <div>
+          146000000
+        </div>
+      </div>
+      <hr
+        className="line"
+      />
+      <div
+        className="time"
+      >
+        trees total
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        over
+      </div>
+      <div
+        className="subtitle"
+      >
+        12,101,152
+      </div>
+      <hr
+        className="line"
+      />
+      <div
+        className="time"
+      >
+        EUR invested
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        over
+      </div>
+      <div
+        className="subtitle"
+      >
+        9000
+      </div>
+      <hr
+        className="line"
+      />
+      <div
+        className="time"
+      >
+        planting sites
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Components.HowItWorksComponent/> renders correctly 1`] = `
+<section
+  className="how_it_works_section"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="title"
+    >
+      How it works
+    </div>
+  </div>
+  <div
+    className="images"
+  >
+    <div>
+      <img
+        alt="tdlr"
+        className="image"
+        src="ecosia.svg"
+      />
+      <div
+        className="text"
+      >
+        You search the web with Ecosia.
+      </div>
+    </div>
+    <div>
+      <img
+        alt="tdlr"
+        className="image"
+        src="ads.svg"
+      />
+      <div
+        className="text"
+      >
+        Search ads generate income for Ecosia.
+      </div>
+    </div>
+    <div>
+      <img
+        alt="tdlr"
+        className="image"
+        src="income.svg"
+      />
+      <div
+        className="text"
+      >
+        Ecosia uses this income to plant trees.
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Components.PlantTreesComponent/> renders correctly 1`] = `
+<section
+  className="plant-trees-section"
+>
+  <div
+    className="title"
+  >
+    Plant trees while you search the web
+  </div>
+  <div
+    className="separator"
+  >
+     
+  </div>
+  <div
+    className="sub-title"
+  >
+    We use the profit we make from your searches to plant trees where they are needed most. 
+    <br />
+    Get the free browser extension and plant trees with every search.
+  </div>
+  <div
+    className="separator"
+  >
+     
+  </div>
+  <div>
+    <button
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Add Ecosia to Firefox
+    </button>
+  </div>
+</section>
+`;
+
+exports[`<Components.ReportsComponent/> renders correctly 1`] = `
+<section
+  className="reports-section"
+>
+  <div>
+    <img
+      alt="transparency"
+      src="https://infopages-prod-cdn.ecosia.org/assets/images/what/transperancy-blue-img-8408403664.svg"
+    />
+  </div>
+  <div
+    className="title"
+  >
+    We know trust has to be earned
+  </div>
+  <div
+    className="sub-title"
+  >
+    That is why we publish our monthly financial reports and tree planting receipts. This way you can hold us accountable as we follow our journey to a reforested world.
+  </div>
+  <div
+    className="view-reports-btn"
+  >
+    <button
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      View Reports
+      <span
+        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</section>
+`;

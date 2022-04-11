@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Components.BannerComponent/> renders correctly 1`] = `
+<section
+  className="everyone-power-section"
+>
+  <div
+    className="title"
+  >
+    We believe in everyone's power to do good
+  </div>
+  <div>
+    <button
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Add Ecosia to Firefox
+    </button>
+  </div>
+  <div />
+</section>
+`;
+
+exports[`<Components.HireComponent/> renders correctly 1`] = `
+<section
+  className="hiring-section"
+>
+  <div
+    className="title"
+  >
+    We're hiring!
+  </div>
+  <div
+    className="subtitle"
+  >
+    Want to help change the world? Let's team up. Apply to help us build great products and services that can make the world a more sustainable place. We can't wait to hear from you.
+  </div>
+  <div>
+    <button
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      See openings
+      <span
+        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</section>
+`;
+
+exports[`<Components.MeetTheTeamComponent/> renders correctly 1`] = `
+<section
+  className="meet-the-team-section"
+>
+  <div
+    className="title"
+  >
+    Step inside!
+  </div>
+  <div
+    className="subtitle"
+  >
+    Meet the humans who make Ecosia and learn what it's like to work here.
+  </div>
+  <div>
+    <button
+      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Play
+    </button>
+  </div>
+</section>
+`;
+
+exports[`<Components.SocialBusinessComponent/> renders correctly 1`] = `
+<section
+  className="social-business-section"
+>
+  <div
+    className="title"
+  >
+    Ecosia is a social business founded in 2009 after a trip around the world
+  </div>
+  <div
+    className="column"
+  >
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        December 2009
+      </div>
+      <div
+        className="subtitle"
+      >
+        Ecosia is born
+      </div>
+      <hr
+        className="line"
+      />
+      <div>
+        Christian founded Ecosia.org after a trip around the world helped him understand the problems of deforestation.
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        2009 - 2011
+      </div>
+      <div
+        className="subtitle"
+      >
+        People's choice
+      </div>
+      <hr
+        className="line"
+      />
+      <div>
+        Ecosia won several awards for its clever concept and speedy growth in Europe and beyond.
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        April 2014
+      </div>
+      <div
+        className="subtitle"
+      >
+        First German B Corp
+      </div>
+      <hr
+        className="line"
+      />
+      <div>
+        Ecosia was the first German company to become a B Corporation thanks to its social business model.
+      </div>
+    </div>
+    <div
+      className="column__item"
+    >
+      <div
+        className="time"
+      >
+        April 2018
+      </div>
+      <div
+        className="subtitle"
+      >
+        25 million trees
+      </div>
+      <hr
+        className="line"
+      />
+      <div>
+        A planting milestone! That same year, Ecosia also builds its own solar energy plant to power every search.
+      </div>
+    </div>
+  </div>
+</section>
+`;

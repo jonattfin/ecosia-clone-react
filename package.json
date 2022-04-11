@@ -36,7 +36,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test-snap": "npm test storybook.test.js"
   },
   "eslintConfig": {
     "extends": [
@@ -71,6 +72,7 @@
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-storyshots": "^6.4.21",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "@storybook/node-logger": "^6.4.19",

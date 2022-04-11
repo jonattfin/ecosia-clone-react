@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Components.CountriesComponent/> renders correctly 1`] = `
+<section
+  className="countries-section"
+>
+  <div
+    className="above-title"
+  >
+    Where are your trees being planted?
+  </div>
+  <div
+    className="title"
+  >
+    We plant in 30+ countries with local organizations
+  </div>
+  <div
+    className="countries-grid"
+  >
+    <div
+      className="grid-item"
+    >
+      <div>
+        <img
+          alt="brazil"
+          className="country"
+          src="brazil.webp"
+        />
+      </div>
+      <div
+        className="grid-item__title"
+      >
+        Brazil
+      </div>
+      <div
+        className="grid-item__subtitle"
+      >
+        Your trees in Brazil protect thousands of endangered plants and animals.
+      </div>
+    </div>
+    <div
+      className="grid-item"
+    >
+      <img
+        alt="burkina faso"
+        className="country"
+        src="burkinafaso.webp"
+      />
+      <div
+        className="grid-item__title"
+      >
+        Burkina Faso
+      </div>
+      <div
+        className="grid-item__subtitle"
+      >
+        By planting trees in Burkina Faso, you restore desertified land to its former fertility.
+      </div>
+    </div>
+    <div
+      className="grid-item"
+    >
+      <img
+        alt="indonesia"
+        className="country"
+        src="indonesia.webp"
+      />
+      <div
+        className="grid-item__title"
+      >
+        Indonesia
+      </div>
+      <div
+        className="grid-item__subtitle"
+      >
+        In Indonesia, your searches bring back forests on former palm oil plantations while creating alternative sources of income.
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Components.JoinUsComponent/> renders correctly 1`] = `
+<section
+  className="join-section"
+>
+  <div
+    className="main-grid"
+  >
+    <div
+      className="grid-item__title"
+    >
+      Join 15 million people who already use Ecosia
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Components.MapComponent/> renders correctly 1`] = `
+<section
+  className="map-section"
+>
+  <div
+    className="wrapper-image"
+  >
+    <div
+      className="above-title"
+    >
+      Trees planted by ecosia users
+    </div>
+    <div
+      className="title__kick"
+    />
+    <div
+      className="facts-grid"
+    >
+      <div
+        className="grid-item"
+      >
+        <div
+          className="grid-item__title"
+        >
+          15 Million
+        </div>
+        <div
+          className="grid-item__text"
+        >
+          People using Ecosia
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div
+          className="grid-item__title"
+        >
+          500+
+        </div>
+        <div
+          className="grid-item__text"
+        >
+          Native species
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div
+          className="grid-item__title"
+        >
+          30+
+        </div>
+        <div
+          className="grid-item__text"
+        >
+          Countries
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div
+          className="grid-item__title"
+        >
+          60+
+        </div>
+        <div
+          className="grid-item__text"
+        >
+          Active projects
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="report-link"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Discover our projects...
+    </a>
+  </div>
+</section>
+`;
+
+exports[`<Components.SearchComponent/> renders correctly 1`] = `
+<section
+  className="search-section"
+>
+  <div>
+    <img
+      alt="logo"
+      className="logo"
+      src="logo.png"
+    />
+  </div>
+  <div
+    className="counter"
+  >
+    <div
+      className="MuiFormControl-root search-box css-r47a1p-MuiFormControl-root"
+    >
+      <div
+        className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+          disabled={false}
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search the web to plant trees..."
+          required={false}
+          type="text"
+          value=""
+        />
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="SearchIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+        <fieldset
+          aria-hidden={true}
+          className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            className="css-hdw1oc"
+          >
+            <span
+              className="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <div
+      className="counter__wrapper"
+    >
+      <h1>
+        The search engine that plants trees.
+      </h1>
+      <div
+        className="counter"
+      >
+        <div
+          className="counter__text"
+          style={
+            Object {
+              "fontSize": "4em",
+            }
+          }
+        >
+          0
+        </div>
+        <div>
+          Trees planted by Ecosia users
+        </div>
+      </div>
+      <div>
+         
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`<Components.WhyChooseUsComponentw/> renders correctly 1`] = `
+<section
+  className="why-choose-us-section"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="above-title"
+    >
+      Why choose Ecosia? 
+    </div>
+    <div
+      className="title"
+    >
+      We put people and planet before profit
+    </div>
+    <div>
+       
+    </div>
+    <div
+      className="reasons-grid"
+    >
+      <div
+        className="grid-item"
+      >
+        <div>
+          <img
+            alt="profits"
+            src="profits.svg"
+          />
+        </div>
+        <div
+          className="grid-item__title"
+        >
+          We’re a not-for-profit business
+        </div>
+        <div>
+          We dedicate 100% of our profits to climate action, with at least 80% financing tree-planting projects.
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div>
+          <img
+            alt="privacy"
+            src="privacy.svg"
+          />
+        </div>
+        <div
+          className="grid-item__title"
+        >
+          Ecosia is powered by 200% renewable energy
+        </div>
+        <div>
+          Our solar panels produce twice the amount of energy needed to power all searches with renewables.
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div>
+          <img
+            alt="world"
+            src="world.svg"
+          />
+        </div>
+        <div
+          className="grid-item__title"
+        >
+          We always put your privacy first
+        </div>
+        <div>
+          We anonymize your searches and don’t create a profile of you. We’re interested in trees, not your data.
+        </div>
+      </div>
+      <div
+        className="grid-item"
+      >
+        <div>
+          <img
+            alt="coin"
+            src="coin.svg"
+          />
+        </div>
+        <div
+          className="grid-item__title"
+        >
+          We are transparent about everything we do
+        </div>
+        <div>
+          We publish detailed financial reports and frequent updates from our tree planting projects.
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+         
+      </div>
+      <div
+        className="report-link"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Other reasons...
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
