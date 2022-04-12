@@ -4,14 +4,12 @@ import HomeComponent from './home-component';
 import { withRouter } from '../../helpers';
 
 import * as Components from './components';
-import styles from './styles.module.scss';
 import { getLanguage } from './languages';
 import { Languages } from '../../language';
 
 export default () => <div></div>
 
 const commonProps = {
-  styles,
   language: getLanguage(Languages.En)
 };
 

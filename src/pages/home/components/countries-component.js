@@ -1,34 +1,34 @@
+import { Grid } from '@mui/material';
 
 import * as Images from './images';
+import { AboveTitle, Subtitle } from './styled-components';
 
-export default function Component({ language, styles }) {
+export default function Component({ language }) {
   return (
-    <section className={styles['countries-section']}>
-      <div className={styles['above-title']}>
-        {language['where-do-you-plant-trees']}
-      </div>
-      <div className={styles.title}>
-        {language['we-plant-30-countries']}
-      </div>
-      <div className={styles['countries-grid']}>
-        <div className={styles['grid-item']}>
-          <div><img className={styles.country} src={Images.BrazilImage} alt="brazil" /></div>
-          <div className={styles['grid-item__title']}>Brazil</div>
-          <div className={styles['grid-item__subtitle']}>
-            {language['we-plant-in-brazil']}
-          </div>
-        </div>
-        <div className={styles['grid-item']}>
-          <img className={styles.country} src={Images.BurkinaFasoImage} alt="burkina faso" />
-          <div className={styles['grid-item__title']}>Burkina Faso</div>
-          <div className={styles['grid-item__subtitle']}>{language['we-plant-in-burkina-faso']}</div>
-        </div>
-        <div className={styles['grid-item']}>
-          <img className={styles.country} src={Images.IndonesiaImage} alt="indonesia" />
-          <div className={styles['grid-item__title']}>Indonesia</div>
-          <div className={styles['grid-item__subtitle']}>{language['we-plant-in-indonesia']}</div>
-        </div>
-      </div>
-    </section >
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <AboveTitle>
+          {language['where-do-you-plant-trees']}
+        </AboveTitle>
+        <Subtitle>
+          {language['we-plant-30-countries']}
+        </Subtitle>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <img src={Images.BrazilImage} alt="brazil" />
+        <div>Brazil</div>
+        <div>{language['we-plant-in-brazil']}</div>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <img src={Images.BurkinaFasoImage} alt="burkina faso" />
+        <div>Burkina Faso</div>
+        <div>{language['we-plant-in-burkina-faso']}</div>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <img src={Images.IndonesiaImage} alt="indonesia" />
+        <div>Indonesia</div>
+        <div>{language['we-plant-in-indonesia']}</div>
+      </Grid>
+    </Grid>
   )
 }

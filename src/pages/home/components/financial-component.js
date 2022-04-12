@@ -1,24 +1,31 @@
 import { Link } from 'react-router-dom';
+import { Grid } from '@mui/material';
+import styled from '@emotion/styled'
 
 import PieComponent from './pie';
+import { AboveTitle, Subtitle } from './styled-components';
 
-export default function Component({ language, styles }) {
+const PieContainer = styled.div`
+  height: 20vh;
+  width: 20vw;
+`;
+
+export default function Component({ language }) {
   return (
-    <section className={styles['financial-reports-section']}>
-      <div className={styles['container-wrapper']}>
-        <div className={styles['reports-text']}>
-          <div className={styles['above-title']}>Monthly financial reports </div>
-          <div className={styles.title}>Our revenue in January 2022 </div>
-          <div >
-            Our monthly reports show how much ad revenue we made from your searches, how we spent it, and how many trees this helped us plant.
-          </div>
-        </div>
-        <div className={styles['pie-container']}>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={6}>
+        <AboveTitle>Monthly financial reports </AboveTitle>
+        <Subtitle>Our revenue in January 2022 </Subtitle>
+        <div>Our monthly reports show how much ad revenue we made from your searches, how we spent it, and how many trees this helped us plant.</div>
+      </Grid>
+      <Grid item xs={12} xl={6}>
+        <PieContainer>
           <PieComponent />
-          <div>&nbsp;</div>
-          <div className={styles['report-link']}><Link to="#">Explore our financial reports...</Link></div>
-        </div>
-      </div>
-    </section>
+        </PieContainer>
+      </Grid>
+      <Grid item xs={12} xl={12}>
+        <Link to="#">Explore our financial reports...</Link>
+      </Grid>
+    </Grid>
   )
 }

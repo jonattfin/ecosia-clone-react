@@ -1,19 +1,19 @@
-import * as Components from './components';
+import { Container } from '@mui/material';
 
-import styles from './styles.module.scss';
+import * as Components from './components';
 
 export default function Component(props: any) {
   const { counter, onSearch, language } = props;
-  const commonProps = { language, styles };
+  const commonProps = { language };
 
   return (
-    <div>
+    <Container>
       <Components.SearchComponent {...{ counter, onSearch }} {...commonProps} />
       <Components.CountriesComponent {...commonProps} />
       <Components.MapComponent {...{ counter }} {...commonProps} />
       <Components.FinancialComponent {...commonProps} />
       <Components.WhyChooseUsComponent {...commonProps} />
       <Components.JoinUsComponent {...commonProps} />
-    </div >
+    </Container>
   )
 }

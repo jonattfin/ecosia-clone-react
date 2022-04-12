@@ -1,21 +1,19 @@
-import { FormControl, OutlinedInput } from '@mui/material';
+import { FormControl, OutlinedInput, Grid } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { useState } from 'react';
 
 import * as SharedComponents from '../../../shared-components'
 import * as Images from './images';
 
-
-export default function Component({ onSearch, language, counter, styles }) {
+export default function Component({ onSearch, language, counter }) {
   const [query, setQuery] = useState('');
-
   return (
-    <section className={styles['search-section']}>
-      <div>
-        <img className={styles.logo} src={Images.LogoImage} alt="logo" />
-      </div>
-      <div className={styles.counter}>
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined" className={styles['search-box']}>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <img src={Images.LogoImage} alt="logo" />
+      </Grid>
+      <Grid item xs={12} xl={12}>
+        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
           <OutlinedInput
             value={query}
             placeholder="Search the web to plant trees..."
@@ -24,12 +22,12 @@ export default function Component({ onSearch, language, counter, styles }) {
             endAdornment={<SearchIcon />}
           />
         </FormControl>
-        <div className={styles.counter__wrapper}>
-          <h1>{language['the-search-engine']}</h1>
-          <SharedComponents.Counter counter={counter} />
-          <div>&nbsp;</div>
-        </div>
-      </div>
-    </section>
+      </Grid>
+      <Grid item xs={12} xl={12}>
+        <h1>{language['the-search-engine']}</h1>
+        <SharedComponents.Counter counter={counter} />
+        <div>&nbsp;</div>
+      </Grid>
+    </Grid>
   )
 }

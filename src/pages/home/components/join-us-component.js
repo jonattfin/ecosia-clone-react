@@ -1,10 +1,13 @@
+import { Grid } from '@mui/material';
 
-export default function Component({ language, styles }) {
+import { Subtitle } from './styled-components';
+
+export default function Component({ language }) {
   return (
-    <section className={styles['join-section']}>
-      <div className={styles['main-grid']}>
-        <div className={styles['grid-item__title']}>Join 15 million people who already use Ecosia</div>
-      </div>
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <Subtitle>Join 15 million people who already use Ecosia</Subtitle>
+      </Grid>
+    </Grid>
   )
 }
