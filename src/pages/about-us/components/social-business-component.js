@@ -1,19 +1,58 @@
+import styled from '@emotion/styled';
 
-export default function Component({ language, styles }) {
+import { AboveTitle } from './styled-components';
+
+const DivParentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: #f9f9f9;
+`;
+
+const DivChildContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30vh;
+`;
+
+const DivTitle = styled.div`
+  text-transform: uppercase;
+  padding: 15px 0;
+  text-align: center;
+`;
+
+const DivLine = styled.div`
+  border: 3px solid #aab74f;
+  margin: 10px 50px 
+`;
+
+const DivSubtitle = styled.div`
+  text-align: center;
+`;
+
+const DivContent = styled.div`
+  text-align: center;
+`;
+
+
+export default function Component({ language, styles = {} }) {
   return (
-    <section className={styles['social-business-section']}>
-      <div className={styles.title}>Ecosia is a social business founded in 2009 after a trip around the world</div>
-      <div className={styles.column}>
+    <DivParentContainer>
+      <AboveTitle>Ecosia is a social business founded in 2009 after a trip around the world</AboveTitle>
+      <DivChildContainer>
         {getTimePeriods().map((period, index) => (
-          <div key={`period_${index}`} className={styles.column__item}>
-            <div className={styles.time}>{period.time}</div>
-            <div className={styles.subtitle}>{period.title}</div>
-            <hr className={styles.line} />
-            <div>{period.content}</div>
+          <div key={`period_${index}`}>
+            <DivTitle>{period.time}</DivTitle>
+            <DivSubtitle>{period.title}</DivSubtitle>
+            <DivLine/>  
+            <DivContent>{period.content}</DivContent>
           </div>
         ))}
-      </div>
-    </section>
+      </DivChildContainer>
+      <div>&nbsp;</div>
+    </DivParentContainer>
   )
 }
 

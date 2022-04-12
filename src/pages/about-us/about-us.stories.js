@@ -1,9 +1,7 @@
 import AboutUsComponent from './about-us-component';
 import * as Components from './components';
-import styles from './styles.module.scss';
 
 const commonProps = {
-  styles,
   language: {}
 };
 

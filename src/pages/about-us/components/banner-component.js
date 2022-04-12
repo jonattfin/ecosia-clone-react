@@ -1,13 +1,30 @@
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
+import styled from '@emotion/styled';
+
+import { AboveTitle } from './styled-components';
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+`;
 
 export default function Component({ language, styles }) {
   return (
-    <section className={styles['everyone-power-section']}>
-      <div className={styles.title}>We believe in everyone's power to do good</div>
-      <div>
-        <Button variant="contained">Add Ecosia to Firefox</Button>
-      </div>
-      <div></div>
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <DivContainer>
+          <AboveTitle>
+            We believe in everyone's power to do good
+          </AboveTitle>
+          <div>&nbsp;</div>
+          <div>
+            <Button variant="contained" >Add Ecosia to Firefox</Button>
+          </div>
+        </DivContainer>
+      </Grid>
+    </Grid>
   )
 }

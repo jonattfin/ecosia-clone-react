@@ -1,23 +1,50 @@
-import { TextField, Button, MenuItem } from '@mui/material';
+import { TextField, Button, MenuItem, Grid } from '@mui/material';
+import styled from '@emotion/styled';
+
+import { AboveTitle, Subtitle } from './styled-components';
+
+const DivParentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const DivChildContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+`;
+
+const TextFieldExtra = styled(TextField)`
+  width: 25vw;
+  margin: 5px;
+`
 
 export default function Component({ language, styles }) {
   return (
-    <section className={styles['contact-us-section']}>
-      <div className={styles.title}>Contact us</div>
-      <div className={styles.subtitle}>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</div>
-      <div className={styles.form}>
-        <TextField variant="outlined" label="Message" multiline rows={5}></TextField>
-        <TextField variant="outlined" label="E-mail" />
-        <TextField variant="outlined" label="Subject" select>
-          {getFilterOptions().map((option) => (
-            <MenuItem key={option} value={option}>
-              {option}
-            </MenuItem>
-          ))}
-        </TextField>
-        <Button variant="contained">Send</Button>
-      </div>
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <DivParentContainer>
+          <AboveTitle>Contact us</AboveTitle>
+          <Subtitle>For questions about Ecosia check our FAQ first. <br />If you don't see what you are looking for, drop us a line!</Subtitle>
+          <DivChildContainer>
+            <TextFieldExtra variant="outlined" label="Message" multiline rows={5}></TextFieldExtra>
+            <TextFieldExtra variant="outlined" label="E-mail" />
+            <TextFieldExtra variant="outlined" label="Subject" select>
+              {getFilterOptions().map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextFieldExtra>
+            <Button variant="contained" >Send</Button>
+          </DivChildContainer>
+        </DivParentContainer>
+      </Grid>
+    </Grid>
   )
 }
 

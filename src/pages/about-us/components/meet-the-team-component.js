@@ -1,27 +1,51 @@
 import { useState } from "react";
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
+import styled from '@emotion/styled';
 
-export default function Component({ language, styles }) {
+import { AboveTitle, Subtitle } from './styled-components';
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+`;
+
+const MovieWrapper = styled.video`
+  max-width: 25vw;
+`;
+
+const ExtraSubtitle = styled(Subtitle)`
+  text-align: center;
+`;
+
+export default function Component({ language }) {
   const [play, setPlay] = useState(false);
 
   return (
-    <section className={styles['meet-the-team-section']}>
-      {!play && (
-        <>
-          <div className={styles.title}>Step inside!</div>
-          <div className={styles.subtitle}>Meet the humans who make Ecosia and learn what it's like to work here.</div>
-          <div>
-            <Button variant="contained" onClick={() => setPlay(true)} >Play</Button>
-          </div>
-        </>
-      )}
-      {play && (
-        <div className={styles['movie']}>
-          <video className={styles['movie__wrapper']} controls autoPlay={true}>
-            <source src="https://d3fme2ivr1xlgj.cloudfront.net/240719_Ecosia_hiringvideo_subbed_titled.mp4" type="video/mp4" />
-          </video>
-        </div>
-      )}
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <DivContainer>
+          {!play && (
+            <>
+              <AboveTitle>Step inside!</AboveTitle>
+              <ExtraSubtitle>Meet the humans who make Ecosia and learn what it's like to work here.</ExtraSubtitle>
+              <div>
+                <Button variant="contained" color="success" onClick={() => setPlay(true)} >Play</Button>
+              </div>
+            </>
+          )}
+          {play && (
+            <>
+              <MovieWrapper controls autoPlay={true}>
+                <source src="https://d3fme2ivr1xlgj.cloudfront.net/240719_Ecosia_hiringvideo_subbed_titled.mp4" type="video/mp4" />
+              </MovieWrapper>
+            </>
+          )}
+        </DivContainer>
+      </Grid>
+    </Grid>
+
   )
 }
