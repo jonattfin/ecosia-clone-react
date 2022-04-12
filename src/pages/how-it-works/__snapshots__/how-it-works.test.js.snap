@@ -1,318 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Components.BrandsComponent/> renders correctly 1`] = `
-<section
-  className="brands-section"
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
-  <img
-    alt="tdlr"
-    className="image"
-    src="up-worthy.svg"
-  />
-  <img
-    alt="tdlr"
-    className="image"
-    src="scientific.svg"
-  />
-  <img
-    alt="tdlr"
-    className="image"
-    src="guardian.svg"
-  />
-  <img
-    alt="tdlr"
-    className="image"
-    src="salon.svg"
-  />
-  <img
-    alt="tdlr"
-    className="image"
-    src="forbes.svg"
-  />
-</section>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
+  >
+    <div
+      className="css-l7puij"
+    >
+      <img
+        alt="tdlr"
+        className="css-1o2ogah"
+        src="up-worthy.svg"
+      />
+      <img
+        alt="tdlr"
+        className="css-1o2ogah"
+        src="scientific.svg"
+      />
+      <img
+        alt="tdlr"
+        className="css-1o2ogah"
+        src="guardian.svg"
+      />
+      <img
+        alt="tdlr"
+        className="css-1o2ogah"
+        src="salon.svg"
+      />
+      <img
+        alt="tdlr"
+        className="css-1o2ogah"
+        src="forbes.svg"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`<Components.GraphicsComponent/> renders correctly 1`] = `
-<section
-  className="graphics-section"
->
+<div>
   <div
-    className="title"
-  >
-    Over 146 million trees planted
-  </div>
-  <div
-    className="column"
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
   >
     <div
-      className="column__item"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
     >
       <div
-        className="time"
+        className="css-1xeryup"
       >
-        December 2009
+        Over 146 million trees planted
       </div>
       <div
-        className="subtitle"
-      >
-        1.1 sec
-      </div>
-      <hr
-        className="line"
-      />
-      <div
-        className="time"
-      >
-        to plant a tree
-      </div>
-    </div>
-    <div
-      className="column__item"
-    >
-      <div
-        className="time"
-      >
-        over
-      </div>
-      <div
-        className="subtitle"
-      >
-        15 million
-      </div>
-      <hr
-        className="line"
-      />
-      <div
-        className="time"
-      >
-        active users
-      </div>
-    </div>
-    <div
-      className="column__item"
-    >
-      <div
-        className="time"
-      >
-        now
-      </div>
-      <div
-        className="subtitle"
+        className="css-q40ub6"
       >
         <div>
-          146000000
+          <div
+            className="css-1wjqaby"
+          >
+            December 2009
+          </div>
+          <div
+            className="css-1yltisf"
+          >
+            1.1 sec
+          </div>
+          <div
+            className="css-qqlgcp"
+          />
+          <div
+            className="css-1wjqaby"
+          >
+            to plant a tree
+          </div>
         </div>
-      </div>
-      <hr
-        className="line"
-      />
-      <div
-        className="time"
-      >
-        trees total
-      </div>
-    </div>
-    <div
-      className="column__item"
-    >
-      <div
-        className="time"
-      >
-        over
-      </div>
-      <div
-        className="subtitle"
-      >
-        12,101,152
-      </div>
-      <hr
-        className="line"
-      />
-      <div
-        className="time"
-      >
-        EUR invested
-      </div>
-    </div>
-    <div
-      className="column__item"
-    >
-      <div
-        className="time"
-      >
-        over
-      </div>
-      <div
-        className="subtitle"
-      >
-        9000
-      </div>
-      <hr
-        className="line"
-      />
-      <div
-        className="time"
-      >
-        planting sites
+        <div>
+          <div
+            className="css-1wjqaby"
+          >
+            over
+          </div>
+          <div
+            className="css-1yltisf"
+          >
+            15 million
+          </div>
+          <div
+            className="css-qqlgcp"
+          />
+          <div
+            className="css-1wjqaby"
+          >
+            active users
+          </div>
+        </div>
+        <div>
+          <div
+            className="css-1wjqaby"
+          >
+            over
+          </div>
+          <div
+            className="css-1yltisf"
+          >
+            12,101,152
+          </div>
+          <div
+            className="css-qqlgcp"
+          />
+          <div
+            className="css-1wjqaby"
+          >
+            EUR invested
+          </div>
+        </div>
+        <div>
+          <div
+            className="css-1wjqaby"
+          >
+            over
+          </div>
+          <div
+            className="css-1yltisf"
+          >
+            9000
+          </div>
+          <div
+            className="css-qqlgcp"
+          />
+          <div
+            className="css-1wjqaby"
+          >
+            planting sites
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 `;
 
 exports[`<Components.HowItWorksComponent/> renders correctly 1`] = `
-<section
-  className="how_it_works_section"
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
   <div
-    className="header"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
   >
     <div
-      className="title"
+      className="css-kl3k6o"
     >
-      How it works
+      <div
+        className="css-j4shcj"
+      >
+        How it works
+      </div>
+      <div
+        className="css-y8pvf0"
+      >
+        <div
+          className="css-1yltisf"
+        >
+          <img
+            alt="tdlr"
+            className="css-184rirz"
+            src="ads.svg"
+          />
+          <div
+            className="css-gz8dae"
+          >
+            Search ads generate income for Ecosia.
+          </div>
+        </div>
+        <div
+          className="css-1yltisf"
+        >
+          <img
+            alt="tdlr"
+            className="css-184rirz"
+            src="ecosia.svg"
+          />
+          <div
+            className="css-gz8dae"
+          >
+            You search the web with Ecosia.
+          </div>
+        </div>
+        <div
+          className="css-1yltisf"
+        >
+          <img
+            alt="tdlr"
+            className="css-184rirz"
+            src="income.svg"
+          />
+          <div
+            className="css-gz8dae"
+          >
+            Ecosia uses this income to plant trees.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    className="images"
-  >
-    <div>
-      <img
-        alt="tdlr"
-        className="image"
-        src="ecosia.svg"
-      />
-      <div
-        className="text"
-      >
-        You search the web with Ecosia.
-      </div>
-    </div>
-    <div>
-      <img
-        alt="tdlr"
-        className="image"
-        src="ads.svg"
-      />
-      <div
-        className="text"
-      >
-        Search ads generate income for Ecosia.
-      </div>
-    </div>
-    <div>
-      <img
-        alt="tdlr"
-        className="image"
-        src="income.svg"
-      />
-      <div
-        className="text"
-      >
-        Ecosia uses this income to plant trees.
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 `;
 
 exports[`<Components.PlantTreesComponent/> renders correctly 1`] = `
-<section
-  className="plant-trees-section"
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
   <div
-    className="title"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
   >
-    Plant trees while you search the web
-  </div>
-  <div
-    className="separator"
-  >
-     
-  </div>
-  <div
-    className="sub-title"
-  >
-    We use the profit we make from your searches to plant trees where they are needed most. 
-    <br />
-    Get the free browser extension and plant trees with every search.
-  </div>
-  <div
-    className="separator"
-  >
-     
-  </div>
-  <div>
-    <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
-      disabled={false}
-      onBlur={[Function]}
-      onContextMenu={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <div
+      className="css-4skt07"
     >
-      Add Ecosia to Firefox
-    </button>
+      <div
+        className="css-j4shcj"
+      >
+        Plant trees while you search the web
+      </div>
+      <div
+        className="css-csqwk5"
+      />
+      <div>
+        We use the profit we make from your searches to plant trees where they are needed most. 
+      </div>
+      <div>
+        Get the free browser extension and plant trees with every search.
+      </div>
+      <div
+        className="css-csqwk5"
+      />
+      <div>
+        <button
+          className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          Add Ecosia to Firefox
+        </button>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 `;
 
 exports[`<Components.ReportsComponent/> renders correctly 1`] = `
-<section
-  className="reports-section"
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
 >
-  <div>
-    <img
-      alt="transparency"
-      src="https://infopages-prod-cdn.ecosia.org/assets/images/what/transperancy-blue-img-8408403664.svg"
-    />
-  </div>
   <div
-    className="title"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
   >
-    We know trust has to be earned
-  </div>
-  <div
-    className="sub-title"
-  >
-    That is why we publish our monthly financial reports and tree planting receipts. This way you can hold us accountable as we follow our journey to a reforested world.
-  </div>
-  <div
-    className="view-reports-btn"
-  >
-    <button
-      className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
-      disabled={false}
-      onBlur={[Function]}
-      onContextMenu={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <div
+      className="css-iq2mru"
     >
-      View Reports
-      <span
-        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
-    </button>
+      <div>
+        <img
+          alt="transparency"
+          src="https://infopages-prod-cdn.ecosia.org/assets/images/what/transperancy-blue-img-8408403664.svg"
+        />
+      </div>
+      <div
+        className="css-j4shcj"
+      >
+        We know trust has to be earned
+      </div>
+      <div
+        className="css-ds9a2i"
+      >
+        That is why we publish our monthly financial reports and tree planting receipts. 
+        <br />
+         This way you can hold us accountable as we follow our journey to a reforested world.
+      </div>
+      <div>
+        <button
+          className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          View Reports
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 `;

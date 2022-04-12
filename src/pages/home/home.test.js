@@ -46,7 +46,7 @@ it('<Components.MapComponent/> renders correctly', () => {
 
 it('<Components.SearchComponent/> renders correctly', () => {
   const tree = renderer
-    .create(<Components.SearchComponent {... { language }} />)
+    .create(<Components.SearchComponent {... { language, counter: 0 }} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
