@@ -1,28 +1,31 @@
+import { Grid } from '@mui/material';
+import styled from '@emotion/styled';
+
 import * as Images from './images';
+import { AboveTitle } from './styled-components';
 
-export default function Component({ styles, language }) {
+const SpecialImage = styled.img`
+  max-width: 5vw;
+`;
+
+export default function Component({ language }) {
   return (
-    <section className={styles['how_it_works_section']}>
-      <div className={styles.header}>
-        <div className={styles.title}>How it works</div>
-      </div>
-      <div className={styles.images}>
-        {getImages().map((item, index) => (
-          <div key={`image_${index}`}>
-            <img className={styles.image} src={item.image} alt='tdlr'></img>
-            <div className={styles.text}>{item.text}</div>
-          </div>
-        ))}
-      </div>
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <AboveTitle>How it works</AboveTitle>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <SpecialImage src={Images.EcosiaImage} alt='tdlr'></SpecialImage>
+        <div >You search the web with Ecosia.</div>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <SpecialImage src={Images.AdsImage} alt='tdlr'></SpecialImage>
+        <div >Search ads generate income for Ecosia.</div>
+      </Grid>
+      <Grid item xs={12} xl={4}>
+        <SpecialImage src={Images.IncomeImage} alt='tdlr'></SpecialImage>
+        <div >Ecosia uses this income to plant trees.</div>
+      </Grid>
+    </Grid>
   )
-}
-
-function getImages() {
-  const { EcosiaImage, AdsImage, IncomeImage } = Images;
-  return [
-    { image: EcosiaImage, text: 'You search the web with Ecosia.' },
-    { image: AdsImage, text: 'Search ads generate income for Ecosia.' },
-    { image: IncomeImage, text: 'Ecosia uses this income to plant trees.' },
-  ];
 }
