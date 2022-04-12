@@ -8,3 +8,4 @@ export { default as CoinImage } from './coin.svg';
 export { default as WorldImage } from './world.svg';
 export { default as PrivacyImage } from './privacy.svg';
 export { default as ProfitsImage } from './profits.svg';
+export { default as MapImage } from './map.svg';

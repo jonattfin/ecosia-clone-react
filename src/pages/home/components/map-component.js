@@ -1,21 +1,33 @@
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import styled from '@emotion/styled';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import { AboveTitle, TitleKick } from './styled-components';
 
+const GridWrapper = styled(Grid)`
+  background-color: aliceblue;
+`;
+
 const ItemTitle = styled.div`
-  border: 1px solid blue;
   font-size: x-large;
+  padding-left: 20px;
+  border-left: 5px solid teal;
 `;
 
 const ItemText = styled.div`
-  /* border: 1px solid red; */
+  padding-left: 20px;
+  border-left: 5px solid teal;
+`;
+
+const DivLinkWrapper = styled.div`
+  text-align: right;
+  padding-right: 20px;
 `;
 
 export default function Component({ counter, language }) {
   return (
-    <Grid container spacing={2}>
+    <GridWrapper container spacing={2}>
       <Grid item xs={12} xl={12}>
         <AboveTitle>Trees planted by ecosia users</AboveTitle>
         <TitleKick>{counter}</TitleKick>
@@ -36,7 +48,12 @@ export default function Component({ counter, language }) {
         <ItemTitle>60+</ItemTitle>
         <ItemText>Active projects</ItemText>
       </Grid>
-    </Grid>
-
+      <Grid item xs={12} xl={12}>
+        <DivLinkWrapper><Link to="#">Discover our projects <ChevronRightIcon fontSize='small'/></Link></DivLinkWrapper>
+      </Grid>
+      <Grid item xs={12} xl={12}>
+        &nbsp;
+      </Grid>
+    </GridWrapper>
   )
 }

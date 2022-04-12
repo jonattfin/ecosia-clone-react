@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
 export const AboveTitle = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
   color: teal;
   text-transform: uppercase;
   padding: 10px 0px;
 `;
 
 export const Subtitle = styled.div`
-  font-size: 3em;
+  font-size: 2em;
 `;
 
 export const TitleKick = styled.div`
