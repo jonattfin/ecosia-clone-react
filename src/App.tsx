@@ -1,12 +1,11 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes, Outlet } from "react-router-dom";
+import { Container } from '@mui/material';
 
 import { Footer, Links, Header } from './shared-components';
 import { Languages, LanguageContext } from './language';
 import { Themes, ThemeContext } from './theme';
 import { CounterContext } from './counter';
-
-import styles from './styles.module.scss';
 
 const Home = lazy(() => import('./pages/home'));
 const AboutUs = lazy(() => import('./pages/about-us'));
@@ -31,7 +30,7 @@ const Layout = () => {
     <ThemeContext.Provider value={theme}>
       <LanguageContext.Provider value={language}>
         <CounterContext.Provider value={queryCounter}>
-          <div className={styles.layout}>
+          <Container>
             <section>
               <Header {...props} />
             </section>
@@ -44,14 +43,14 @@ const Layout = () => {
             <section>
               <Footer />
             </section>
-          </div>
+          </Container>
         </CounterContext.Provider>
       </LanguageContext.Provider>
     </ThemeContext.Provider>
   )
 };
 
-const App = () => {
+export default function App() {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
@@ -69,5 +68,3 @@ const App = () => {
     </Router>
   );
 }
-
-export default App;

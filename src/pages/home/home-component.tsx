@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Fragment } from 'react';
 
 import * as Components from './components';
 
@@ -7,13 +7,13 @@ export default function Component(props: any) {
   const commonProps = { language };
 
   return (
-    <Container>
+    <Fragment>
       <Components.SearchComponent {...{ counter, onSearch }} {...commonProps} />
       <Components.CountriesComponent {...commonProps} />
       <Components.MapComponent {...{ counter }} {...commonProps} />
       <Components.FinancialComponent {...commonProps} />
       <Components.WhyChooseUsComponent {...commonProps} />
       <Components.JoinUsComponent {...commonProps} />
-    </Container>
+    </Fragment  >
   )
 }

@@ -26,7 +26,7 @@ const pages = [
   { url: '/privacy', text: 'Privacy', icon: 'shield' },
 ];
 
-const Component = (props) => {
+export default function Component(props) {
   const {
     language, onLanguageChange,
     theme, onThemeChange
@@ -120,5 +120,3 @@ const Component = (props) => {
     </Box >
   );
 }
-
-export default Component;
