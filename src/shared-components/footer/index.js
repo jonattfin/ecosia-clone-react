@@ -28,7 +28,7 @@ export default function Component() {
       <Grid item xs={12} xl={12}>
         <DivLine />
         <DivContainer>
-          <FacebookRounded/>
+          <FacebookRounded/>  
           <PublicRounded />
           <EmojiPeopleRounded />
           <PianoRounded />

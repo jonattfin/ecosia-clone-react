@@ -1,35 +1,68 @@
 import { Grid } from '@mui/material';
+import styled from '@emotion/styled';
 
-export default function Component({ styles = {}, language }) {
+import { AboveTitle } from './styled-components';
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+`;
+
+const DivTitle = styled.div`
+  text-transform: uppercase;
+  padding: 15px 0;
+  text-align: center;
+`;
+
+const DivLine = styled.div`
+  border: 3px solid #aab74f;
+`;
+
+const DivSubtitle = styled.div`
+  text-align: center;
+`;
+
+const AboveTitleExtra = styled(AboveTitle)`
+  text-align: center;
+`;
+
+export default function Component({ language }) {
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12} xl={12}>
-        Over 146 million trees planted
+    <div>
+      <Grid container spacing={2}>
+        <Grid item xs={12} xl={12}>
+          <AboveTitleExtra>Over 146 million trees planted</AboveTitleExtra>
+          <DivContainer>
+            <div>
+              <DivTitle>{'December 2009'}</DivTitle>
+              <DivSubtitle>{'1.1 sec'}</DivSubtitle>
+              <DivLine />
+              <DivTitle>{'to plant a tree'}</DivTitle>
+            </div>
+            <div>
+              <DivTitle>{'over'}</DivTitle>
+              <DivSubtitle>{'15 million'}</DivSubtitle>
+              <DivLine />
+              <DivTitle>{'active users'}</DivTitle>
+            </div>
+            <div>
+              <DivTitle>{'over'}</DivTitle>
+              <DivSubtitle>{'12,101,152'}</DivSubtitle>
+              <DivLine />
+              <DivTitle>{'EUR invested'}</DivTitle>
+            </div>
+            <div>
+              <DivTitle>{'over'}</DivTitle>
+              <DivSubtitle>{'9000'}</DivSubtitle>
+              <DivLine />
+              <DivTitle>{'planting sites'}</DivTitle>
+            </div>
+          </DivContainer>
+        </Grid>
       </Grid>
-      <Grid item xs={12} xl={3}>
-        <div className={styles.time}>{'December 2009'}</div>
-        <div className={styles.subtitle}>{'1.1 sec'}</div>
-        <hr className={styles.line} />
-        <div className={styles.time}>{'to plant a tree'}</div>
-      </Grid>
-      <Grid item xs={12} xl={3}>
-        <div className={styles.time}>{'over'}</div>
-        <div className={styles.subtitle}>{'15 million'}</div>
-        <hr className={styles.line} />
-        <div className={styles.time}>{'active users'}</div>
-      </Grid>
-      <Grid item xs={12} xl={3}>
-        <div className={styles.time}>{'over'}</div>
-        <div className={styles.subtitle}>{'12,101,152'}</div>
-        <hr className={styles.line} />
-        <div className={styles.time}>{'EUR invested'}</div>
-      </Grid>
-      <Grid item xs={12} xl={3}>
-        <div className={styles.time}>{'over'}</div>
-        <div className={styles.subtitle}>{'9000'}</div>
-        <hr className={styles.line} />
-        <div className={styles.time}>{'planting sites'}</div>
-      </Grid>
-    </Grid>
+    </div>
   )
 }

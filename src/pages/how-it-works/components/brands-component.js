@@ -7,11 +7,22 @@ const BrandImage = styled.img`
   width: 100px;
 `;
 
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  background-color: #ededed;
+`;
+
 export default function Component({ language }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
-        {getBrands().map((brand, index) => (<BrandImage key={`brand_image_${index}`} src={brand} alt='tdlr'></BrandImage>))}
+        <DivContainer>
+          {getBrands().map((brand, index) => (<BrandImage key={`brand_image_${index}`} src={brand} alt='tdlr'></BrandImage>))}
+        </DivContainer>
       </Grid>
     </Grid>
   )

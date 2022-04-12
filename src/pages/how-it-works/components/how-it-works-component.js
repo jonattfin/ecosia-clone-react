@@ -5,26 +5,54 @@ import * as Images from './images';
 import { AboveTitle } from './styled-components';
 
 const SpecialImage = styled.img`
-  max-width: 5vw;
+  max-width: 150px;
+  padding: 20px;
+`;
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+`;
+
+const DivChildContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const DivImageContainer = styled.div`
+  text-align: center;
+`;
+
+const DivContentContainer = styled.div`
+  padding: 20px;
 `;
 
 export default function Component({ language }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
-        <AboveTitle>How it works</AboveTitle>
-      </Grid>
-      <Grid item xs={12} xl={4}>
-        <SpecialImage src={Images.EcosiaImage} alt='tdlr'></SpecialImage>
-        <div >You search the web with Ecosia.</div>
-      </Grid>
-      <Grid item xs={12} xl={4}>
-        <SpecialImage src={Images.AdsImage} alt='tdlr'></SpecialImage>
-        <div >Search ads generate income for Ecosia.</div>
-      </Grid>
-      <Grid item xs={12} xl={4}>
-        <SpecialImage src={Images.IncomeImage} alt='tdlr'></SpecialImage>
-        <div >Ecosia uses this income to plant trees.</div>
+        <DivContainer>
+          <AboveTitle>How it works</AboveTitle>
+          <DivChildContainer>
+            <DivImageContainer>
+              <SpecialImage src={Images.AdsImage} alt='tdlr'></SpecialImage>
+              <DivContentContainer >Search ads generate income for Ecosia.</DivContentContainer>
+            </DivImageContainer>
+            <DivImageContainer>
+              <SpecialImage src={Images.EcosiaImage} alt='tdlr'></SpecialImage>
+              <DivContentContainer >You search the web with Ecosia.</DivContentContainer>
+            </DivImageContainer>
+            <DivImageContainer>
+              <SpecialImage src={Images.IncomeImage} alt='tdlr'></SpecialImage>
+              <DivContentContainer >Ecosia uses this income to plant trees.</DivContentContainer>
+            </DivImageContainer>
+          </DivChildContainer>
+        </DivContainer>
       </Grid>
     </Grid>
   )
