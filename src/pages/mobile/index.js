@@ -1,11 +1,11 @@
+import { Fragment } from 'react';
 import * as Components from './components';
-import styles from './styles.module.scss';
 
 export default function Component() {
-  const props = { styles, language: {} };
+  const props = { styles: {}, language: {} };
   return (
-    <div>
+    <Fragment>
       <Components.BannerComponent {...props} />
-    </div>
+    </Fragment>
   );
 }

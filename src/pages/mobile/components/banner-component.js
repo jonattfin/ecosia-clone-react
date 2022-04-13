@@ -1,20 +1,48 @@
+import { Grid } from '@mui/material';
+import styled from '@emotion/styled';
+
 import * as Images from './images';
 
-export default function Component({ styles, language }) {
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+
+  background-color: aliceblue;
+`;
+
+const AboveTitle = styled.div`
+  font-size: 1.5em;
+  color: teal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+`;
+
+const Subtitle = styled.div`
+  font-size: 2em;
+  text-align: center;
+`;
+
+export default function Component({ language }) {
   return (
-    <section className={styles['ecosia-for-mobile']}>
-      <div className={styles.title}>
-        Ecosia for Mobile
-      </div>
-      <div className={styles.subtitle}>
-        Plant trees while searching the web with your mobile phone or tablet.
-      </div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div >
-        <img className={styles.logo} src={Images.AppStoreImage} alt={"app store"} />
-        <img className={styles.logo} src={Images.PlayStoreImage} alt={"play store"} />
-      </div>
-    </section>
+    <Grid container spacing={2}>
+      <Grid item xs={12} xl={12}>
+        <DivContainer>
+          <AboveTitle>
+            Ecosia for Mobile
+          </AboveTitle>
+          <Subtitle>
+            Plant trees while searching the web <br/> with your mobile phone or tablet.
+          </Subtitle>
+          <div>
+            <img src={Images.AppStoreImage} alt={"app store"} />
+            <img src={Images.PlayStoreImage} alt={"play store"} />
+          </div>
+        </DivContainer>
+      </Grid>
+    </Grid>
+
   )
 }

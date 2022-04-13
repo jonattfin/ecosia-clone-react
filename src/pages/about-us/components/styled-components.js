@@ -8,7 +8,7 @@ export const AboveTitle = styled.div`
 `;
 
 export const Subtitle = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
 `;
 
 export const TitleKick = styled.div`
