@@ -8,7 +8,7 @@ export default () => <div></div>
 export const SearchPage = () => {
   const query = 'hello world';
 
-  const values = range(10).map(item => {
+  const values = range(1, 100).map(item => {
     return { url: `url${item}`, snippet: `snippet ${query} ${item}`, name: `name${item}` };
   });
 
