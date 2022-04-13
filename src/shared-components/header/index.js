@@ -103,7 +103,7 @@ export default function Component(props) {
             {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} onClick={() => handleClose(url)}>{text}</MenuItem>)}
             <Divider />
             <MenuItem onClick={() => handleChangeLanguage(otherLanguage)}>Change language ({otherLanguage})</MenuItem>
-            <MenuItem onClick={() => handleChangeTheme(otherTheme)}>Change theme ({otherTheme})</MenuItem>
+            <MenuItem onClick={() => handleChangeTheme(otherTheme)} disabled>Change theme ({otherTheme})</MenuItem>
           </Menu>
           <IconButton
             size="large"
