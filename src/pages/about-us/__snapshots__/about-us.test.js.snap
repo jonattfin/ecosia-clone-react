@@ -11,7 +11,7 @@ exports[`<Components.BannerComponent/> renders correctly 1`] = `
       className="css-1637b1s"
     >
       <div
-        className="css-1vzsge8"
+        className="css-f8qm9p"
       >
         We believe in everyone's power to do good
       </div>
@@ -53,10 +53,10 @@ exports[`<Components.HireComponent/> renders correctly 1`] = `
     className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-12 css-1idn90j-MuiGrid-root"
   >
     <div
-      className="css-1hsx150"
+      className="css-14wcu1j"
     >
       <div
-        className="css-1vzsge8"
+        className="css-f8qm9p"
       >
         We're hiring!
       </div>
@@ -110,7 +110,7 @@ exports[`<Components.MeetTheTeamComponent/> renders correctly 1`] = `
       className="css-14wcu1j"
     >
       <div
-        className="css-1vzsge8"
+        className="css-f8qm9p"
       >
         Step inside!
       </div>
@@ -149,10 +149,10 @@ exports[`<Components.MeetTheTeamComponent/> renders correctly 1`] = `
 
 exports[`<Components.SocialBusinessComponent/> renders correctly 1`] = `
 <div
-  className="css-flwcnq"
+  className="css-1oskuwq"
 >
   <div
-    className="css-1vzsge8"
+    className="css-f8qm9p"
   >
     Ecosia is a social business founded in 2009 after a trip around the world
   </div>
