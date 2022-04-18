@@ -36,8 +36,6 @@ const darkTheme = createTheme({
   },
 });
 
-
-
 export default function Component(props) {
   const {
     language, onLanguageChange,
