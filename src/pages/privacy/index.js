@@ -6,7 +6,9 @@ export default function Component(props) {
 
   return (
     <Fragment>
-      <Components.ProtectPrivacyComponent {...{ language: {} }} />
+      <section>
+        <Components.ProtectPrivacyComponent {...{ language: {} }} />
+      </section>
     </Fragment>
   );
 }

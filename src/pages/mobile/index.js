@@ -5,7 +5,9 @@ export default function Component() {
   const props = { styles: {}, language: {} };
   return (
     <Fragment>
-      <Components.BannerComponent {...props} />
+      <section>
+        <Components.BannerComponent {...props} />
+      </section>
     </Fragment>
   );
 }

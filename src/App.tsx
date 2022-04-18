@@ -30,19 +30,19 @@ const Layout = () => {
     <ThemeContext.Provider value={theme}>
       <LanguageContext.Provider value={language}>
         <CounterContext.Provider value={queryCounter}>
+          <header>
+            <Header {...props} />
+          </header>
+          <main>
+            <Outlet />
+          </main>
           <Container>
-            <section>
-              <Header {...props} />
-            </section>
-            <section>
-              <Outlet />
-            </section>
             <section>
               <Links />
             </section>
-            <section>
+            <footer>
               <Footer />
-            </section>
+            </footer>
           </Container>
         </CounterContext.Provider>
       </LanguageContext.Provider>

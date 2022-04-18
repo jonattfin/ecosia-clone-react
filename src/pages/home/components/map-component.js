@@ -5,9 +5,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import { AboveTitle, TitleKick } from './styled-components';
 
-const GridWrapper = styled(Grid)`
-  background-color: aliceblue;
-`;
 
 const ItemTitle = styled.div`
   font-size: x-large;
@@ -27,7 +24,7 @@ const DivLinkWrapper = styled.div`
 
 export default function Component({ counter, language }) {
   return (
-    <GridWrapper container spacing={2}>
+    <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
         <AboveTitle>Trees planted by ecosia users</AboveTitle>
         <TitleKick>{counter}</TitleKick>
@@ -54,6 +51,6 @@ export default function Component({ counter, language }) {
       <Grid item xs={12} xl={12}>
         &nbsp;
       </Grid>
-    </GridWrapper>
+    </Grid>
   )
 }

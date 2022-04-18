@@ -5,6 +5,7 @@ export const AboveTitle = styled.div`
   color: teal;
   text-transform: uppercase;
   padding: 10px 0px;
+  text-align: center;
 `;
 
 export const Subtitle = styled.div`

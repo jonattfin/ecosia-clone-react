@@ -6,8 +6,6 @@ const DivParentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  background-color: #f9f9f9;
 `;
 
 const DivChildContainer = styled.div`

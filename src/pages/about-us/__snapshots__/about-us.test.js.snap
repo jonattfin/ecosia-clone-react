@@ -61,7 +61,7 @@ exports[`<Components.HireComponent/> renders correctly 1`] = `
         We're hiring!
       </div>
       <div
-        className="css-1t6l3ut"
+        className="css-18ogej"
       >
         Want to help change the world? Let's team up. 
         <br />
@@ -115,7 +115,7 @@ exports[`<Components.MeetTheTeamComponent/> renders correctly 1`] = `
         Step inside!
       </div>
       <div
-        className="css-1t6l3ut"
+        className="css-18ogej"
       >
         Meet the humans who make Ecosia and learn what it's like to work here.
       </div>

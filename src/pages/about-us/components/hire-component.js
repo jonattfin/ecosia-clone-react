@@ -9,7 +9,6 @@ const DivContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 30vh;
-  background-color: #f9f9f9;
 `;
 
 const ExtraSubtitle = styled(Subtitle)`
