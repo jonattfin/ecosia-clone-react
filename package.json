@@ -37,7 +37,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "test-snap": "npm test storybook.test.js"
+    "test-snap": "npm test storybook.test.js",
+    "cy:open:local": "cypress open --config-file cypress.local.json",
+    "cy:open:prod": "cypress open --config-file cypress.prod.json"
   },
   "eslintConfig": {
     "extends": [
@@ -79,6 +81,11 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
+    "cypress": "^9.5.4",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "webpack": "^5.70.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }

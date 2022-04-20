@@ -18,10 +18,10 @@ export default function Component({ language }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
-        <AboveTitle>
+        <AboveTitle data-test="countries-title">
           {language['where-do-you-plant-trees']}
         </AboveTitle>
-        <Subtitle>
+        <Subtitle data-test="countries-subtitle">
           {language['we-plant-30-countries']}
         </Subtitle>
       </Grid>

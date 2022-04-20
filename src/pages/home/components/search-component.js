@@ -47,6 +47,7 @@ export default function Component({ onSearch, language, counter }) {
             placeholder="Search the web to plant trees..."
             onChange={(ev) => { setQuery(ev.target.value); }}
             onKeyDown={ev => { if (ev.key === 'Enter') onSearch(query); }}
+            inputProps={{ 'data-test': "searchInput" }}
             endAdornment={<SearchIcon />}
           />
         </SearchControl>

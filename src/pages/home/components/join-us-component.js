@@ -15,10 +15,10 @@ const DivContainer = styled.div`
 export default function Component({ language }) {
   return (
     <DivContainer>
-      <Subtitle>Join 15 million people who already use Ecosia</Subtitle>
+      <Subtitle data-test='join-us-title'>Join 15 million people who already use Ecosia</Subtitle>
       <div>&nbsp;</div>
       <div>
-        <Button color='primary' variant="contained">Share Ecosia</Button>
+        <Button color='primary' variant="contained" data-test='share-ecosia'>Share Ecosia</Button>
       </div>
     </DivContainer>
   )

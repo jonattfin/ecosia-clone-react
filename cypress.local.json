@@ -1,0 +1,8 @@
+{
+  "testFiles": [
+    "**/*.{feature,features}"
+  ],
+  "env": {
+    "baseUrl": "http://localhost:3000/"
+  }
+}

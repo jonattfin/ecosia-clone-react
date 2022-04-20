@@ -26,7 +26,7 @@ export default function Component({ counter, language }) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
-        <AboveTitle>Trees planted by ecosia users</AboveTitle>
+        <AboveTitle data-test='map-title'>Trees planted by ecosia users</AboveTitle>
         <TitleKick>{counter}</TitleKick>
       </Grid>
       <Grid item xs={12} xl={3}>
@@ -46,7 +46,7 @@ export default function Component({ counter, language }) {
         <ItemText>Active projects</ItemText>
       </Grid>
       <Grid item xs={12} xl={12}>
-        <DivLinkWrapper><Link to="#">Discover our projects <ChevronRightIcon fontSize='small'/></Link></DivLinkWrapper>
+        <DivLinkWrapper><Link to="#" data-test='discover-projects'>Discover our projects <ChevronRightIcon fontSize='small'/></Link></DivLinkWrapper>
       </Grid>
       <Grid item xs={12} xl={12}>
         &nbsp;

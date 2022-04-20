@@ -34,7 +34,7 @@ export default function Component({ language }) {
     <DivContainer>
       <Grid container spacing={2}>
         <Grid item xs={6} xl={6}>
-          <AboveTitle>Monthly financial reports </AboveTitle>
+          <AboveTitle data-test='reports-title'>Monthly financial reports</AboveTitle>
           <Subtitle>Our revenue in January 2022 </Subtitle>
           <DivTextContent>Our monthly reports show how much ad revenue we made from your searches, how we spent it, and how many trees this helped us plant.</DivTextContent>
         </Grid>
@@ -44,7 +44,7 @@ export default function Component({ language }) {
           </PieContainer>
         </Grid>
         <Grid item xs={12} xl={12}>
-          <DivLinkWrapper><Link to="#">Explore our financial reports <ChevronRightIcon fontSize='small'/></Link></DivLinkWrapper>
+          <DivLinkWrapper><Link to="#" data-test='explore-reports'>Explore our financial reports <ChevronRightIcon fontSize='small'/></Link></DivLinkWrapper>
         </Grid>
       </Grid>
     </DivContainer>
