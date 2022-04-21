@@ -4,6 +4,8 @@ The url where this repo is deployed is: https://ecosia-clone.vercel.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jonattfin_ecosia-clone&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jonattfin_ecosia-clone)
+
 ## Other *opinionated* decisions
 
 - pages are split by "features", and all the components / images / styles stay within that feature folder "page" for better coupling.
@@ -12,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Storybook is used to render components "out of the box" and to build them in isolation. Also those components are snapshot tested.
 - For the integration tests we're using cypress.js with cucumber.js and the features/scenarios are written in Gerkin.
 - The style & icons are based on material ui and based on styled components.
-- For static code analysis we're using SonarCloud.io. and the report is public at this address: https://sonarcloud.io/summary/overall?id=jonattfin_ecosia-clone 
+
 
 ## Learn More
 
