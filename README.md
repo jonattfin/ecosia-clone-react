@@ -1,6 +1,6 @@
-# This is a clone of "ecosia.org" search engine
+# This is a *clone* of "ecosia.org" search engine
 
-The url where this repo is deployed is: https://ecosia-clone.herokuapp.com/
+The url where this repo is deployed is: https://ecosia-clone.vercel.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
