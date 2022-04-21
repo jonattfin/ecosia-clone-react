@@ -16,6 +16,10 @@ const DivChildContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 30vh;
+
+  @media (max-height: 1080px) {
+    height: 50vh;
+  }
 `;
 
 const TextFieldExtra = styled(TextField)`

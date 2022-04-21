@@ -17,7 +17,7 @@ export default function Component() {
   return (
     <Grid container>
       {/* section */}
-      <AliceBlueGrid item xl={12}>
+      <AliceBlueGrid item xs={12} xl={12}>
         <Components.BannerComponent {...commonProps} />
       </AliceBlueGrid>
       {/* section */}
