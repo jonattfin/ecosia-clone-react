@@ -1,7 +1,7 @@
-Feature: About Us
+Feature: About us
+  Background:
+    Given The user opens the about us page
 
-  Scenario: Admin Settings Group Level
-    Given User is at the login page
-    When User enters username as 'Admin' and password as 'admin123'
-    And User clicks on login button
-    Then User is able to successfully login to the Website
+  Scenario: The banner section is shown
+    Then The banner section title and add ecosia button are shown
+

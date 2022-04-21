@@ -1,18 +1,20 @@
+/// <reference types="cypress" />
+
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-Given('User is at the login page', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/')
+Given('The user opens the about us page', (page) => {
+  cy.visit(`http://localhost:3000/about-us`)
 })
 
-When('User enters username as {string} and password as {string}', (username, password) => {
-    cy.get('#txtUsername').type(username)
-    cy.get('#txtPassword').type(password)
-})
+describe("The banner section is shown", () => {
+  Then('The banner section title and add ecosia button are shown', () => {
 
-And('User clicks on login button', () => {
-    cy.get('#btnLogin').click()
-})
+    cy.getBySel('banner-title')
+      .should('be.visible')
+      .should('have.text', "We believe in everyone's power to do good")
 
-Then('User is able to successfully login to the Website', () => {
-    cy.get('#welcome').should('be.visible', { timeout: 10000 })
-})
+    cy.getBySel('add-ecosia-button')
+      .should('be.visible')
+      .should('have.text', 'Add Ecosia to Firefox')
+  });
+});

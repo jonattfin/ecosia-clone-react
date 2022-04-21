@@ -1,35 +1,34 @@
+/// <reference types="cypress" />
+
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-import * as helpers from '../helpers';
-import * as homePage from './home-page';
-
 Given('The user opens the home page', (page) => {
-  helpers.openPage('/');
+  cy.visit(`http://localhost:3000/`)
 })
 
 describe("User types for a query in the search input", () => {
   When('The user search for the query in the search input', () => {
-    const q = "hello world";
+    const q = "hello";
 
-    homePage.getSearchInput()
+    cy.getBySel('searchInput')
       .wait(100)
       .type(q).should('have.value', q)
       .type('{enter}')
   });
 
   Then('The user is redirected to the results page', () => {
-    helpers.isPage("/search/hello world");
+    cy.url().should('eq', `http://localhost:3000/search/hello`);
   });
 })
 
 describe("The countries section is shown", () => {
   Then('The countries section title and subtitle are shown', () => {
 
-    homePage.getCountriesTitle()
+    cy.getBySel('countries-title')
       .should('be.visible')
       .should('have.text', 'Where are your trees being planted?')
 
-    homePage.getCountriesSubtitle()
+    cy.getBySel('countries-subtitle')
       .should('be.visible')
       .should('have.text', 'We plant in 30+ countries with local organizations')
   });
@@ -37,11 +36,11 @@ describe("The countries section is shown", () => {
 
 describe("The map section is shown", () => {
   Then('The map section title and discover our project link are shown', () => {
-    homePage.getMapTitle()
+    cy.getBySel('map-title')
       .should('be.visible')
       .should('have.text', 'Trees planted by ecosia users')
 
-    homePage.getMapDiscoverProjectsLink()
+    cy.getBySel('discover-projects')
       .should('be.visible')
       .should('contain.text', 'Discover our projects')
   });
@@ -50,11 +49,11 @@ describe("The map section is shown", () => {
 
 describe("The financial section is shown", () => {
   Then('The financial section title and explore financial reports are shown', () => {
-    homePage.getReportsTitle()
+    cy.getBySel('reports-title')
       .should('be.visible')
       .should('have.text', 'Monthly financial reports')
 
-    homePage.getReportsLink()
+    cy.getBySel('explore-reports')
       .should('be.visible')
       .should('contain.text', 'Explore our financial reports')
   });
@@ -63,11 +62,11 @@ describe("The financial section is shown", () => {
 describe("The join section is shown", () => {
   Then('The join section title and share ecosia button are shown', () => {
 
-    homePage.getJoinUsTitle()
+    cy.getBySel('join-us-title')
       .should('be.visible')
       .should('have.text', 'Join 15 million people who already use Ecosia')
 
-    homePage.getShareEcosiaButton()
+    cy.getBySel('share-ecosia')
       .should('be.visible')
   });
 });

@@ -16,12 +16,12 @@ export default function Component({ language, styles }) {
     <Grid container spacing={2}>
       <Grid item xs={12} xl={12}>
         <DivContainer>
-          <AboveTitle>
+          <AboveTitle data-test="banner-title">
             We believe in everyone's power to do good
           </AboveTitle>
           <div>&nbsp;</div>
           <div>
-            <Button variant="contained" >Add Ecosia to Firefox</Button>
+            <Button variant="contained" data-test="add-ecosia-button">Add Ecosia to Firefox</Button>
           </div>
         </DivContainer>
       </Grid>
