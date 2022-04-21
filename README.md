@@ -7,11 +7,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Other *opionated* decisions
 
 - pages are split by "features", and all the components / images / styles stay within that feature folder "page" for better coupling.
-- pages are loaded in a lazy fashion "by demand".
+- pages are loaded in a lazy fashion "by demand" to minimize the loading time.
 - the components are split by the "smart/dumb" rule, and usually per page there's only one smart component, all the others just render what they receive as props.
 - Storybook is used to render components "out of the box". Also those components are snapshot tested.
 - For the integration tests we're using cypress.js with cucumber.js and the features/scenarios are written in Gerkin.
 - The style & icons are based on material ui and based on styled components.
+- For static code analysis we're using SonarCloud.io. and the report is public at this address: https://sonarcloud.io/summary/overall?id=jonattfin_ecosia-clone
 
 ## Learn More
 
