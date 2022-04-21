@@ -40,7 +40,7 @@
     "build-storybook": "build-storybook -s public",
     "test-snap": "npm test storybook.test.js",
     "cy:open:local": "cypress open --config-file cypress.local.json",
-    "cy:run:local": "rm -r mochawesome-report && node ./run-tests.js",
+    "cy:run:local": "rm -r mochawesome-report && node ./scripts/run-tests.js",
     "cy:open:prod": "cypress open --config-file cypress.prod.json"
   },
   "eslintConfig": {

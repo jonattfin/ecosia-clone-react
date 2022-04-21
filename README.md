@@ -10,7 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - pages are loaded in a lazy fashion "by demand".
 - the components are split by the "smart/dumb" rule, and usually per page there's only one smart component, all the others just render what they receive as props.
 - Storybook is used to render components "out of the box". Also those components are snapshot tested.
-- The style & icons are based on material ui.
+- For the integration tests we're using cypress.js with cucumber.js and the features/scenarios are written in Gerkin.
+- The style & icons are based on material ui and based on styled components.
 
 ## Learn More
 

@@ -20,6 +20,9 @@ export const ContactUsComponent = () => {
   };
   return <Components.ContactUsComponent {...props} />
 }
+ContactUsComponent.parameters = {
+  storyshots: { disable: true },
+};
 
 export const HireComponent = () => {
   const props = {
@@ -48,3 +51,6 @@ export const AboutUsPage = () => {
 
   return <AboutUsComponent {...props} />;
 }
+AboutUsPage.parameters = {
+  storyshots: { disable: true },
+};

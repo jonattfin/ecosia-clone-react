@@ -15,7 +15,14 @@ export const EcosiaHeader = () => {
   }
   return withRouter(Header, props)
 };
+EcosiaHeader.parameters = {
+  storyshots: { disable: true },
+};
 
 export const EcosiaFooter = () => withRouter(Footer);
 
 export const EcosiaLinks = () => withRouter(Links);
+EcosiaLinks.parameters = {
+  storyshots: { disable: true },
+};
+

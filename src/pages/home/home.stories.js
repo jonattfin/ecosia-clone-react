@@ -20,6 +20,9 @@ export const PieComponent = () => {
     </div>
   );
 }
+PieComponent.parameters = {
+  storyshots: { disable: true },
+};
 
 export const SearchComponent = () => {
   const props = {
@@ -54,6 +57,10 @@ export const FinancialComponent = () => {
   };
   return withRouter(Components.FinancialComponent, props);
 }
+FinancialComponent.parameters = {
+  storyshots: { disable: true },
+};
+
 
 export const WhyChooseUsComponent = () => {
   const props = {
@@ -78,3 +85,6 @@ export const HomePageIndex = () => {
 
   return withRouter(HomeComponent, props);
 }
+HomePageIndex.parameters = {
+  storyshots: { disable: true },
+};
